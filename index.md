@@ -6,8 +6,8 @@ header:
   overlay_color: "#1a1a2e"
   overlay_filter: "0.6"
   actions:
-    - label: "<i class='fas fa-file-pdf'></i> Download Resume"
-      url: "/resume.dominick.campbell.pdf"
+    - label: "<i class='fas fa-file-pdf'></i> View Resume"
+      url: "/resume/"
     - label: "<i class='fab fa-linkedin'></i> LinkedIn"
       url: "https://linkedin.com/in/dominick-campbell"
 excerpt: >
