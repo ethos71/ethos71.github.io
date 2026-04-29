@@ -15,8 +15,7 @@ voice-biometric fraud detection system that caught $830B in fraud at JPMC, a mon
 platform serving Fortune 500 companies at Vertex, or the acquisition-driving HRCommand product at
 Connect Your Care — I identify the hard problem, architect the right solution, and ship it.
 
-I'm also obsessive about raising the floor. I designed and personally delivered the **"Raise the Boats"**
-AI curriculum at Vertex, teaching 200+ employees how to use AI and build custom agents from scratch.
+I'm also obsessive about raising the floor. I designed and personally delivered the **AI Curiosity Workshop** ("Raise the Boats") at Vertex, teaching ~50 employees across engineering, product, and data science how to use AI and build custom agents from scratch.
 
 ## Career Snapshot
 
