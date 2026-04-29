@@ -1,5 +1,5 @@
 ---
-title: "I Taught 200+ People to Build AI Agents. Here's What Surprised Me."
+title: "I Ran the AI Curiosity Workshop at Vertex. Here's What I Learned."
 date: 2026-03-18
 categories:
   - AI
@@ -10,12 +10,12 @@ tags:
   - crewai
   - autogen
   - vertex
-excerpt: "Running the 'Raise the Boats' AI curriculum at Vertex taught me more about how people actually learn — and think about — AI than any framework documentation ever could."
+excerpt: "Running the AI Curiosity Workshop — internally branded 'Raise the Boats' — at Vertex taught me more about how people actually learn AI than any framework documentation ever could."
 ---
 
-When I pitched the idea for "Raise the Boats" internally, the reaction was roughly: *that's a lot of time to spend on something that isn't shipping features.*
+When I pitched the idea internally, the reaction was roughly: *that's a lot of time to spend on something that isn't shipping features.*
 
-I pushed anyway. Six months later, over 200 employees across engineering, product, data science, and — yeah — some finance people had gone through it. And I learned more from teaching it than I expected.
+I pushed anyway. By the time we wrapped, ~50 employees across engineering, product, data science, and — yeah — some finance folks had gone through the **AI Curiosity Workshop** (we called it "Raise the Boats" internally). I learned more from teaching it than I expected.
 
 ## The thing nobody told me about teaching AI
 

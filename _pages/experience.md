@@ -12,7 +12,7 @@ author_profile: true
 - Oversaw launch of Indirect Tax Intelligence and Indirect Tax Close products; led 10 teams of 50+ engineers driving Fortune 500 monthly tax close and government audit defense
 - Architected data pipelines processing 50M–100M transactions/day from Target, Starbucks, McDonald's via MS Dynamics, Vertex OSeries, SAP, and custom ETL
 - Led overhaul of metrics system estimated to save ~$1M/year through reclaiming unused customer data and cloud resources
-- Designed and delivered "Raise the Boats" AI curriculum — personally taught 200+ employees how to use AI and build custom agents
+- Designed and delivered the **AI Curiosity Workshop** ("Raise the Boats") — taught ~50 employees across engineering, product, and data science how to use AI and build custom agents
 
 ---
 
