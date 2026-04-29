@@ -1,0 +1,11 @@
+main:
+  - title: "About"
+    url: /about/
+  - title: "Experience"
+    url: /experience/
+  - title: "Patents"
+    url: /patents/
+  - title: "Resume"
+    url: /resume.dominick.campbell.pdf
+  - title: "Blog"
+    url: /blog/

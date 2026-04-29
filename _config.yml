@@ -1,0 +1,108 @@
+title: "Dominick A. Campbell"
+name: "Dominick A. Campbell"
+description: "Principal Engineer & AI Architect · 4 Patent-Pending AI Inventions · 25+ Years"
+url: "https://ethos71.github.io"
+baseurl: ""
+repository: "ethos71/ethos71.github.io"
+
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+
+minimal_mistakes_skin: "dark"
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: /blog/page:num/
+
+author:
+  name: "Dominick A. Campbell"
+  bio: "Principal Engineer & AI Architect. 25+ years shipping systems from Mainframe to modern AI. 4 patent-pending inventions."
+  location: "Remote"
+  email: "Dominick.do.Campbell@gmail.com"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ethos71"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/dominick-campbell"
+    - label: "Resume"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/resume.dominick.campbell.pdf"
+
+# Site-wide settings
+locale: "en-US"
+timezone: America/New_York
+breadcrumbs: false
+words_per_minute: 200
+
+# Analytics (add your tracking ID if desired)
+# analytics:
+#   provider: "google-gtag"
+#   google:
+#     tracking_id: "UA-XXXXXX-X"
+
+# SEO
+twitter:
+  username:
+social:
+  name: "Dominick A. Campbell"
+  links:
+    - "https://github.com/ethos71"
+    - "https://linkedin.com/in/dominick-campbell"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      show_date: true
+      comments: false
+      share: false
+      related: true
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
