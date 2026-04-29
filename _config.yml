@@ -22,6 +22,7 @@ paginate_path: /blog/page:num/
 
 author:
   name: "Dominick A. Campbell"
+  avatar: "/assets/images/profile.png"
   bio: "Principal Engineer & AI Architect. 25+ years shipping systems from Mainframe to modern AI. 4 patent-pending inventions."
   location: "Remote"
   email: "Dominick.do.Campbell@gmail.com"
