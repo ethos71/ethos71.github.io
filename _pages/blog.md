@@ -1,13 +1,6 @@
 ---
 permalink: /blog/
 title: "Blog"
+layout: posts
 author_profile: true
 ---
-
-<div class="grid__wrapper">
-{% for post in paginator.posts %}
-  {% include archive-single.html type="grid" %}
-{% endfor %}
-</div>
-
-{% include paginator.html %}
