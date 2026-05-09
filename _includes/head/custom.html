@@ -1,0 +1,28 @@
+{% comment %}
+  Custom <head> additions:
+    - favicon set (generated from /assets/favicon/source.html)
+    - apple touch icon
+    - web app manifest
+    - theme color
+{% endcomment %}
+
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/favicon/favicon-48x48.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/favicon/favicon-96x96.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/favicon/favicon-192x192.png' | relative_url }}">
+<link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
+<link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | relative_url }}">
+
+<meta name="theme-color" content="#0f1419">
+<meta name="msapplication-TileColor" content="#0f1419">
+<meta name="apple-mobile-web-app-title" content="DC">
+
+{% comment %}
+  Plausible Analytics (privacy-friendly, $9/mo at plausible.io).
+  To enable: sign up, add ethos71.github.io as a site, then uncomment the line below.
+{% endcomment %}
+{%- comment -%}
+<script defer data-domain="ethos71.github.io" src="https://plausible.io/js/script.js"></script>
+{%- endcomment -%}

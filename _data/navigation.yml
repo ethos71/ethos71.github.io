@@ -9,3 +9,7 @@ main:
     url: /resume/
   - title: "Blog"
     url: /blog/
+  - title: "Tags"
+    url: /tags/
+  - title: "Contact"
+    url: /contact/

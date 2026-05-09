@@ -43,11 +43,30 @@ timezone: America/New_York
 breadcrumbs: false
 words_per_minute: 200
 
-# Analytics (add your tracking ID if desired)
+# Logo / favicon (rendered via _includes/head/custom.html)
+logo: "/assets/favicon/favicon-96x96.png"
+
+# Tag and category archive routing (used by _pages/tags.md and _pages/categories.md)
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Analytics
+# To enable: uncomment, replace tracking_id with your GA4 measurement ID (G-XXXXXXXX),
+# and the theme will inject the gtag.js snippet automatically.
 # analytics:
 #   provider: "google-gtag"
 #   google:
-#     tracking_id: "UA-XXXXXX-X"
+#     tracking_id: "G-XXXXXXXXXX"
+#     anonymize_ip: true
+#
+# Or use Plausible (privacy-friendly, $9/mo at https://plausible.io):
+#   1. Sign up and add ethos71.github.io as a site
+#   2. Uncomment the line below in _includes/head/custom.html:
+#      <script defer data-domain="ethos71.github.io" src="https://plausible.io/js/script.js"></script>
 
 # SEO
 twitter:
