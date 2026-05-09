@@ -10,6 +10,9 @@ tags:
   - documentation
   - code quality
 excerpt: "Documentation rot is the silent killer of engineering velocity. Doc Intel is my patent-pending system for detecting when your code and docs have gone their separate ways."
+header:
+  og_image: /assets/linkedin/linkedin-banner.png
+  teaser: /assets/linkedin/linkedin-banner.png
 ---
 
 Every engineering team I've ever been on has the same lie.

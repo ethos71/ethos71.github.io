@@ -127,5 +127,5 @@ Less pecking. More building.
 
 ---
 
-*I'm actively developing Robby and looking for teams who want to think seriously about what AI-augmented engineering actually looks like. [Find me on LinkedIn](https://linkedin.com/in/dominick-campbell).*
+*I'm actively developing Robby and looking for teams who want to think seriously about what AI-augmented engineering actually looks like. [Find me on LinkedIn](https://www.linkedin.com/in/dominick-campbell-70b3619b/).*
 

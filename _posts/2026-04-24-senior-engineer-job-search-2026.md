@@ -49,7 +49,7 @@ I want to build something real. Not a proof-of-concept. Not an "AI strategy" doc
 
 Tax, compliance, fintech — I know those domains. But I'm open to any technically hard problem where the stakes are real and the team is serious.
 
-If that's you, [find me on LinkedIn](https://linkedin.com/in/dominick-campbell).
+If that's you, [find me on LinkedIn](https://www.linkedin.com/in/dominick-campbell-70b3619b/).
 
 More updates as this unfolds. I'm going to document this process — the good, the awkward, and the things that don't work — because I think more senior engineers should talk honestly about what job searching is actually like. We tend to only share the win announcement.
 

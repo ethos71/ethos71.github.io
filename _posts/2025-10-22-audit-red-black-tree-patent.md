@@ -10,6 +10,9 @@ tags:
   - tax tech
   - audit
 excerpt: "The Audit Management Red Black Tree Timber Model started as a question: why are we making $50K decisions based on gut feel when we have the data to do better?"
+header:
+  og_image: /assets/linkedin/linkedin-banner.png
+  teaser: /assets/linkedin/linkedin-banner.png
 ---
 
 Tax audits are expensive. Not just the settlement amounts — the decision cost. Every audit finding requires a judgment call: do you contest it, settle it, or absorb it? Each path has different legal costs, time costs, settlement risks, and precedent implications.

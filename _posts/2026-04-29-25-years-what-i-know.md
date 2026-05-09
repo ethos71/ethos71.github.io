@@ -55,5 +55,5 @@ at JPMC hit 10 million accounts in 3 months. Both had clear owners.
 ---
 
 I'm writing more here as I go. If any of this resonates, find me on
-[LinkedIn](https://linkedin.com/in/dominick-campbell) or
+[LinkedIn](https://www.linkedin.com/in/dominick-campbell-70b3619b/) or
 [GitHub](https://github.com/ethos71).

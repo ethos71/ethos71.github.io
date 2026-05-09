@@ -9,10 +9,10 @@ header:
     - label: "<i class='fas fa-file-pdf'></i> View Resume"
       url: "/resume/"
     - label: "<i class='fab fa-linkedin'></i> LinkedIn"
-      url: "https://linkedin.com/in/dominick-campbell"
+      url: "https://www.linkedin.com/in/dominick-campbell-70b3619b/"
 excerpt: >
   **Principal Engineer & AI Architect** · 25+ years shipping systems from Mainframe to modern AI ·
-  4 Patent-Pending AI Inventions · Shipped $500M+ in products · Led 50+ engineers
+  4 Patent-Pending AI Inventions · Production systems serving 100M+ daily transactions · Led 50+ engineers
 
 intro:
   - excerpt: >
@@ -31,16 +31,16 @@ feature_row:
   - title: "25+ Years. Zero Shortcuts."
     excerpt: >
       Mainframe → J2EE → Microservices → Cloud → AI. Every era, every stack.
-      Built voice-biometric fraud systems at JPMC, a $500M tax close platform at Vertex,
-      and the platform that drove an acquisition at Connect Your Care.
+      Built voice-biometric fraud systems at JPMC handling 10M accounts in 90 days, the Indirect Tax Close platform at Vertex,
+      and the HRCommand decomposition that drove the United Health acquisition of Connect Your Care.
     url: "/experience/"
     btn_label: "See Experience"
     btn_class: "btn--primary"
   - title: "Builder. Teacher. Leader."
     excerpt: >
       Designed and delivered the **"Raise the Boats"** AI curriculum — personally taught
-      200+ employees how to build production AI agents. I don't just ship products; I raise the bar
-      for the whole team.
+      ~50 employees across engineering, product, and data science how to build production AI agents.
+      I don't just ship products; I raise the bar for the whole team.
     url: "/about/"
     btn_label: "About Me"
     btn_class: "btn--primary"
@@ -48,11 +48,13 @@ feature_row:
 feature_row2:
   - title: "Tech Stack"
     excerpt: >
-      **AI/ML**: crewAI, AutoGen, LangChain, LangGraph, OpenAI, Anthropic, RAG, XGBoost, scikit-learn  
-      **Languages**: Python, Java (15+ yrs), TypeScript, Go, C#/.NET, SQL, COBOL  
-      **Cloud**: AWS (Lambda, ECS, RDS, S3, SQS), GCP, Terraform, Kubernetes, Docker  
-      **Data**: Spark, dbt, Kafka, Airflow, Snowflake, PostgreSQL, DynamoDB  
-      **Frontend**: React, Next.js, Angular
+      **AI / Agents**: crewAI, AutoGen, LangChain, LangGraph, MCP, RAG, OpenAI, Anthropic, Langfuse  
+      **ML**: XGBoost, scikit-learn, PyTorch, NLP, synthetic data generation, SageMaker, Snowflake Cortex  
+      **Cloud-native**: AWS (Lambda, ECS, EKS, RDS, S3, DynamoDB, Kinesis), GCP, Azure, Terraform, Kubernetes, Docker  
+      **Backend**: Python, Java (15+ yrs), Go, TypeScript, FastAPI, Spring Boot, microservices, REST/GraphQL  
+      **Data**: Snowflake, PostgreSQL, Kafka, Spark, dbt, Airflow  
+      **Frontend**: React, Next.js, Vue.js, Angular  
+      **Earlier career**: C#/.NET, COBOL, J2EE, Assembly
 ---
 
 {% include feature_row id="intro" type="center" %}

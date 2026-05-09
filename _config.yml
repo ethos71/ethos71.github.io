@@ -32,7 +32,7 @@ author:
       url: "https://github.com/ethos71"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/dominick-campbell"
+      url: "https://www.linkedin.com/in/dominick-campbell-70b3619b/"
     - label: "Resume"
       icon: "fas fa-fw fa-file-pdf"
       url: "/resume.dominick.campbell.pdf"
@@ -56,7 +56,7 @@ social:
   name: "Dominick A. Campbell"
   links:
     - "https://github.com/ethos71"
-    - "https://linkedin.com/in/dominick-campbell"
+    - "https://www.linkedin.com/in/dominick-campbell-70b3619b/"
 
 # Reading Files
 include:
@@ -99,11 +99,15 @@ defaults:
       read_time: true
       show_date: true
       comments: false
-      share: false
+      share: true
       related: true
+      header:
+        og_image: /assets/linkedin/linkedin-banner.png
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: true
+      header:
+        og_image: /assets/linkedin/linkedin-banner.png

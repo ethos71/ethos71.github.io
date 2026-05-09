@@ -10,6 +10,9 @@ tags:
   - machine learning
   - tax tech
 excerpt: "The origin story of one of my patent-pending inventions — how a real problem with real stakes led to building a synthetic tax data generator using ML."
+header:
+  og_image: /assets/linkedin/data-cake.png
+  teaser: /assets/linkedin/data-cake.png
 ---
 
 The problem started, like most good engineering problems, with something nobody wanted to touch.

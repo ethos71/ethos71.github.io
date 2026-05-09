@@ -14,6 +14,9 @@ tags:
   - fintech
   - architecture
 excerpt: "Five production systems from the last decade. Patents, platform rewrites, fraud prevention at scale. Each one shipped, each one moved a number that mattered."
+header:
+  og_image: /assets/linkedin/linkedin-banner.png
+  teaser: /assets/linkedin/linkedin-banner.png
 ---
 
 I've been writing one-off posts about individual systems for a while. People keep asking me for the consolidated portfolio version — what shipped, what it moved, what the architecture looked like.
@@ -130,4 +133,4 @@ Five-person team. We never broke production. We never took the platform down for
 
 The pattern across all five is the same. You ground in the business outcome first. You earn the right to be technical. You ship the smallest thing that proves the bet. Then you scale.
 
-If you'd like to talk about any of these in depth — or you're working on something with the same shape and want a second opinion — I'm at [Dominick.do.Campbell@gmail.com](mailto:Dominick.do.Campbell@gmail.com), or [LinkedIn](https://linkedin.com/in/dominick-campbell).
+If you'd like to talk about any of these in depth — or you're working on something with the same shape and want a second opinion — I'm at [Dominick.do.Campbell@gmail.com](mailto:Dominick.do.Campbell@gmail.com), or [LinkedIn](https://www.linkedin.com/in/dominick-campbell-70b3619b/).
