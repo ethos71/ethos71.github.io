@@ -63,18 +63,22 @@ measurable, before the gap becomes a production incident or an onboarding tax.
 
 ## 4. Mort AI Nexus
 
-**Domain**: Multi-State Nexus Compliance  
+**Domain**: Multi-State Economic Nexus Compliance (Sales Tax)  
 **Status**: Patent Pending
 
-A predictive model that forecasts when a company crosses economic nexus thresholds across US
-jurisdictions. Originally developed for mortgage-related nexus compliance — incorporating weather
-patterns and economic indicators as leading signals — the architecture generalizes to the broader
-multi-state economic nexus landscape created by *South Dakota v. Wayfair* (2018).
+A predictive model that forecasts when a company crosses **economic nexus thresholds** across US
+jurisdictions in the post-*Wayfair* sales-tax landscape. Each state sets its own threshold
+(typically $100K in revenue or 200 transactions per year — see the [Sales Tax Institute's economic
+nexus state guide](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide)). Cross
+the line and you owe sales tax in that state, often discovered months later via a state notice
+with penalties and interest stacked on top.
 
-**Why it matters**: Per-state nexus exposure runs $100K–$500K. Most companies discover they've
-crossed a threshold from a state notice arriving months later, with penalties stacked on top. Mort
-AI Nexus shifts the discovery model from reactive to predictive — companies see the line coming
-weeks before they cross it.
+Mort AI Nexus uses pattern analysis informed by Wayfair plus regional economic signals to forecast
+threshold crossings 30, 60, and 90 days out — letting compliance teams register and configure
+calculation in advance instead of catching up after the fact.
+
+**Why it matters**: Per-state exposure runs $100K–$500K. Mort AI Nexus shifts discovery from
+reactive ("we got a state notice") to predictive ("we'll cross in 60 days, here's what to do").
 
 [Read the deep dive →](/2026/01/14/mort-ai-nexus-patent.html)
 

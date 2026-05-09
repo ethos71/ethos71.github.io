@@ -23,8 +23,9 @@ feature_row:
   - title: "4 Patent-Pending AI Inventions"
     excerpt: >
       **Data Cake** · **Audit Management Red Black Tree Timber Model** ·
-      **Doc Intel** · **Mort AI Nexus Weather Economic Model** —
-      all developed at Vertex Inc., targeting tax, audit, and mortgage nexus domains.
+      **Doc Intel** · **Mort AI Nexus** —
+      all developed at Vertex Inc., targeting tax data synthesis, audit defense, code quality,
+      and multi-state economic nexus compliance.
     url: "/patents/"
     btn_label: "View Patents"
     btn_class: "btn--primary"
