@@ -73,6 +73,8 @@ exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .github
+  - TODO.md
+  - SITE_AUDIT_2026-05-09.md
   - vendor
   - .asset-cache
   - .bundle

@@ -33,6 +33,13 @@ generalize this back to the toolkit definition.
 Weekly, posted Friday or Saturday. File pattern:
 `_posts/YYYY-MM-DD-week-notes-<keyword>.md`.
 
+## TODO
+
+`TODO.md` at the repo root tracks open feature decisions and the
+week's pending review items. **Read it before drafting a post** and
+update it after. Anything @dom is doing autonomously does not go in
+TODO.md — only things that need Dominick's decision, brief, or eyes.
+
 ## Sources (in order)
 
 1. **Local commits across `~/workspace/`** — `git log --since='7 days
