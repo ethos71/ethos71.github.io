@@ -72,6 +72,7 @@ include:
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
+  - .github
   - vendor
   - .asset-cache
   - .bundle
