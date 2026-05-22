@@ -41,7 +41,7 @@ threshold recommendations for whether to contest, settle, or absorb a tax audit 
 model makes them data-driven, explainable, and fast — turning $50K judgment calls into
 auditable reasoning trails.
 
-[Read the deep dive →](/2025/10/22/audit-red-black-tree-patent.html)
+[Read the deep dive →](/engineering/ai/2025/10/22/audit-red-black-tree-patent.html)
 
 ---
 
