@@ -17,6 +17,16 @@ I'm a Principal Engineer with 25+ years of experience, four patent-pending AI in
 
 A few things I've noticed in the first few weeks.
 
+```mermaid
+graph LR
+    A[Apply] --> S[Recruiter screen]
+    S --> H[Hiring manager]
+    H --> T[Technical loop]
+    T --> O[Offer]
+    T -.most candidates exit here.-> X[No]
+```
+_Figure: the senior-engineer funnel — and where it actually filters._
+
 ## The ATS problem is worse than you think
 
 I knew ATS (Applicant Tracking Systems) were a thing. I didn't fully appreciate how aggressively they filter until I started actually testing my resume against job descriptions.
