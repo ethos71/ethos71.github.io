@@ -40,8 +40,8 @@ Robby is a patent-pending multi-agent system I invented at Vertex. The patent is
 
 The super chicken problem in software teams isn't just that the dominant engineers crowd out others. It's that the process overhead itself selects for the wrong things — the people who are good at playing the process game, not the people who are good at building software.
 
-Robby is my answer to that. A direction, not a complete answer. A bet that the best version of an engineering team is one where every person spends their time on the part of the job that made them want to do this in the first place.
+Robby is my answer to that. A direction, not a finished product. The bet is that an engineering team works best when every person spends their day on the part of the job that made them want to do this in the first place.
 
-Happy to discuss the high-level problem and outcomes at NDA depth.
+I can't go deeper on the mechanism here. Reach out if it's relevant to what you're working on.
 
-Less pecking. More building.
+More soon.
