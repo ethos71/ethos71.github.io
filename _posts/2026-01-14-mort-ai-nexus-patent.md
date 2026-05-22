@@ -11,6 +11,7 @@ tags:
   - machine learning
 excerpt: "Nexus threshold violations cost companies $100K–$500K per state. Mort AI Nexus is my patent-pending model for forecasting when you're about to cross — using economic indicators and regional signals as leading inputs."
 header:
+  image: /assets/linkedin/mort-ai-nexus.png
   og_image: /assets/linkedin/mort-ai-nexus.png
   teaser: /assets/linkedin/mort-ai-nexus.png
 ---
