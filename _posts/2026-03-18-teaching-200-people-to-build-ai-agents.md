@@ -12,9 +12,11 @@ tags:
 excerpt: "Running the AI Curiosity Workshop — internally branded 'Raise the Boats' — at Vertex taught me more about how people actually learn AI than any framework documentation ever could."
 ---
 
-When I pitched the idea internally, the reaction was roughly: *that's a lot of time to spend on something that isn't shipping features.*
+Four hours. No prior Python. The analyst sitting across from me had just shipped a working RAG tool that pre-drafted answers to our most common customer audit questions, over our internal knowledge base. She had never written a line of Python before that morning.
 
-I pushed anyway. By the time we wrapped two years in, 200+ employees across engineering, product, data science, and — yeah — some finance folks had been through the **AI Curiosity Workshop** (we called it "Raise the Boats" internally). About 50 of them came through the live cohort I taught directly; the rest worked through the curriculum I built around it. I learned more from teaching it than I expected.
+That was week two of the workshop. The moment I knew the curriculum worked.
+
+By the time we wrapped two years in, 200+ employees across engineering, product, data science, and yes, finance had been through the **AI Curiosity Workshop** — internally called "Raise the Boats." About 50 came through the live cohort I taught directly. The rest worked through the curriculum I built around it. I learned more from running it than I expected.
 
 ```mermaid
 graph TB
@@ -25,31 +27,33 @@ _Figure: what "raise the boats" means in practice._
 
 ## The thing nobody told me about teaching AI
 
-Most engineers I work with are smart. Like, genuinely sharp. But when I started the curriculum, I kept hitting the same wall: people understood what a large language model *was* in the abstract, but they couldn't picture what to actually *do* with it in the context of their day job.
+Most engineers I work with are smart. Like, genuinely sharp. But when I started the curriculum, I kept hitting the same wall: people understood what an LLM *was* in the abstract, and they couldn't picture what to actually *do* with one in the context of their day job.
 
-That's not an intelligence problem. That's a framing problem.
+That's not an intelligence problem. It's a framing problem.
 
-The breakthrough came when I stopped starting with "here's how transformers work" and started with: *what's the thing in your week that makes you want to throw your laptop?* Then we'd build something that fixed that. Small. Concrete. Theirs.
+The shift came when I stopped opening with "here's how transformers work" and started opening with: *what's the thing in your week that makes you want to throw your laptop?* Then we'd build something that fixed that. Small. Concrete. Theirs.
 
-By week two, people were building real things. One of our analysts built a tool that pre-drafted responses to our most common customer audit questions using RAG over our internal knowledge base. She'd never written a line of Python before. Took her four hours.
+By week two, people were building real things. Like the analyst's RAG tool. Like a product manager who chained three tools together to triage a support backlog she'd been staring at for months. Like a data analyst who got tired of waiting on engineering and wrote her own first prompt template by Wednesday.
 
-That's the thing about agents. The barrier isn't technical — it's imagination.
+The barrier to building with agents isn't the framework. It's permission to imagine what you'd build if you had one.
 
-## What actually works in production (and what doesn't)
+## What works in production, what doesn't
 
-We used crewAI and AutoGen heavily. Both are solid. But I want to be honest about what I saw in real projects versus what the demos show you:
+We used crewAI and AutoGen heavily. Both are solid. I want to be honest about what I saw in real projects versus what the demos show you.
 
-**What works:**
-- Multi-agent pipelines for research + synthesis tasks (summarize → validate → format)
-- RAG over structured internal data (policies, audit histories, transaction logs)
+What works:
+
+- Multi-agent pipelines for research and synthesis (summarize, validate, format)
+- RAG over structured internal data — policies, audit histories, transaction logs
 - Code review and doc-quality tooling
 
-**What doesn't (yet):**
-- Fully autonomous decision-making on anything with financial consequence
-- Agents that "just handle it" without a human-in-the-loop step somewhere
+What doesn't, yet:
+
+- Fully autonomous decisions on anything with financial consequence
+- Agents that "just handle it" with no human-in-the-loop step somewhere
 - Anything where the failure mode is silent
 
-The silent failure thing is the one I hammer on hardest in every session. A traditional service throws a 500. An agent confidently gives you a wrong answer with excellent grammar. Those are not the same failure mode and they don't get caught by the same monitoring.
+That last one is the one I hammer on hardest in every session. A traditional service throws a 500. An agent confidently gives you a wrong answer with excellent grammar. Those aren't the same failure mode and they don't get caught by the same monitoring.
 
 ## The unexpected win
 
@@ -57,6 +61,6 @@ The best outcome of the whole program wasn't the tools people built. It was the 
 
 After running it, teams started having different conversations. Instead of "we need a developer to build a script for this," it was "can we agent this?" Product managers were writing prompt templates. Data analysts were chaining tools together. The vocabulary changed, and with it, what felt possible.
 
-That's what "raise the boats" means to me. Not that everyone becomes an ML engineer. That everyone's working at a higher waterline.
+That's what the name actually meant. Not that everyone becomes an ML engineer. That everyone's working at a higher waterline.
 
-We're just getting started.
+Back to work.
