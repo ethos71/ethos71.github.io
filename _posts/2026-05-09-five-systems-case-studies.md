@@ -26,6 +26,16 @@ So here it is. Five systems from the last decade. Each section is short. Each on
 
 Where there's a deeper post on the system, I link to it. Where there isn't, I go a little deeper here.
 
+```mermaid
+graph TB
+    A[Robby<br/>Vertex]
+    B[Mort AI Nexus<br/>Vertex]
+    C[Data Cake<br/>Vertex]
+    D[Voice biometric<br/>JPMC]
+    E[Strangler-fig<br/>Connect Your Care]
+```
+_Figure: five systems, five domains._
+
 ---
 
 ## 1. Robby — Multi-Agent SDLC System
