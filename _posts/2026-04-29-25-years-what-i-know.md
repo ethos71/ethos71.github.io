@@ -33,7 +33,9 @@ broken until it was very broken. Build the dashboards before you build the featu
 
 I hold 4 patent-pending AI inventions now. I've built LLM-backed audit defense tools, synthetic
 data generators, and multi-agent systems. And the most important thing I've learned is this:
+
 **AI doesn't eliminate the need for good system design — it punishes bad system design faster.**
+{: .notice--info}
 
 A poorly-designed traditional service degrades gracefully. A poorly-designed AI service hallucinates
 confidently.
