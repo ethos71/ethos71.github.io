@@ -32,6 +32,14 @@ Reactive monitoring works the way a smoke detector works. By the time it alarms,
 
 When a company crosses an economic nexus threshold, the obligation is immediate — but the discovery isn't. Most companies find out from a state notice arriving months after the crossing, with penalties and interest already attached. That gap between *event* and *discovery* is where the financial exposure lives.
 
+```mermaid
+graph LR
+    T[Today] --> C[Threshold<br/>crossing]
+    C --> N[State notice<br/>arrives later]
+    N --> P[Penalty +<br/>interest]
+```
+_Figure: the gap between crossing the line and finding out about it._
+
 That gap is the problem worth solving.
 
 ## What Mort AI Nexus does
