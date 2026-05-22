@@ -15,11 +15,9 @@ header:
   teaser: /assets/linkedin/linkedin-banner.png
 ---
 
-Every engineering team I've ever been on has the same lie.
+Every engineering team I've ever been on has the same lie. There's a README somewhere that describes what the system does. It was accurate once. Two sprints later, three engineers have pushed changes and nobody updated it, because nobody ever updates it.
 
-It's usually written on a README somewhere. Or in Confluence. Or in a comment block at the top of a service nobody touches anymore. It says what the system does. It was accurate once. But that was two sprints ago, and three engineers have since pushed changes without updating the docs because — let's be honest — nobody updates the docs.
-
-Documentation rot is not a discipline problem. It's a systems problem. And I got tired of it.
+Documentation rot isn't a discipline problem. It's a systems problem. And I got tired of it.
 
 ```mermaid
 graph LR
@@ -29,27 +27,25 @@ graph LR
 ```
 _Figure: code keeps moving; docs stop; drift accumulates as silent risk._
 
-## The problem in concrete terms
+## What this actually looks like
 
-At Vertex, we ran large, complex data pipelines in a regulated domain. And we had documentation — internal wikis, inline comments, architectural decision records, README files.
+At Vertex, we ran large, complex data pipelines in a regulated domain. We had docs — internal wikis, inline comments, decision records, README files. The docs were never wrong, exactly. They were *drifted*. Subtly out of sync in ways that were expensive to discover.
 
-The documentation was never actively wrong. It was *drifted*. Subtly out of sync in ways that were expensive to discover. A new engineer would read the docs, build a mental model, then spend two days confused before a senior engineer said "oh yeah, that changed about six months ago."
-
-That's not a documentation problem. That's a confidence problem. The docs existed — you just couldn't trust them.
+A new engineer would read the docs, build a mental model, and spend two days confused before someone older said "oh yeah, that changed about six months ago." The docs existed. You just couldn't trust them, and you didn't know which parts to distrust.
 
 ## What Doc Intel does
 
-Doc Intel is my patent-pending take on the code/doc drift problem in regulated environments. The patent is still pending, so I'm not going further than that on the mechanism. Happy to go into the problem space under NDA.
+Doc Intel is my patent-pending take on the code/doc drift problem in regulated environments. The patent is still pending, so I'm staying off the mechanism.
 
-The point wasn't a number on a dashboard. It was giving engineering teams a way to talk about documentation debt the same way they already talk about code coverage debt — quantifiable, tracked over time, integrated into the development workflow, brought up in PR review when it matters.
+The point wasn't a dashboard number. It was giving engineering teams a way to talk about documentation debt the same way they already talked about code coverage — quantifiable, tracked over time, brought up in PR review when it actually mattered.
 
 ## What teams did with it
 
-Nobody had noticed the drift accumulating on the pipelines we instrumented. The team was shipping. Velocity looked great. The docs had quietly fallen off the cliff, and the only person who would have known was the senior engineer who was about to go on parental leave.
+Nobody had noticed the drift accumulating on the first pipelines we instrumented. The team was shipping. Velocity looked great. The docs had quietly fallen off a cliff and the one person who would have caught it was deep in a different program.
 
-The first internal team to run it had a senior engineer say "I had no idea it had gotten this bad." That's when I knew we'd built something real.
+The first internal team to run Doc Intel had a senior engineer say "I had no idea it had gotten this bad." That's when I knew we'd built something real — when the people closest to the code were the ones surprised by the picture.
 
-The shift it produced was simple: doc health stopped being an opinion. It became something teams could see, trend, and own.
+Back to work.
 
 ---
 

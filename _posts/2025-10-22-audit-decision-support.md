@@ -19,7 +19,7 @@ header:
   teaser: /assets/linkedin/linkedin-banner.png
 ---
 
-Tax audits are expensive. Not just the settlement amounts — the decision cost. Every audit finding requires a judgment call: contest it, settle it, or absorb it? Each path has different legal costs, time costs, settlement risks, and precedent implications.
+A Fortune 500 tax team I worked with in 2024 had 180 open audit findings on a spreadsheet. The senior controversy lead — one person, twenty-plus years on the job — was the system. When she was out, decisions stalled. When she was in the room, the room deferred.
 
 ```mermaid
 graph LR
@@ -30,29 +30,31 @@ graph LR
 ```
 _Figure: every finding is a contest / settle / absorb decision with its own cost shape._
 
-At Vertex, we had large enterprise customers managing dozens or hundreds of open audit findings at any moment. Each one is a decision. Most of those decisions were being made by humans using spreadsheets, gut feel, and whoever had the most institutional memory in the room.
+Every one of those 180 findings is a judgment call. Contest, settle, or absorb. Each path has its own legal cost, its own timeline, its own settlement risk. The right call depends on the jurisdiction, the audit type, current precedent, and what the company can stomach this quarter. Multiply that by hundreds of findings across dozens of customers and you have an industry running on hallway memory.
 
 That bothered me.
 
-## Audit findings are decisions
+## Findings are decisions, not problems
 
-The framing that matters here is the one that gets lost: an audit finding is not a problem to be solved, it's a decision to be made. And the right decision shifts based on the jurisdiction, the audit type, current legal precedent, and the company's own risk posture. What's the right call for a finding in California vs. the same finding in Texas? For a sales tax audit vs. an income tax audit? For a company with a generous tax controversy budget vs. one running lean?
+The framing I kept coming back to: an audit finding is not a thing to fix. It's a choice to make. The same finding in California is a different decision than in Texas. A sales tax finding lives on a different clock than an income tax one. A company with a generous controversy budget tolerates risk a lean one can't.
 
-Nobody had a good answer. Everyone had an opinion. The decisions were happening anyway — just without a shared frame.
+Nobody had a shared frame. Everyone had an opinion. The decisions happened anyway.
 
 ## What I built
 
-A patent-pending decision-support model for audit defense. The patent is still pending, so I won't go further than that on the mechanism. Happy to talk through the problem space under NDA.
+A patent-pending decision-support model for audit defense. I can't go deeper on the mechanism here — reach out if it's relevant to what you're working on.
 
 ## What changed when we deployed it
 
-The first thing that changed wasn't accuracy. It was conversations.
+The first thing that changed wasn't accuracy. It was the conversations.
 
-Instead of "I think we should contest this," teams started having a structured conversation about each finding, with the model's recommendation as a starting point rather than a tribal opinion. That's a different conversation. It has data in it. It has an auditable reasoning trail.
+Instead of "I think we should contest this," teams started talking about each finding against a structured recommendation — something to argue with, agree with, or override on the record. That's a different conversation, and it has an auditable trail.
 
-The second thing: patterns that had been invisible because they were spread across hundreds of one-at-a-time decisions started becoming visible. Nobody meant for those patterns to exist. They were just the residue of how decisions had historically been made.
+The second thing took longer. Patterns that had been invisible — because they were spread across hundreds of one-at-a-time decisions over years — started showing up. Nobody meant for those patterns to exist. They were the residue of how the work had always been done.
 
-That's what good decision-support tooling should do. Not replace the judgment — augment it. Make the implicit explicit. Surface what's invisible when you're making 200 decisions one at a time.
+Good decision support doesn't replace the judgment. It makes the implicit legible enough to argue with.
+
+More soon.
 
 ---
 

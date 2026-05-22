@@ -16,21 +16,19 @@ header:
   teaser: /assets/linkedin/mort-ai-nexus.png
 ---
 
-If you're not in tax technology, "nexus" might sound obscure. It isn't.
+The letter shows up in February. State revenue department, certified mail. The company crossed an economic nexus threshold sometime last year, never registered, and now owes back tax plus penalties plus interest. Six figures, easy. Sometimes seven.
 
-Nexus is the legal threshold that determines whether a business has sufficient presence in a state to owe sales tax there. Cross the threshold and you owe — retroactively, often with penalties.
+The tax director finds out the same week the CFO does.
 
-After *South Dakota v. Wayfair* (2018), the Supreme Court expanded **economic nexus** to cover remote sales. Companies that never had a physical presence in a state suddenly discovered they'd been technically taxable there for years. Each state set its own threshold ([here's the current state-by-state guide](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide) from the Sales Tax Institute, if you want to see how spread out it is). Per-state exposure runs $100K–$500K.
+After *South Dakota v. Wayfair* (2018), the Supreme Court expanded economic nexus to cover remote sales, and companies that never had a physical presence in a state suddenly discovered they'd been technically taxable there for years. Each state set its own threshold ([here's the current state-by-state guide](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide) from the Sales Tax Institute, if you want to see how spread out it is). Per-state exposure runs $100K–$500K.
 
-The compliance machinery that exists to track this is mostly reactive. Tools watch your transaction volume by state and tell you when you're close to a threshold. That's defense with a short horizon.
+The compliance machinery that exists to handle this is mostly reactive. Tools watch your transaction volume by state and tell you when you're close. That's defense with a short horizon.
 
 The question that kept nagging me: **can you see it coming?**
 
-## What the existing tools got wrong
+## Where the money actually leaks
 
-Reactive monitoring works the way a smoke detector works. By the time it alarms, you already have a fire.
-
-When a company crosses an economic nexus threshold, the obligation is immediate — but the discovery isn't. Most companies find out from a state notice arriving months after the crossing, with penalties and interest already attached. That gap between *event* and *discovery* is where the financial exposure lives.
+When a company crosses an economic nexus threshold, the obligation is immediate. The discovery isn't. Most companies find out months later, from a state notice with penalties and interest already attached.
 
 ```mermaid
 graph LR
@@ -40,15 +38,15 @@ graph LR
 ```
 _Figure: the gap between crossing the line and finding out about it._
 
-That gap is the problem worth solving.
+That gap — between the event and the discovery — is where the financial exposure lives. Close the gap and the exposure mostly goes away. Leave it open and you're paying for it in arrears.
 
 ## What Mort AI Nexus does
 
-Mort AI Nexus is a patent-pending model aimed at shifting nexus compliance from reactive to proactive — closing the gap between event and discovery so tax teams aren't finding out from the state. The patent is still pending, so I'm staying off the mechanism. Happy to go deeper on the problem under NDA.
+Mort AI Nexus is a patent-pending model that closes that gap, so tax teams aren't finding out from the state. I'm not going to walk through the mechanism here.
 
-The bigger shift wasn't a single number. It was the change in posture. Tax teams stopped scrambling to retroactively file and started planning ahead. Registration, calculation configuration, internal briefings — all of it could happen in time. Companies that adopted it shifted from defensive compliance to proactive compliance.
+The interesting shift wasn't a single number. It was posture. Tax teams stopped scrambling to retroactively file and started planning ahead — registration, calculation configuration, internal briefings, all of it happening on a calendar instead of on a fire drill.
 
-That's the bar I think compliance tooling should aim for. Not "we'll tell you when you've broken the rule." Rather, "we'll tell you in time to not break it."
+That's the bar I think compliance tooling should clear. Tell me before the state does.
 
 ---
 
