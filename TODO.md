@@ -34,13 +34,13 @@ Conventions: 🔴 this week, 🟡 next, 🟢 someday. Check off when done.
 ## 🟢 Site Audit Backlog (from `SITE_AUDIT_2026-05-09.md`)
 
 - [ ] Decide Mort AI Nexus positioning — Option A / B / C from the audit
-- [ ] Add `header.og_image` to the 4 patent posts (point at infographics in `assets/linkedin/`)
 - [ ] Tags + categories index pages (your roadmap had this for Week 2)
 - [ ] Share buttons on posts — currently off, audit recommends on
 - [ ] Analytics decision — GA4 free vs. Plausible $9/mo vs. nothing
 - [ ] `/contact/` page with email + LinkedIn + GitHub + "what I'm looking for"
-- [ ] RSS link surfaced in nav (feed exists, just hidden)
-- [ ] Per-post header images for older posts
+- [ ] Per-post header images for older posts — **partial**: data-cake,
+      mort-ai-nexus, robby, five-systems wired; agentic-hype, 25-years,
+      senior-engineer-job-search, and the workshop post still need imagery.
 
 ---
 
@@ -49,3 +49,10 @@ Conventions: 🔴 this week, 🟡 next, 🟢 someday. Check off when done.
 - [x] 2026-05-18: `@dom` installed as blog operator (`.github/agents/dom.md`)
 - [x] 2026-05-18: First weekly post (`_posts/2026-05-18-week-notes-toolkit-week.md`)
 - [x] 2026-05-18: TODO.md established
+- [x] 2026-05-22: `header.og_image` (plus `image`/`teaser`) on the 4 patent /
+      hero-eligible posts pointing at the LinkedIn infographics
+- [x] 2026-05-22: RSS link surfaced in nav (`_data/navigation.yml`)
+- [x] 2026-05-22: Patents page links fixed to match `categories:` permalinks
+      (`/engineering/ai/...` instead of bare `/YYYY/MM/DD/...`)
+- [x] 2026-05-22: Workshop post — reconciled 200-vs-50 mismatch in body
+- [x] 2026-05-22: Categories link added to top nav
