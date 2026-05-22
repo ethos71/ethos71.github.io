@@ -11,11 +11,9 @@ tags:
 excerpt: "Everyone is shipping 'AI agents' right now. Having actually built them in production for three years, I have some thoughts on what's real and what's going to hurt people."
 ---
 
-There's a version of the AI agent conversation happening in conference keynotes right now that makes it sound like autonomous software agents are a solved problem. You just hook up a few tools, give the model some instructions, and watch it go.
+I've spent the last three years building multi-agent systems in production at Vertex — tax intelligence pipelines, audit defense, synthetic data generators. Four patent-pending inventions in the space. I am not standing in the way of the freight train.
 
-I've spent the last three years building these things in production at Vertex — multi-agent tax intelligence pipelines, audit defense systems, synthetic data generators. I have four patent-pending inventions in this space.
-
-Let me tell you what's actually real.
+I do want to talk about how fast it is actually moving, because the keynote version and the production version are not the same conversation.
 
 ```mermaid
 graph LR
@@ -27,32 +25,28 @@ _Figure: agentic AI follows the curve — the value at the end is real; the time
 
 ## The capability is genuinely there
 
-I don't want to be the guy standing in the way of the freight train. The foundation models are legitimately good. GPT-4 class models can reason across complex multi-step problems, synthesize large document sets, write production-quality code, and chain tool calls in ways that would have seemed like science fiction five years ago.
+The foundation models are good. GPT-4-class models can reason across complex multi-step problems, synthesize large document sets, write production code, and chain tool calls in ways that would have looked like science fiction five years ago. crewAI and AutoGen have matured. LangGraph gives you proper state management for non-trivial flows.
 
-crewAI and AutoGen have both matured significantly. LangGraph gives you proper state management for complex flows. The tooling is there.
+If you want an agent that researches a topic, drafts a report, validates sources, and formats the output — that works today. Well.
 
-If you want to build an agent that researches a topic, drafts a report, validates its sources, and formats the output — that works today. Well.
+## Where reality bites
 
-## Where the hype outpaces reality
+The keynote demos always show the agent "taking action." Submitting filings. Modifying records. Moving money. In tax, finance, and healthcare, you cannot have an agent autonomously do any of those without a verification layer in front of it. That's not a capability gap. It's the legal and operational reality of regulated domains, and pretending otherwise will get someone fired. Build for human-in-the-loop by default, not as the thing you'll add when compliance asks.
 
-**Autonomous action on consequential data.** The demos show the agent "taking action." In tax, in finance, in healthcare — you cannot have an agent autonomously modify records, submit filings, or make financial decisions without a verification layer. Full stop. This isn't a capability problem. It's a liability problem. Build for human-in-the-loop by default, not as an afterthought.
+Reliability is the other thing the demos don't show. A single agent call has maybe a 2-3% failure rate on a complex task — hallucination, tool error, context-window weirdness. Chain five and that compounds. You need retry logic, fallback paths, observable failure states. The pretty demos have none of it, and that's why they don't survive contact with a real workload.
 
-**Reliability at scale.** A single agent call has maybe a 2-3% failure rate on a complex task (hallucination, tool error, context window issues). Chain five agents together and that compounds. You need retry logic, fallback paths, and observable failure states baked in from the start. Most demos have none of this.
+And the context windows. Yes, they're huge now. But large context isn't *coherent* context. I've watched 128K-window models quietly forget early constraints around the 90K-token mark. Chunk and retrieve. Don't just stuff the window and hope.
 
-**Context window isn't infinite in practice.** Yes, the context windows are huge now. But large context doesn't mean *coherent* context. I've watched models with 128K token windows quietly lose track of early constraints when you're 90K tokens in. Chunk and retrieve. Don't just stuff.
+## What actually holds up
 
-## The architecture that actually holds up
+The pattern I keep coming back to: **small agents with clear contracts.** Not one big orchestrator trying to be everything. A pipeline of focused agents, each with one job, explicit inputs and outputs, and its own observability. Closer to microservices than monoliths.
 
-The pattern I keep coming back to: **small agents with clear contracts.**
+The other one: treat your prompts like code. Version them, test them, review them before they go to production. I can't tell you how many production incidents I've seen that traced back to a prompt edit nobody reviewed because "it's just text."
 
-Not one big orchestrator trying to do everything. A pipeline of focused agents, each with a specific job, explicit inputs and outputs, and its own observability. More like microservices than monoliths.
+## My honest take
 
-The other thing: treat your prompts like code. Version them. Test them. Review them before they go to production. I can't tell you how many production incidents I've seen that traced back to an updated prompt nobody reviewed because "it's just text."
+We are in the awkward middle. Foundations are solid. Tooling is good. Patterns are still settling. The companies that win this cycle won't be the ones with the most impressive demos — they'll be the ones who figure out how to run agents reliably, observably, and safely at the scale a real business needs.
 
-## My honest take on 2026
+That's an engineering problem. Engineers who've been doing this for a few years have a real edge right now, and I'd rather spend that edge building things that actually work than shipping a demo that hallucinates a tax filing.
 
-We are in the awkward middle phase. The foundations are solid. The tooling is good. The patterns are still settling. The companies that are going to win aren't the ones with the most impressive demos — they're the ones that figure out how to run agents reliably, observably, and safely at scale.
-
-That's an engineering problem. And engineers who've been doing this for a few years have a real edge right now.
-
-Build carefully. Ship it anyway.
+More soon.
