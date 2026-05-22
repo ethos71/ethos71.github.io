@@ -122,6 +122,7 @@ defaults:
       related: true
       header:
         og_image: /assets/linkedin/linkedin-banner.png
+        teaser: /assets/linkedin/linkedin-banner.png
   - scope:
       path: "_pages"
       type: pages
