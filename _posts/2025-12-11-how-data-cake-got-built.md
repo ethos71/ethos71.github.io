@@ -24,6 +24,14 @@ Legal said no to real customer data. Security said no to real customer data. The
 
 So we had a problem. You can't train a model on nothing. And synthetic data that doesn't behave like the real thing just teaches your model to recognize fake patterns.
 
+```mermaid
+graph LR
+    R[Real customer<br/>transactions] -.blocked.-> M[ML model<br/>training]
+    L[Legal &<br/>security] -.no.-> R
+    S[Synthetic<br/>training data] --> M
+```
+_Figure: the data-access problem the patent addresses._
+
 ## What we actually built
 
 Data Cake is a patent-pending service that removes the training-data bottleneck for tax ML — without any real customer data ever leaving its system of record. The patent is still pending, so I'm staying high-level. Happy to walk through the problem under NDA.
