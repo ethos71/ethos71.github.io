@@ -61,7 +61,7 @@ selected_work:
   - image_path: /assets/linkedin/robby.png
     alt: "Robby — multi-agent AI for the SDLC"
     title: "Robby"
-    excerpt: "70 reusable skills, 15 specialized roles. The AI system that kills the super-chicken problem in production engineering."
+    excerpt: "A multi-agent system for SDLC orchestration — built to remove process friction so engineers can spend time on the work they came here for."
     url: "/ai/engineering/leadership/2026/02/19/robby-ai-sdlc-system.html"
     btn_label: "Read"
     btn_class: "btn--primary"
