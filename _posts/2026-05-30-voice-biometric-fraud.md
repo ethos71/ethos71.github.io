@@ -23,6 +23,14 @@ That's how many JPMorgan Chase customers opted out of voice biometric authentica
 
 I have built and shipped a lot of systems in 25 years, and this remains the highest voluntary adoption rate I have ever seen on a security feature. The reason is not the technology. It is what we decided the design problem was.
 
+```mermaid
+graph LR
+    A[10M JPMC<br/>accounts] --> B[Voice fingerprint<br/>opt-in]
+    B --> O1[99.87%<br/>adopted]
+    B --> O2[0.13%<br/>opted out]
+```
+_Figure: opt-in adoption that didn't look like opt-in adoption._
+
 ## The fraud problem
 
 I was the lead developer on this system at JPMC TARA Fraud Busters, retail banking, 2018–2019. The problem was call-center fraud — an industry-wide $2.4 billion exposure at the time. The attack pattern was simple: attacker calls pretending to be the account holder, rep authenticates with knowledge-based questions (mother's maiden name, last four of social, last transaction amount), every one of those answers was already in a breached database somewhere on the open web, rep authenticates the attacker, fraud is on.
