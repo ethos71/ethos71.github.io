@@ -24,51 +24,51 @@ Between 2022 and 2026 at Vertex, I shipped five patent-pending AI/ML systems int
 
 ---
 
-## 1. Data Cake — Synthetic Tax Data from Real Statistical Properties
+## 1. Data Cake — Synthetic Training Data for a Regulated Industry
 
-You can't train tax AI on real customer transactions — legal and security both veto, correctly. But synthetic data that doesn't match the real statistical shape of tax events produces models that fall apart in production.
+**Domain:** synthetic training-data generation for tax/ML in a PII-constrained environment.
 
-Data Cake is an NLP-driven generator that learns distributions and rare-event tails from real customer data, then produces synthetic streams matching those properties without preserving any traceable link. XGBoost and scikit-learn for statistical modeling; a deterministic rules engine enforcing tax-law validity. The unlock wasn't accuracy — it was that ML projects stopped being a regulatory negotiation.
+You can't train tax AI on real customer transactions — legal and security veto, correctly. Data Cake is the patent-pending answer to that constraint, designed so ML projects inside a regulated industry can spin up training corpora without negotiating with compliance for a quarter. The unlock wasn't accuracy — it was that ML projects stopped being a regulatory negotiation.
 
 [How Data Cake Got Built](/engineering/ai/2025/12/11/how-data-cake-got-built.html)
 
 ---
 
-## 2. Doc Intel — Detecting When Code and Docs Have Divorced
+## 2. Doc Intel — Code / Documentation Drift Detection
 
-Every engineering team has the same lie written on a README. It was true once. Three engineers pushed changes without updating it, and now it actively misleads.
+**Domain:** developer tooling for regulated environments where stale documentation becomes an audit finding.
 
-Doc Intel detects when documents and the systems they describe have drifted, syncs metadata across systems automatically, and maintains the relationships between code, configuration, and compliance artifacts. In a regulated setting — audit trails, SOX-relevant docs, tax-treatment justifications — drift between code and documentation isn't an annoyance. It's an audit finding waiting to happen.
+Every engineering team has the same lie written on a README. It was true once. Three engineers pushed changes without updating it, and now it actively misleads. Doc Intel is the patent-pending system that makes that drift visible and measurable — so docs stop being a trailing indicator of trust.
 
 [Doc Intel: What Happens When Your Code and Docs Divorce](/engineering/ai/2026/01/28/doc-intel-patent.html)
 
 ---
 
-## 3. Audit Management Red-Black Tree Timber Model — Decision Support for Audit Defense
+## 3. Audit Management Timber Model — Decision Support for Audit Defense
 
-Fortune 500 tax teams routinely sit on dozens or hundreds of open audit findings. Each one is a decision — contest, settle, or absorb — with different legal costs, time costs, and precedent implications. Most of those calls were being made on spreadsheets and institutional memory.
+**Domain:** decision support for Fortune 500 tax-audit defense portfolios.
 
-The Red-Black Tree Timber Model treats the portfolio of findings as a self-balancing tree of decisions. Each node carries expected cost, settlement risk, and precedent weight; the tree stays balanced as findings are added or resolved. The output isn't a recommendation — it's a structured view humans act on. The hard part wasn't the algorithm. It was modeling the *decision*, not the data.
+Fortune 500 tax teams routinely sit on dozens or hundreds of open audit findings. Each one is a decision — contest, settle, or absorb — with different legal costs, time costs, and precedent implications. Most of those calls were being made on spreadsheets and institutional memory. The patent-pending Timber Model turns that decision portfolio into something teams can reason about systematically. The hard part wasn't the algorithm — it was modeling the *decision*, not the data.
 
-[Why I Built a Self-Balancing Tree to Make Audit Defense Decisions](/engineering/ai/2025/10/22/audit-red-black-tree-patent.html)
+[Why I Built a Decision-Support Model for Audit Defense](/engineering/ai/2025/10/22/audit-red-black-tree-patent.html)
 
 ---
 
-## 4. Mort AI Nexus — Predicting Economic Nexus Before You Cross It
+## 4. Mort AI Nexus — Economic Nexus Forecasting
 
-After the 2018 *South Dakota v. Wayfair* ruling, every state set its own economic-nexus threshold — typically $100K in revenue or 200 transactions a year — and crossing the line obligated you to collect sales tax there. Per-state penalty exposure runs $100K–$500K.
+**Domain:** predictive multi-state economic-nexus compliance for the post-*Wayfair* sales-tax landscape.
 
-Existing compliance tools were reactive. Mort AI Nexus shifts the horizon, combining transaction patterns, regional economic signals, and historical filing data to forecast a crossing weeks in advance. The change wasn't accuracy — it was timing. Customers stopped finding out from state notices and started finding out from the platform.
+After the 2018 *South Dakota v. Wayfair* ruling, every state set its own economic-nexus threshold and crossing the line obligated you to collect sales tax there. Per-state penalty exposure runs $100K–$500K. Existing compliance tools were reactive. Mort AI Nexus is the patent-pending system that shifts that horizon forward — customers stopped finding out from state notices and started finding out from the platform.
 
 [Mort AI Nexus: Predicting Economic Nexus Before It Bites You](/engineering/ai/2026/01/14/mort-ai-nexus-patent.html)
 
 ---
 
-## 5. Robby — Multi-Agent SDLC System
+## 5. Robby — Multi-Agent SDLC Tooling
 
-The other four patents are products. Robby is the operating system underneath the team that built them.
+**Domain:** multi-agent AI tooling for software-development-lifecycle orchestration.
 
-Robby is a multi-agent orchestration framework — **70 skills, 15 specialized roles**. A head-chef orchestrator routes work to specialist agents: architecture, testing, project management, security, UX. Each agent has focused tools and a narrow job. The running code is the source of truth, and the agents read it to produce specs, sprint plans, and reviews from there. The bet was that an AI orchestrator could absorb the process work eating half my team's day and free the humans to do the engineering they actually love. It paid out — and spawned the methodology that produced the other four patents.
+The other four patents are products. Robby is the operating system underneath the team that built them — a patent-pending multi-agent system for SDLC orchestration, built to remove the process friction eating half my team's day so the humans could spend their time on the work they actually came here for. It paid out, and the methodology behind it is what produced the other four patents.
 
 [Robby: I Built an AI System to Kill the Super Chicken Problem](/ai/engineering/leadership/2026/02/19/robby-ai-sdlc-system.html)
 
