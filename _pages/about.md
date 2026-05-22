@@ -48,4 +48,3 @@ Principal / Staff Engineer or AI Architect roles, preferably in:
 - **Developer tooling / platform engineering**
 
 [Download My Resume](/resume.dominick.campbell.pdf){: .btn .btn--primary}
-[View Patents](/patents/){: .btn .btn--inverse}

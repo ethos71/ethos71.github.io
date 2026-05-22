@@ -7,12 +7,12 @@ author_profile: true
 ## Vertex Inc — King of Prussia, PA
 **Principal Engineer & AI Architect** · May 2022 – May 2026
 
-- Inventor on **4 patent-pending AI systems** targeting tax data synthesis, audit defense, code quality, and nexus compliance — [see all four](/patents/)
+- Inventor on **4 patent-pending AI systems** addressing tax data synthesis, audit defense, code quality, and nexus compliance
 - Leading AI researcher, architect, and engineer for the Data and Insights value stream — developing AI models and platforms infused into existing and new products
 - Built and shipped **Robby**, a patent-pending multi-agent system for SDLC orchestration, adopted across multiple teams · [read the deep dive](/ai/engineering/leadership/2026/02/19/robby-ai-sdlc-system.html)
 - Oversaw launch of Indirect Tax Intelligence and Indirect Tax Close products; led 10 teams of 50+ engineers driving Fortune 500 monthly tax close and government audit defense
-- Architected data pipelines processing 50M–100M transactions/day from Target, Starbucks, McDonald's via MS Dynamics, Vertex OSeries, SAP, and custom ETL
-- Led overhaul of metrics system estimated to save ~$1M/year through reclaiming unused customer data and cloud resources
+- Architected data pipelines processing tax-transaction volume from Fortune 500 retail and food-service customers across MS Dynamics, Vertex OSeries, SAP, and custom ETL
+- Drove cost-reclaim work on cloud resources and unused customer-data utilization
 - Designed and delivered the **AI Curiosity Workshop** ("Raise the Boats") — taught ~50 employees across engineering, product, and data science how to use AI and build custom agents · [read about the workshop](/ai/leadership/2026/03/18/teaching-200-people-to-build-ai-agents.html)
 
 ---

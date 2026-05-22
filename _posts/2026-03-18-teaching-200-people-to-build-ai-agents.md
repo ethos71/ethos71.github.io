@@ -9,7 +9,6 @@ tags:
   - teaching
   - crewai
   - autogen
-  - vertex
 excerpt: "Running the AI Curiosity Workshop — internally branded 'Raise the Boats' — at Vertex taught me more about how people actually learn AI than any framework documentation ever could."
 ---
 
@@ -36,7 +35,7 @@ We used crewAI and AutoGen heavily. Both are solid. But I want to be honest abou
 **What works:**
 - Multi-agent pipelines for research + synthesis tasks (summarize → validate → format)
 - RAG over structured internal data (policies, audit histories, transaction logs)
-- Code review and doc drift detection (which became the Doc Intel patent, actually)
+- Code review and doc-quality tooling
 
 **What doesn't (yet):**
 - Fully autonomous decision-making on anything with financial consequence

@@ -12,7 +12,7 @@ header:
       url: "https://www.linkedin.com/in/dominick-campbell-70b3619b/"
 excerpt: >
   **Principal Engineer & AI Architect** · 25+ years shipping systems from Mainframe to modern AI ·
-  4 Patent-Pending AI Inventions · Production systems serving 100M+ daily transactions · Led 50+ engineers
+  Inventor on 4 patent-pending AI systems · Production tax systems serving Fortune 500 customers · Led 50+ engineers
 
 intro:
   - excerpt: >
@@ -20,15 +20,6 @@ intro:
       how to do the same with AI. Currently open to **Principal / Staff Engineer** and **AI Architect** roles.
 
 feature_row:
-  - title: "4 Patent-Pending AI Inventions"
-    excerpt: >
-      **Data Cake** · **Audit Management Timber Model** ·
-      **Doc Intel** · **Mort AI Nexus** —
-      all developed at Vertex Inc., targeting tax data synthesis, audit defense, code quality,
-      and multi-state economic nexus compliance.
-    url: "/patents/"
-    btn_label: "View Patents"
-    btn_class: "btn--primary"
   - title: "25+ Years. Zero Shortcuts."
     excerpt: >
       Mainframe → J2EE → Microservices → Cloud → AI. Every era, every stack.
