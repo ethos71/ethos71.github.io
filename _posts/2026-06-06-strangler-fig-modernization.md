@@ -26,6 +26,15 @@ The difference wasn't talent. It wasn't budget. It was that we didn't do a rewri
 
 This post is about that pattern and why it works.
 
+```mermaid
+graph LR
+    M1[Monolith] --> M2[Monolith<br/>shrinks]
+    M2 --> M3[Microservices<br/>grow]
+    S[New service 1] --> M2
+    M3 --> S2[New service N]
+```
+_Figure: the strangler-fig pattern — new grows around old as old shrinks._
+
 ## Why rip-and-replace fails
 
 A monolith that's been in production for a decade isn't a code problem. It's a *running business* with integration contracts, regulatory commitments, billing flows, and undocumented behavior the customer support team has been quietly accommodating for years.
