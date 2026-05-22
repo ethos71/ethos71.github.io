@@ -38,6 +38,16 @@ If you can read the leading signals well enough, you can see the crossing coming
 
 ## The architecture
 
+```mermaid
+flowchart LR
+    A[Revenue stream<br/>per transaction] --> B[Per-state<br/>aggregator]
+    B --> C{Threshold<br/>check}
+    C -->|Within 90d| D[Forecast horizon<br/>30 / 60 / 90 day]
+    C -->|Already crossed| E[Backfill<br/>obligation report]
+    D --> F[Alert<br/>w/ driving factors]
+```
+_Figure: the prediction pipeline — raw revenue flows into per-state aggregators, the threshold check decides whether we forecast forward or backfill, and the forecast horizon feeds an alert that ranks the contributing signals._
+
 Mort AI Nexus is a predictive model that forecasts threshold crossings on a state-by-state, horizon-by-horizon basis. The core inputs:
 
 - The company's own transaction data (volume, geography, growth trajectory)
