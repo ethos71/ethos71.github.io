@@ -70,7 +70,7 @@ Why doesn't it generalize? Because my features are entirely about *the player*. 
 
 About 40% of predictions land within ±2 FP — useful for relative ranking. But the worst errors are 15+ FP, and they cluster in exactly the games my features can't see: a slumping batter explodes against a Triple-A call-up. Of course my model missed it. It didn't know the Triple-A call-up was on the mound.
 
-This is the 80/20 rule of ML stated plainly: 80% of accuracy comes from domain features, 20% from algorithm choice. Most teams I've seen invert that ratio and wonder why their pipeline doesn't move the needle.
+This is the 80/20 rule of ML stated plainly: 80% of accuracy comes from domain features, 20% from algorithm choice. Most teams I've seen invert that ratio and wonder why their pipeline doesn't get better in production.
 
 ## What I'd ship — and what I wouldn't
 
