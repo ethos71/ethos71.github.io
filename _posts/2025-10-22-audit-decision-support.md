@@ -21,6 +21,15 @@ header:
 
 Tax audits are expensive. Not just the settlement amounts — the decision cost. Every audit finding requires a judgment call: contest it, settle it, or absorb it? Each path has different legal costs, time costs, settlement risks, and precedent implications.
 
+```mermaid
+graph LR
+    F[Audit finding] --> Q{Decision}
+    Q --> A[Contest]
+    Q --> B[Settle]
+    Q --> C[Absorb]
+```
+_Figure: every finding is a contest / settle / absorb decision with its own cost shape._
+
 At Vertex, we had large enterprise customers managing dozens or hundreds of open audit findings at any moment. Each one is a decision. Most of those decisions were being made by humans using spreadsheets, gut feel, and whoever had the most institutional memory in the room.
 
 That bothered me.
