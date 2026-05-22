@@ -9,7 +9,7 @@ tags:
   - tax tech
   - nexus
   - machine learning
-excerpt: "Nexus threshold violations cost companies $100K–$500K per state. Mort AI Nexus is my patent-pending model for forecasting when you're about to cross — using economic indicators and regional signals as leading inputs."
+excerpt: "Nexus threshold violations cost companies $100K–$500K per state. Mort AI Nexus is my patent-pending model for forecasting when you're about to cross — before the state notice arrives."
 header:
   image: /assets/linkedin/mort-ai-nexus.png
   og_image: /assets/linkedin/mort-ai-nexus.png
@@ -32,46 +32,21 @@ Reactive monitoring works the way a smoke detector works. By the time it alarms,
 
 When a company crosses an economic nexus threshold, the obligation is immediate — but the discovery isn't. Most companies find out from a state notice arriving months after the crossing, with penalties and interest already attached. That gap between *event* and *discovery* is where the financial exposure lives.
 
-The problem isn't visibility into current transactions. Companies have that. The problem is the **forward signal**. Whether you're going to cross the threshold in a given state isn't just a function of what you sold last month. It's a function of regional economic activity, your own growth trajectory by geography, seasonal patterns, and migration trends — things that lead the transaction volume by weeks.
+The problem isn't visibility into current transactions. Companies have that. The problem is the **forward signal** — whether you're going to cross the threshold in a given state, weeks before the transaction volume itself tells you.
 
 If you can read the leading signals well enough, you can see the crossing coming.
 
-## The architecture
+## What Mort AI Nexus does
 
-```mermaid
-flowchart LR
-    A[Revenue stream<br/>per transaction] --> B[Per-state<br/>aggregator]
-    B --> C{Threshold<br/>check}
-    C -->|Within 90d| D[Forecast horizon<br/>30 / 60 / 90 day]
-    C -->|Already crossed| E[Backfill<br/>obligation report]
-    D --> F[Alert<br/>w/ driving factors]
-```
-_Figure: the prediction pipeline — raw revenue flows into per-state aggregators, the threshold check decides whether we forecast forward or backfill, and the forecast horizon feeds an alert that ranks the contributing signals._
+Mort AI Nexus is a predictive model that forecasts threshold crossings on a state-by-state, horizon-by-horizon basis. The output is a probability of crossing each state's threshold within a forward window, with the contributing factors ranked. A compliance team using it sees something closer to *"Texas is likely to cross in the next several weeks; here's what's driving it."* — in time to do something about it.
 
-Mort AI Nexus is a predictive model that forecasts threshold crossings on a state-by-state, horizon-by-horizon basis. The core inputs:
+The patent is still pending, so I'm staying high-level on what goes into the forecast and how the model weighs it. Happy to go deeper under NDA.
 
-- The company's own transaction data (volume, geography, growth trajectory)
-- Per-state threshold rules — there are 50+ different ones and they change
-- Regional economic indicators (housing market activity, employment data, retail spending indices, migration patterns)
-- Historical nexus crossings as labeled training data
-
-The model outputs a probability of crossing each state's threshold within 30, 60, and 90 days, with the driving factors ranked by contribution. A compliance team using it sees: *"Texas is 87% likely to cross in 45 days, primarily driven by Q3 transaction acceleration in the Houston metro plus your overall ARR trajectory."*
-
-That's a different conversation than the one tax teams have today. It's actionable. It happens in time to do something.
-
-## On the regional signals
-
-The signal that gets the most pushback is the **regional economic indicator** layer. The intuition isn't that we're predicting tax obligation directly from macroeconomics. We're using leading indicators of regional commercial activity as one input in a broader model.
-
-Why does this matter? Economic nexus is fundamentally about commerce in a state. State-level commerce moves with state-level economic conditions. Cold winters in northern states correlate with suppressed spring transaction volumes. Severe weather events affect regional economic activity for weeks. Local employment shifts move retail spending. These signals lead the per-state transaction volume by enough time to be useful as a forecasting input.
-
-We're not predicting nexus from the weather. We're using weather-correlated economic signals as one input alongside housing indices, employment data, migration patterns, and the company's own historical trajectory.
+That's a different conversation than the one tax teams have today. It's actionable. It happens in time to act.
 
 ## What we measured
 
-We tested the model against historical data first — backtesting against known nexus violations that had already occurred. It would have flagged 74% of them with a 45+ day warning window.
-
-That's not perfect. But it's dramatically better than finding out after a state notice.
+We backtested against historical nexus violations that had already occurred. The model would have flagged a meaningful majority of them well in advance of the actual crossing — enough lead time to register, configure, and brief the business before the obligation hit.
 
 The bigger shift wasn't the accuracy number. It was the change in posture. Tax teams running Mort AI Nexus stopped scrambling to retroactively file and started planning ahead. Registration, calculation configuration, internal briefings — all of it could happen in time. The companies that adopted it shifted from defensive compliance to proactive compliance.
 
@@ -79,7 +54,7 @@ The bigger shift wasn't the accuracy number. It was the change in posture. Tax t
 
 Beyond the prediction itself, the model's most valuable surface is **planning**.
 
-Tax compliance teams now had 60–90 days of visibility into which states were likely to become nexus states. That's enough time to:
+Tax compliance teams now had real lead time on which states were likely to become nexus states. That's enough time to:
 
 - Register with the state proactively
 - Configure tax calculation in the right systems

@@ -9,7 +9,7 @@ tags:
   - synthetic data
   - machine learning
   - tax tech
-excerpt: "The origin story of one of my patent-pending inventions — how a real problem with real stakes led to building a synthetic tax data generator using ML."
+excerpt: "The origin story of one of my patent-pending inventions — how a real problem with real stakes led to a synthetic tax data generator."
 header:
   image: /assets/linkedin/data-cake.png
   og_image: /assets/linkedin/data-cake.png
@@ -26,34 +26,11 @@ So we had a problem. You can't train a model on nothing. And synthetic data, if 
 
 ## What we actually built
 
-Data Cake is an NLP service that learns the statistical properties of real tax transaction data and generates synthetic records that are statistically indistinguishable from the real thing — but contain no actual customer information.
+Data Cake is a service that learns the statistical fingerprint of real tax transaction data and generates synthetic records that are statistically indistinguishable from the real thing — but contain no actual customer information.
 
-The core is XGBoost for learning the distributions and scikit-learn for the feature engineering and pipeline. We capture things like: how often does a given SIC code appear with a given jurisdiction? What's the typical transaction amount range for a Fortune 500 manufacturing company vs. a regional retailer? What ERP systems cluster with what company sizes?
+The synthetic records carry the same shape as production data: jurisdictions, SIC codes, company-size profiles, ERP systems, taxable amounts, tax rates, filing periods. The generator preserves the joint structure of those fields — the way a real industry constrains a real jurisdiction, the way company size shifts the amount distribution, the way certain combinations that look plausible on paper are legally impossible in practice. The constraints chain.
 
-Then we sample from those learned distributions to generate new records that feel authentic. The synthetic records have the same statistical fingerprint as real data without any of the compliance risk.
-
-A single generated row looks roughly like this:
-
-```python
-synthetic_row = {
-    "transaction_id": "tx_8e3a91c4",
-    "jurisdiction": "CA-LA-COUNTY",
-    "sic_code": 3674,
-    "company_size_bucket": "F500",
-    "erp_system": "SAP-S4",
-    "taxable_amount": 14820.55,
-    "tax_rate": 0.0975,
-    "tax_collected": 1444.99,
-    "line_items": 7,
-    "exemption_certificate": None,
-    "filing_period": "2024-Q3",
-    "audit_flag": False,
-    "source_distribution_hash": "d41a...c0b2",
-}
-```
-
-Every field is sampled — but sampled jointly, conditioned on the others. The SIC code constrains the jurisdiction distribution. The jurisdiction constrains the tax rate. Company size shifts the amount distribution. The constraints chain.
-
+The patent is still pending, so I'm staying high-level on the generator itself. Happy to walk through the technique under NDA.
 
 ## What surprised me building it
 
@@ -62,12 +39,15 @@ Two things.
 First: the hardest part wasn't the ML. It was figuring out what "realistic" meant in the context of tax data. Tax data has deeply weird distributions. Jurisdiction-level tax rules create hard floors and ceilings on amounts. Certain industries only appear in certain states. Some combinations that are statistically plausible are legally impossible. Getting the constraints right took more domain knowledge than model tuning.
 
 Second: once it worked, the use cases exploded beyond what we originally intended. We built it for model training. But it immediately became useful for:
+
 - Safe demo data for customer pilots
 - Load testing with realistic data distributions
 - Onboarding new engineers who needed to work with production-shaped data without touching production
 - QA environments that had previously been either too small to be meaningful or too real to be safe
 
 That's the thing about solving a hard, real problem well — the solution tends to have more surface area than you planned for.
+
+The bigger outcome: ML projects at Vertex stopped being a regulatory negotiation. We could move from "is there a path to data?" to "what model do we want to train?" — which is the conversation engineers should be having in the first place.
 
 ## On the patent process
 

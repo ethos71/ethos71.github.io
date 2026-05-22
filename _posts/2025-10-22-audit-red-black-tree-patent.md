@@ -1,15 +1,15 @@
 ---
-title: "Why I Built a Self-Balancing Tree to Make Audit Defense Decisions"
+title: "How I Built Decision Support for Audit Defense"
 date: 2025-10-22
 categories:
   - Engineering
   - AI
 tags:
   - patents
-  - algorithms
   - tax tech
   - audit
-excerpt: "The Audit Management Red Black Tree Timber Model started as a question: why are we making $50K decisions based on gut feel when we have the data to do better?"
+  - decision support
+excerpt: "Audit defense decisions were being made by gut feel and whoever had the most institutional memory in the room. I built a patent-pending model to change that."
 header:
   og_image: /assets/linkedin/linkedin-banner.png
   teaser: /assets/linkedin/linkedin-banner.png
@@ -31,28 +31,11 @@ The threshold question — "at what ROI does it make sense to contest vs. settle
 
 Nobody had a good answer. Everyone had an opinion.
 
-## Why a Red Black Tree
+## What I built
 
-The Audit Management Red Black Tree Timber Model uses a self-balancing binary search tree to maintain and query ROI threshold recommendations in real time as new audit data flows in.
+A patent-pending decision-support model that takes a stream of audit findings, the historical record, and the company's own risk posture and outputs a per-finding recommendation: contest, settle, or absorb — with a confidence score and the key factors driving the recommendation.
 
-Here's the intuition: you're constantly inserting new data points — new outcomes, new settlements, new contest results. You need to query threshold recommendations fast. And the tree needs to stay balanced as the data distribution shifts, otherwise your query performance degrades and, more importantly, your recommendations skew toward stale data.
-
-A red-black tree gives you O(log n) insert and query with guaranteed balance. The "Timber" part of the name refers to the model's ability to prune branches — historical data that no longer reflects current conditions gets rotated out of the active tree as the model detects distribution shift.
-
-```mermaid
-graph TD
-    A[ROI = 0.62<br/>Contest threshold]:::black --> B[ROI = 0.31<br/>Settle: low jurisdiction win-rate]:::red
-    A --> C[ROI = 0.84<br/>Contest: strong precedent]:::red
-    B --> D[ROI = 0.18<br/>Absorb: below legal-cost floor]:::black
-    B --> E[ROI = 0.47<br/>Settle: medium risk]:::black
-    C --> F[ROI = 0.91<br/>Contest: clean fact pattern]:::black
-    classDef red fill:#b91c1c,stroke:#fecaca,color:#fff;
-    classDef black fill:#1f2937,stroke:#9ca3af,color:#fff;
-```
-_Figure: A snapshot of the decision tree — each node is an audit finding keyed by ROI; color encodes the red-black invariant the model maintains as new outcomes get inserted._
-
-
-The output is a per-finding recommendation: contest, settle, or absorb — with a confidence score and the key factors driving the recommendation.
+The patent is still pending, so I can't go deep on how the engine works under the hood. Happy to talk through the technique under NDA. What I can say: the model is designed to keep its recommendations current as new outcomes flow in and as the underlying distribution shifts. Recommendations age. Stale recommendations are worse than no recommendation, and the system is built to know the difference.
 
 ## What changed when we deployed it
 
@@ -66,4 +49,4 @@ That's what good decision support tooling should do. Not replace the judgment �
 
 ---
 
-*Audit Management Red Black Tree Timber Model is patent pending. Developed at Vertex Inc., 2025.*
+*Audit Management decision-support model is patent pending. Developed at Vertex Inc., 2025.*

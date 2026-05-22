@@ -31,41 +31,21 @@ That's not a documentation problem. That's a confidence problem. The docs existe
 
 ## What Doc Intel does
 
-Doc Intel is a confidence scoring system that measures the degree of drift between source code and its documentation. As code evolves over time, Doc Intel continuously scores the health of the relationship between what the code *does* and what the docs *say it does*.
+Doc Intel is a scoring system that measures how well a codebase's documentation actually matches the code it claims to describe. As the code evolves, Doc Intel continuously scores the health of the relationship between what the code *does* and what the docs *say it does*.
 
-It looks at things like:
-- Function signatures vs. their docstrings — are the parameters still accurate?
-- Module-level descriptions vs. actual exported behavior
-- Inline comments that reference conditions or logic that no longer exists
-- API contracts described in docs vs. the actual current interface
+The output is a per-file, per-function score — plus aggregated health metrics at the module and repository level. It's not a linter. It's a signal. It tells you *where to look*, not just *that something is wrong*.
 
-The output is a per-file, per-function confidence score — plus aggregated health metrics at the module and repository level. It's not a linter. It's a signal. It tells you *where to look*, not just *that something is wrong*.
+The patent is still pending, so I'm staying high-level on the mechanics. Happy to go into it under NDA.
 
-## Why I think this is worth a patent
+## What teams did with it
 
-The insight wasn't "compare code to docs." Tools have been trying that forever with varying success.
+The point wasn't a number on a dashboard. It was giving engineering teams a way to talk about documentation debt the same way they already talk about code coverage debt — quantifiable, tracked over time, integrated into the development workflow, brought up in PR review when it matters.
 
-The insight was **confidence over time**. A doc that was accurate yesterday and slightly less accurate today has a different risk profile than a doc that hasn't been touched in two years and the code it describes has been rewritten three times. The trajectory matters. The rate of drift matters.
+Nobody had noticed the drift accumulating on the pipelines we instrumented. The team was shipping. Velocity looked great. The docs had quietly fallen off the cliff, and the only person who would have known was the senior engineer who was about to go on parental leave.
 
-Here's what that drift looked like in one of the pipelines we instrumented — six months of activity on a single service:
+The first internal team to run it had a senior engineer say "I had no idea it had gotten this bad." That's when I knew we'd built something real.
 
-**Code-vs-doc drift over six months**
-
-| Month | Code commits | Doc commits | Drift ratio |
-|---|---:|---:|---:|
-| Month 1 | 42 | 14 | 3.0x |
-| Month 2 | 51 | 12 | 4.2x |
-| Month 3 | 67 | 9  | 7.4x |
-| Month 4 | 58 | 6  | 9.7x |
-| Month 5 | 74 | 4  | 18.5x |
-| Month 6 | 81 | 3  | 27.0x |
-
-Nobody noticed it happening. The team was shipping. Velocity looked great. The docs just quietly fell off the cliff. By month six, the README's mental model and the running service shared almost no overlap — and the only person who would have known was the senior engineer who was about to go on parental leave.
-
-
-We built it so teams could surface documentation debt the same way they surface code coverage debt — as a quantifiable metric, tracked over time, integrated into the development workflow.
-
-The first internal team to use it had a senior engineer say "I had no idea it had gotten this bad." That's when I knew we'd built something real.
+The shift it produced was simple: doc health stopped being an opinion. It became a number teams could see, trend, and own.
 
 ---
 
