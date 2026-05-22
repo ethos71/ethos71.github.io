@@ -36,11 +36,9 @@ Where there's a deeper post on the system, I link to it. Where there isn't, I go
 
 The problem was the super-chicken problem. Teams stacked with high individual performers were producing less, not more. People were spending half their day in process — Jira hygiene, status updates, sprint planning, design reviews — and the half they had left wasn't enough to do the actual work.
 
-Robby is a multi-agent orchestration system that handles the entire software development lifecycle. **70 skills. 15 specialized roles.** A head-chef agent (Robby) routes incoming work to specialist agents — an architecture agent, a testing agent, a project-management agent, a security agent, a UX agent. Each agent has focused tools and prompt templates. The code is the source of truth. Robby reads the running code and produces specs, reviews, sprint plans, and stakeholder docs from there.
+Robby is a patent-pending multi-agent AI system for SDLC orchestration. The bet was that an AI layer could absorb the process work eating my team's day — and free the humans to do the engineering they actually love. It paid out: the people who used to spend their afternoon on Jira hygiene and status updates started spending it on the work they came here for.
 
-The kitchen metaphor isn't decoration. A real kitchen doesn't have one person cooking, plating, expediting, and washing dishes. Neither does a real engineering org. Robby's whole bet is that an AI orchestrator can do the routing — and free the humans to do the work they actually love.
-
-**Tech:** crewAI, AutoGen, LangChain, Langfuse, MCP, Vue.js Copilot Chat, ArgoCD, GitHub Actions, Datadog
+**Tech:** multi-agent AI tooling, ArgoCD, GitHub Actions, Datadog
 **Outcome:** Adopted across multiple teams; "AI Curiosity Workshop" trained ~50 engineers on how to extend it
 **Deeper read:** [Robby: I Built an AI System to Kill the Super Chicken Problem](/2026/02/19/robby-ai-sdlc-system.html)
 
@@ -57,12 +55,12 @@ The Wayfair ruling in 2018 changed sales-tax compliance for every company doing 
 
 The existing approach was reactive. Tax teams reviewed quarterly reports and chased compliance after the fact. The financial exposure for a single missed state could run $100K–$500K.
 
-Mort AI Nexus is an AI-driven detection system that monitors transaction patterns in real time, predicts when a customer is approaching a nexus threshold in a given state, and triggers proactive registration workflows before the threshold is crossed. The model uses pattern analysis informed by the Wayfair ruling and per-state threshold rules — and learns from confirmed nexus crossings to improve forecasting.
+Mort AI Nexus is a patent-pending AI system that shifts nexus discovery from reactive to predictive — so compliance teams can register and configure tax calculation ahead of crossing a state's threshold, instead of catching up after a state notice arrives.
 
 The shift wasn't accuracy. It was timing. Customers stopped finding out about nexus exposure from state notices. They started finding out from the platform, weeks before the line.
 
-**Tech:** Java, Spring Boot, AWS, ML pattern analysis, real-time transaction streaming
-**Outcome:** Customers shifted from reactive quarterly reviews to real-time nexus monitoring; preventable penalty exposure reduced
+**Tech:** Java, Spring Boot, AWS, real-time transaction streaming
+**Outcome:** Customers shifted from reactive quarterly reviews to forward-looking nexus monitoring; preventable penalty exposure reduced
 **Deeper read:** [Mort AI Nexus — A Patent for Detecting When You've Crossed a Line](/2026/01/14/mort-ai-nexus-patent.html)
 
 ---
@@ -95,13 +93,11 @@ The fraud-prevention side mattered, but the customer-experience side was the unl
 
 You can't train tax AI on real customer transactions. The data is PII-laden, regulated, and contractually restricted. But you also can't train tax AI without realistic transactional data — synthetic data that doesn't reflect the actual statistical properties of tax events produces models that fall apart in production.
 
-Data Cake is an NLP service that generates realistic synthetic tax data by learning the statistical properties from real customer data — without exposing the underlying PII. The pipeline learns distributions over jurisdictions, transaction sizes, product taxability codes, exemption patterns, and rare-event tails. Then it generates synthetic transaction streams that match those distributions while breaking any traceable link to real customers.
+Data Cake is a patent-pending system for generating realistic synthetic tax data that ML projects can train against without putting real customer transactions at risk. Synthetic outputs respect tax-law validity, so downstream models train on something that actually behaves like the production world.
 
-The architecture combines XGBoost and scikit-learn for the statistical modeling with a deterministic rules engine that enforces tax-law constraints in the generated output (a synthetic transaction has to be a valid transaction — the right jurisdictional codes, valid exemption certificates, plausible product types).
+What changed when we deployed it: model training stopped being a regulatory negotiation. New ML projects could spin up training data in days instead of quarters — without ever touching real customer information.
 
-What changed when we deployed it: model training stopped being a regulatory negotiation. New ML projects could spin up training data in days instead of quarters. And the models trained on Data Cake-generated transactions performed within 2% of models trained on real data — without ever touching real customer information.
-
-**Tech:** Python, XGBoost, scikit-learn, NLP, deterministic rules engine
+**Tech:** Python, NLP-driven generation, deterministic rules engine for tax-law validity
 **Outcome:** Removed the data-access bottleneck for AI model training; enabled tax ML projects that previously couldn't be greenlit
 **Deeper read:** [How Data Cake Got Built](/2025/12/11/how-data-cake-got-built.html)
 
