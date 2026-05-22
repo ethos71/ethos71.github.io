@@ -64,3 +64,24 @@
 }
 </script>
 {% endif %}
+
+{% comment %}
+  Mermaid.js for inline diagrams in posts. Loaded from jsDelivr as an ES
+  module. Theme `dark` matches the site's dark skin. The bridge script
+  converts kramdown's <code class="language-mermaid"> blocks into the
+  <div class="mermaid"> shape mermaid scans on init.
+{% endcomment %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('code.language-mermaid').forEach(el => {
+    const div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = el.textContent;
+    el.parentNode.replaceWith(div);
+  });
+});
+</script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose' });
+</script>
