@@ -23,7 +23,7 @@ development without exposing sensitive customer PII.
 training-data bottleneck without the compliance risk. Models trained on Data Cake performed within
 2% of models trained on real data — without ever touching real customer information.
 
-[Read the deep dive →](/2025/12/11/how-data-cake-got-built.html)
+[Read the deep dive →](/engineering/ai/2025/12/11/how-data-cake-got-built.html)
 
 ---
 
@@ -57,7 +57,7 @@ measure of documentation health across their entire codebase.
 **Why it matters**: Documentation rot is silent and expensive. Doc Intel makes it visible and
 measurable, before the gap becomes a production incident or an onboarding tax.
 
-[Read the deep dive →](/2026/01/28/doc-intel-patent.html)
+[Read the deep dive →](/engineering/ai/2026/01/28/doc-intel-patent.html)
 
 ---
 
@@ -80,7 +80,7 @@ calculation in advance instead of catching up after the fact.
 **Why it matters**: Per-state exposure runs $100K–$500K. Mort AI Nexus shifts discovery from
 reactive ("we got a state notice") to predictive ("we'll cross in 60 days, here's what to do").
 
-[Read the deep dive →](/2026/01/14/mort-ai-nexus-patent.html)
+[Read the deep dive →](/engineering/ai/2026/01/14/mort-ai-nexus-patent.html)
 
 ---
 
