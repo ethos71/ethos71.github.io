@@ -29,8 +29,8 @@ _Figure: every era. Same fundamentals underneath._
 ## 1. The database outlives everything
 
 You will rewrite the application 4 times. The database schema you shipped in 2008 will still be
-there in 2026, quietly haunting every new engineer who joins the team. Design your data model like
-it's permanent. Because it basically is.
+there in 2026, quietly haunting every new engineer who joins the team. Design the data model like
+it's permanent, because it basically is.
 
 ## 2. Observability is a feature, not a tax
 
@@ -46,16 +46,15 @@ data generators, and multi-agent systems. And the most important thing I've lear
 **AI doesn't eliminate the need for good system design — it punishes bad system design faster.**
 {: .notice--info}
 
-A poorly-designed traditional service degrades gracefully. A poorly-designed AI service hallucinates
-confidently.
+A traditional service with a weak design degrades. An AI service with a weak design starts inventing
+answers, and it sounds confident doing it.
 
 ## 4. The best engineers I've met are fundamentally teachers
 
 At Vertex, I built and delivered the "Raise the Boats" curriculum — teaching 200+ engineers and
 analysts how to use AI tools and build production agents. The engineers who resisted "wasting time
-teaching" were consistently the ones whose work became a single point of failure.
-
-Knowledge that lives in one person's head is technical debt you haven't put on the balance sheet yet.
+teaching" were consistently the ones whose work became a single point of failure. When they left,
+their systems left with them.
 
 ## 5. Every great product I've shipped had a clear owner
 

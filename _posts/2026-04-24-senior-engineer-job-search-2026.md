@@ -43,7 +43,7 @@ But for senior engineers who can architect systems, evaluate tradeoffs, and lead
 
 The job descriptions I'm seeing for principal/staff roles are asking for things like: multi-agent system design, LLM observability, AI safety/reliability patterns, leading teams through an AI transformation. That's a narrow pool. I happen to be in it.
 
-Know what your specific value is. Don't compete on breadth — compete on depth.
+Know what your specific value is, and lead with it.
 
 ## The conversation that's changed
 
@@ -61,6 +61,6 @@ Tax, compliance, fintech — I know those domains. But I'm open to any technical
 
 If that's you, [find me on LinkedIn](https://www.linkedin.com/in/dominick-campbell-70b3619b/).
 
-More updates as this unfolds. I'm going to document this process — the good, the awkward, and the things that don't work — because I think more senior engineers should talk honestly about what job searching is actually like. We tend to only share the win announcement.
+More updates as this unfolds. I'm going to document this process — including the awkward parts — because more senior engineers should talk honestly about what job searching is actually like. We tend to only share the win announcement.
 
 More soon.

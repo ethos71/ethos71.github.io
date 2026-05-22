@@ -34,9 +34,9 @@ _Figure: the data-access problem the patent addresses._
 
 ## What we actually built
 
-Data Cake is a patent-pending service that removes the training-data bottleneck for tax ML — without any real customer data ever leaving its system of record. The patent is still pending, so I'm staying high-level. Happy to walk through the problem under NDA.
+Data Cake is a patent-pending service that removes the training-data bottleneck for tax ML — without any real customer data ever leaving its system of record. The patent is still pending, so I'm staying high-level on the mechanism.
 
-The point isn't the cleverness of the technique. The point is the outcome: ML projects at Vertex stopped being a regulatory negotiation. We moved from "is there a path to data?" to "what model do we want to train?" — which is the conversation engineers should be having in the first place.
+The outcome was the part that mattered: ML projects at Vertex stopped being a regulatory negotiation. We went from "is there a path to data?" to "what model do we want to train?" That's the conversation engineers should be having in the first place.
 
 ## What surprised me building it
 
@@ -51,7 +51,7 @@ Second: once it worked, the use cases exploded beyond what we originally intende
 - Onboarding new engineers who needed to work with production-shaped data without touching production
 - QA environments that had previously been either too small to be meaningful or too real to be safe
 
-That's the thing about solving a hard, real problem well — the solution tends to have more surface area than you planned for.
+Solutions to hard problems usually have more surface area than the original problem did.
 
 ## On the patent process
 
@@ -59,4 +59,4 @@ Filing a patent as an engineer at a company is a strange experience. You write a
 
 It's worth doing. Not because patents are the point — they're not — but because the process of writing a patent application forces you to articulate your invention precisely enough that someone else could implement it. That's a clarifying exercise. I'd recommend it for any engineer who's built something genuinely novel.
 
-Data Cake is pending. So are the other three. Watch this space.
+Data Cake is pending. So are the other three.
