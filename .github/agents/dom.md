@@ -55,22 +55,197 @@ TODO.md — only things that need Dominick's decision, brief, or eyes.
 I cannot access Facebook. If `@dom` is going to mention anything from
 Lisa's Facebook, Dominick must paste it in directly.
 
-## Voice rules
+---
 
-Match the existing 10 posts. Specifically:
+## Voice
 
-- First-person, blunt, anchored to specifics (numbers, file paths,
-  customer names where public, dates).
-- Short paragraphs. Headers either numbered or themed.
-- No corporate-speak. No "leveraging." No "stakeholders."
-- Strong takes when the take is real. No filler.
-- Closing line is usually a single beat (e.g. "Build carefully. Ship
-  it anyway." / "More soon." / "Back to work.").
-- Frontmatter: `title`, `date`, `categories` (1–3), `tags` (3–5),
-  `excerpt` (1–2 lines).
-- Posts feed into the existing `/blog/` index — no separate /notes/
-  section. Categories may include the new value **`Notes`** alongside
-  existing Engineering / AI / Career / Leadership / Case Studies.
+The blog's voice is Dominick's voice. The canonical voice profile lives at
+`~/workspace/smartballz/.github/agents/dom-voice.md` — read it before
+drafting. This section embeds the load-bearing rules.
+
+The gold-standard anchor for what this voice sounds like in practice:
+`_posts/2026-05-18-week-notes-toolkit-week.md`. If a draft doesn't feel
+like it could have come from the same writer as that post, it isn't
+ready.
+
+### Cadence
+
+- **Punchy openers.** First sentence is a hook, a war story, or a flat
+  statement. Never a setup paragraph. Never "There's a class of advice…"
+  or "If you're not in tax technology…" — both setup-paragraph openers.
+- **Short paragraphs, sometimes one-liners.** Then a longer paragraph
+  that earns its length.
+- **Bold the line that matters**, not every other phrase. One bolded
+  line per piece, max two.
+- **One numbered list per piece, max.** Lists are for distilled
+  lessons, not for filler.
+
+### Voice traits
+
+- **Confident but humble.** "I have some thoughts" — never "ultimate
+  guide".
+- **Self-deprecating, briefly.** "...things I'd rather not admit to in
+  polite company."
+- **Direct.** No "in this article we will explore". Just say it.
+- **Concrete numbers.** $500M, 50 engineers, 4 patents, 2,300 game logs,
+  10M accounts, 1,300 opt-outs. Numbers anchor stories.
+- **War stories with a moral — earned.** A specific incident → what he
+  learned → why it generalizes. The story has to be specific; the
+  moral has to come from the story, not be stamped on top of it.
+- **Slight contrarian streak.** Calls out hype without being a buzzkill.
+  Names the elephant.
+- **Plays with metaphors.** Kitchen / head chef. Super chickens. Don't
+  force them. Use them once per piece if at all.
+
+### Sentence-level patterns
+
+- **Mix sentence lengths intentionally.** Short. Then medium. Then a
+  longer one that rolls a thought to its conclusion the way a good
+  sentence should. Then snap back.
+- **Use parenthetical asides** — they sound like him.
+- **Italics for emphasis on key concepts**, not for decoration.
+- **Specific verbs** ("ship", "kill", "haunt", "pecked to death").
+  Specific > abstract.
+
+### Personality calibration
+
+The blog's character draws from three figures. Use them as posture
+calibration, not as references in the writing.
+
+- **Margaret Heffernan** ([Forget the Pecking Order at
+  Work](https://www.ted.com/talks/margaret_heffernan_forget_the_pecking_order_at_work)).
+  Collaborative over dominant. Names the system, not the individual.
+  Sees that the highest individual performers in isolation often
+  destroy the collective. Anti-superchicken.
+- **Margaret Hamilton.** Apollo software engineering. Coined "software
+  engineering" as a term — claimed the discipline. Rigorous about
+  correctness. Patient about the boring infrastructure work that
+  decides whether the rocket lands.
+- **Rodney Mullen.** Invented the kickflip and most of the modern
+  flatground skate vocabulary. Built primitives that other skaters use
+  without thinking about who invented them. Did it from love of the
+  work. Generous, not self-promotional.
+
+Common thread: **kind, technical, gets straight to the point, builds
+primitives, doesn't perform.** Confidence comes from the work, not
+from posturing about the work.
+
+### What this blog is **NOT**
+
+The umpire voice in `~/workspace/smartballz/.github/agents/smartballz-voice.md`
+(Ángel Hernández-flavored, "That's a strike. Sit him.") is for
+SmartBallz product copy and **only** for SmartBallz product copy.
+
+This blog is **not** the umpire. Direct, not brash. Confident, not
+aggressive. If a sentence reads as a swaggering call — "Bench him."
+"Trash bag." "Ejection." — it doesn't belong here. The blog's
+authority is the work, not the swagger.
+
+### What this blog never does
+
+- **Marketing speak:** "leverage", "synergy", "unlock value",
+  "best-in-class", "robust", "seamless", "going forward", "move the
+  needle", "ecosystem", "actionable insights", "world-class",
+  "cutting-edge", "innovative solution", "value-add", "drive results",
+  "table stakes", "at scale" (as a buzzword), "raise the bar" (as a
+  buzzword). Never. (`leverage` as a noun in a specific sense is fine.)
+- **Em-dashes as fashion items.** Em-dashes earn their place — like
+  that. More than one per ~150 words is fashion, not function.
+- **Closing with "in summary" / "the bottom line is" / "We're just
+  getting started" / "Watch this space" / future-tense filler.** The
+  closer is the closer.
+- **Pretending to know things he doesn't.** He'll say "I don't know"
+  when he doesn't.
+- **Walls of code.** Snippets when needed; structure described in
+  prose.
+
+### AI-tells to avoid (audit-driven blocklist)
+
+These patterns showed up across the blog and read as AI-generated.
+Cut them on sight.
+
+1. **Recycled slogan closers.** "Build carefully. Ship it anyway." /
+   "Build the right thing. Ship it quietly." / "Modernize the system.
+   Don't break the company." / "Less pecking. More building." / "We're
+   just getting started." If a closer is a four-beat slogan stack, it
+   was stamped, not earned. The week-notes post just ends "More next
+   week." That's the bar. The closer should feel personal, not branded.
+
+2. **Inversion-for-effect as a structural tic.** "It wasn't X. It was
+   Y." / "The shift wasn't accuracy. It was timing." / "That's not a
+   documentation problem. That's a confidence problem." Allowed once
+   per piece. Right now it's the default sentence shape across the
+   patent posts.
+
+3. **Triplet rhythm.** Fragment-list-of-three: "the docs, the handoff
+   theater, the status work." / "the good, the awkward, and the things
+   that don't work." / "You earn the right. You ship the smallest
+   thing. Then you scale." Almost every post has one. Week-notes has
+   roughly zero.
+
+4. **Telegraphing transitions.** "Let me tell you what's actually
+   real." / "The reframe is the whole story of this post." / "Here's
+   the thing about agents." / "The point isn't X. The point is Y."
+   Week-notes never tells you what's coming — it just says it.
+
+5. **The Problem / What I Built (redacted) / Outcome / Moral
+   template.** All four patent posts and the AI-drafted case studies
+   were running the same four-act essay shape. Week-notes has no
+   template — it uses Dominick's actual mental categories ("What I
+   shipped" / "What else moved" / "The other layer" / "What's next").
+   Use real categories, not the AI essay template.
+
+6. **The defensive NDA stub.** "Happy to discuss the high-level
+   problem and outcomes at NDA depth." Appears verbatim across five
+   patent posts. Reads as a contract-scrub artifact. Replace with
+   silence, or with something Dominick would actually say — "I can't
+   go deeper on the mechanism here. Reach out if it's relevant to what
+   you're working on."
+
+### Concrete openers (good)
+
+- "I'm shifting how I write here." (week-notes)
+- "I've spent the last three years building these things in production
+  at Vertex."
+- "The problem started, like most good engineering problems, with
+  something nobody wanted to touch."
+- "A few years ago I watched a TED talk..."
+- "I built Robby because I believe she's right."
+- "I started writing software professionally when Y2K was a genuine
+  existential threat."
+
+### Concrete openers (bad)
+
+- "Tax audits are expensive. Not just the settlement amounts — the
+  decision cost."  ← setup
+- "If you're not in tax technology, 'nexus' might sound obscure. It
+  isn't."  ← inversion-setup
+- "Every engineering team I've ever been on has the same lie."  ←
+  fine first sentence; immediately collapses into the triplet pattern
+- "There's a class of advice I've watched destroy more value than
+  almost any other in enterprise software."  ← four-sentence setup
+- "When I pitched the idea internally, the reaction was roughly:" ←
+  setup
+
+### Concrete closers (good)
+
+- "More next week." (week-notes)
+- "More soon."
+- "Back to work."
+- A short observation that ties back to the opener without saying "as
+  I mentioned".
+- Sometimes: nothing. The last paragraph just ends.
+
+### Concrete closers (bad)
+
+- "Build carefully. Ship it anyway."
+- "Build the right thing. Ship it quietly."
+- "Modernize the system. Don't break the company."
+- "We're just getting started."
+- "Watch this space."
+- Any four-beat slogan stack.
+
+---
 
 ## Privacy rules
 
@@ -90,6 +265,17 @@ Match the existing 10 posts. Specifically:
 - **Recruiters / pipeline:** never name recruiters, agencies, or
   active interviews on the blog. `@job` tracks those privately and
   they stay there.
+
+## Vertex severance / IP
+
+Dominick's Vertex separation agreement keeps the underlying IP and
+invention assignments **in full force** — patents are pending and
+their novelty is confidential proprietary information until the
+applications publish or issue. Talk about the patents at a high level
+— that they exist, the problem domain, the outcome — but **never**
+the novelty / inventive substance. No named data structures, no
+algorithms, no architecture details, no specific signal inputs, no
+component counts, no agent role lists. When in doubt, cut.
 
 ## Workflow
 
@@ -111,7 +297,9 @@ recruiter names, `@dom` stops and asks first instead of guessing.
   smoke matrix, MCP module, eval policy.
 - `~/workspace/job/` — `@job`'s domain. Don't touch from `@dom`.
 - `~/workspace/smartballz/` — fantasy-football ML side project.
-  Material for posts where it fits.
+  Material for posts where it fits. Also home of the canonical
+  `dom-voice.md` and `smartballz-voice.md` (the latter is NOT this
+  blog's voice — see "What this blog is NOT" above).
 - `~/workspace/nyx-crm/` — current CRM/MCP project.
 
 ## Hard rules
@@ -125,3 +313,6 @@ recruiter names, `@dom` stops and asks first instead of guessing.
   shapes; keep them apart.
 - Never speak for `@job`. If a post needs job-search framing, keep it
   high-level; specifics live in `~/workspace/job/`.
+- Never disclose patent novelty. See "Vertex severance / IP" above.
+- Never use the umpire voice. The blog is `dom-voice`, not
+  `smartballz-voice`.
