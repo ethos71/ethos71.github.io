@@ -45,6 +45,28 @@ We called it the kitchen because that's what it is. Robby is the **head chef**.
 
 When a project comes in, Robby doesn't try to do everything himself. He knows which chef to call. The **@test chef** has a full set of testing skills — TDD patterns, Cypress templates, integration test scaffolding, coverage analysis — and Robby hands him the ticket and says *make the soup*. The @test chef uses his skills like a chef uses recipes: proven patterns, applied with judgment to the specific ingredients in front of him.
 
+```mermaid
+graph TB
+    O[Orchestrator<br/>head chef]
+    A[Architect]
+    C[Coder]
+    T[Test-writer]
+    R[Reviewer]
+    D[Doc-writer]
+    O -->|delegates design| A
+    O -->|delegates build| C
+    O -->|delegates tests| T
+    O -->|delegates docs| D
+    A --> C
+    C --> T
+    T --> R
+    R -->|feedback loop| C
+    R -->|sign-off| O
+    D --> O
+```
+_Figure: the kitchen brigade — the orchestrator delegates outward, the reviewer feeds critique back to the coder until the dish is ready to plate._
+
+
 The 15 roles cover the full SDLC:
 
 - **@arch** — Architecture agent: ADRs, technical design docs, tradeoff analysis
