@@ -16,6 +16,13 @@ When I pitched the idea internally, the reaction was roughly: *that's a lot of t
 
 I pushed anyway. By the time we wrapped two years in, 200+ employees across engineering, product, data science, and — yeah — some finance folks had been through the **AI Curiosity Workshop** (we called it "Raise the Boats" internally). About 50 of them came through the live cohort I taught directly; the rest worked through the curriculum I built around it. I learned more from teaching it than I expected.
 
+```mermaid
+graph TB
+    W[Workshop<br/>graduates] --> R[Higher waterline]
+    R --> T[Team operating<br/>higher]
+```
+_Figure: what "raise the boats" means in practice._
+
 ## The thing nobody told me about teaching AI
 
 Most engineers I work with are smart. Like, genuinely sharp. But when I started the curriculum, I kept hitting the same wall: people understood what a large language model *was* in the abstract, but they couldn't picture what to actually *do* with it in the context of their day job.
