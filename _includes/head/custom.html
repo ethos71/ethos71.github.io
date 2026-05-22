@@ -18,3 +18,49 @@
 <meta name="theme-color" content="#0f1419">
 <meta name="msapplication-TileColor" content="#0f1419">
 <meta name="apple-mobile-web-app-title" content="DC">
+
+{% comment %}
+  Twitter Card meta. jekyll-seo-tag emits og:* tags but not the twitter:*
+  variants on its own without a `twitter.username` set, and we don't have
+  a Twitter handle to declare. Emit them ourselves so link unfurls work
+  on X / Slack / Discord regardless. summary_large_image because every
+  post defaults to the LinkedIn banner og_image in _config.yml.
+{% endcomment %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+{% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 200 }}">{% else %}<meta name="twitter:description" content="{{ site.description }}">{% endif %}
+<meta name="twitter:image" content="{{ site.url }}{{ page.header.og_image | default: '/assets/linkedin/linkedin-banner.png' }}">
+
+{% if page.layout == "single" %}
+{% comment %}
+  Per-post BlogPosting JSON-LD. Emits only on `single` layout, which
+  covers _posts/ (via the posts default in _config.yml) without touching
+  _pages/ (those also use single but won't have page.date set sanely).
+  Falls through gracefully when optional fields are missing.
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.url | jsonify }}
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }}
+  },
+  "description": {{ page.excerpt | strip_html | strip_newlines | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "url": "{{ site.url }}{{ page.url }}",
+  "image": "{{ site.url }}{{ page.header.og_image | default: '/assets/linkedin/linkedin-banner.png' }}"
+}
+</script>
+{% endif %}

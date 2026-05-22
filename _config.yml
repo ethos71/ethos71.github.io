@@ -56,6 +56,15 @@ tag_archive:
 
 # No analytics. Recruiters and engineers tell us when they read the site.
 
+# Search (Minimal Mistakes built-in Lunr.js — no node/npm needed,
+# the theme ships the lunr bundle and index generator. Adds a search
+# icon to the masthead that opens a full-screen overlay.)
+search: true
+search_full_content: true
+search_provider: lunr
+lunr:
+  search_within_pages: false
+
 # SEO
 twitter:
   username:

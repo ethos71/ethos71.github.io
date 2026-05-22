@@ -3,6 +3,8 @@ permalink: /blog/
 title: "Blog"
 layout: posts
 author_profile: true
+classes: wide
+entries_layout: grid
 ---
 
 I write here about engineering at scale, AI in production, and the parts everyone leaves out of the pitch deck. Twenty-five years of doing this and I'm still surprised at how often the interesting story is the one nobody mentions until two beers in.

@@ -56,10 +56,54 @@ feature_row2:
       **Data**: Snowflake, PostgreSQL, Kafka, Spark, dbt, Airflow  
       **Frontend**: React, Next.js, Vue.js, Angular  
       **Earlier career**: C#/.NET, COBOL, J2EE, Assembly
+
+selected_work:
+  - image_path: /assets/linkedin/robby.png
+    alt: "Robby — multi-agent AI for the SDLC"
+    title: "Robby"
+    excerpt: "70 reusable skills, 15 specialized roles. The AI system that kills the super-chicken problem in production engineering."
+    url: "/ai/engineering/leadership/2026/02/19/robby-ai-sdlc-system.html"
+    btn_label: "Read"
+    btn_class: "btn--primary"
+  - image_path: /assets/linkedin/data-cake.png
+    alt: "Data Cake — synthetic tax data"
+    title: "Data Cake"
+    excerpt: "Inventing synthetic tax data from scratch — privacy-preserving training fuel for AI in a regulated industry."
+    url: "/engineering/ai/2025/12/11/how-data-cake-got-built.html"
+    btn_label: "Read"
+    btn_class: "btn--primary"
+  - image_path: /assets/linkedin/mort-ai-nexus.png
+    alt: "Mort AI Nexus — economic-nexus prediction"
+    title: "Mort AI Nexus"
+    excerpt: "Predicting economic sales-tax nexus before it bites you. State-by-state thresholds, ML-augmented."
+    url: "/engineering/ai/2026/01/14/mort-ai-nexus-patent.html"
+    btn_label: "Read"
+    btn_class: "btn--primary"
+
+selected_work_b:
+  - image_path: /assets/linkedin/voice-bio.png
+    alt: "Voice biometric authentication"
+    title: "Voice biometric auth"
+    excerpt: "$830B fraud prevented at JPMorgan. 99.87% adoption across 10M+ accounts."
+    url: "/engineering/case%20studies/2026/05/30/voice-biometric-fraud.html"
+    btn_label: "Read"
+    btn_class: "btn--primary"
+  - image_path: /assets/linkedin/connect-your-care.png
+    alt: "Connect Your Care modernization"
+    title: "Strangler-fig modernization"
+    excerpt: "Decoupling a J2EE/EJB monolith into Spring Boot microservices. Contributed to the Optum acquisition."
+    url: "/engineering/leadership/2026/06/06/strangler-fig-modernization.html"
+    btn_label: "Read"
+    btn_class: "btn--primary"
 ---
 
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
+
+<h2 id="selected-work" style="text-align:center; margin-top:2em;">Selected Work</h2>
+
+{% include feature_row id="selected_work" %}
+{% include feature_row id="selected_work_b" %}
 
 {% include feature_row id="feature_row2" type="center" %}
