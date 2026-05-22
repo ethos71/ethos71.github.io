@@ -32,6 +32,29 @@ The core is XGBoost for learning the distributions and scikit-learn for the feat
 
 Then we sample from those learned distributions to generate new records that feel authentic. The synthetic records have the same statistical fingerprint as real data without any of the compliance risk.
 
+A single generated row looks roughly like this:
+
+```python
+synthetic_row = {
+    "transaction_id": "tx_8e3a91c4",
+    "jurisdiction": "CA-LA-COUNTY",
+    "sic_code": 3674,
+    "company_size_bucket": "F500",
+    "erp_system": "SAP-S4",
+    "taxable_amount": 14820.55,
+    "tax_rate": 0.0975,
+    "tax_collected": 1444.99,
+    "line_items": 7,
+    "exemption_certificate": None,
+    "filing_period": "2024-Q3",
+    "audit_flag": False,
+    "source_distribution_hash": "d41a...c0b2",
+}
+```
+
+Every field is sampled — but sampled jointly, conditioned on the others. The SIC code constrains the jurisdiction distribution. The jurisdiction constrains the tax rate. Company size shifts the amount distribution. The constraints chain.
+
+
 ## What surprised me building it
 
 Two things.

@@ -39,6 +39,19 @@ Here's the intuition: you're constantly inserting new data points — new outcom
 
 A red-black tree gives you O(log n) insert and query with guaranteed balance. The "Timber" part of the name refers to the model's ability to prune branches — historical data that no longer reflects current conditions gets rotated out of the active tree as the model detects distribution shift.
 
+```mermaid
+graph TD
+    A[ROI = 0.62<br/>Contest threshold]:::black --> B[ROI = 0.31<br/>Settle: low jurisdiction win-rate]:::red
+    A --> C[ROI = 0.84<br/>Contest: strong precedent]:::red
+    B --> D[ROI = 0.18<br/>Absorb: below legal-cost floor]:::black
+    B --> E[ROI = 0.47<br/>Settle: medium risk]:::black
+    C --> F[ROI = 0.91<br/>Contest: clean fact pattern]:::black
+    classDef red fill:#b91c1c,stroke:#fecaca,color:#fff;
+    classDef black fill:#1f2937,stroke:#9ca3af,color:#fff;
+```
+_Figure: A snapshot of the decision tree — each node is an audit finding keyed by ROI; color encodes the red-black invariant the model maintains as new outcomes get inserted._
+
+
 The output is a per-finding recommendation: contest, settle, or absorb — with a confidence score and the key factors driving the recommendation.
 
 ## What changed when we deployed it
