@@ -47,6 +47,22 @@ The insight wasn't "compare code to docs." Tools have been trying that forever w
 
 The insight was **confidence over time**. A doc that was accurate yesterday and slightly less accurate today has a different risk profile than a doc that hasn't been touched in two years and the code it describes has been rewritten three times. The trajectory matters. The rate of drift matters.
 
+Here's what that drift looked like in one of the pipelines we instrumented — six months of activity on a single service:
+
+**Code-vs-doc drift over six months**
+
+| Month | Code commits | Doc commits | Drift ratio |
+|---|---:|---:|---:|
+| Month 1 | 42 | 14 | 3.0x |
+| Month 2 | 51 | 12 | 4.2x |
+| Month 3 | 67 | 9  | 7.4x |
+| Month 4 | 58 | 6  | 9.7x |
+| Month 5 | 74 | 4  | 18.5x |
+| Month 6 | 81 | 3  | 27.0x |
+
+Nobody noticed it happening. The team was shipping. Velocity looked great. The docs just quietly fell off the cliff. By month six, the README's mental model and the running service shared almost no overlap — and the only person who would have known was the senior engineer who was about to go on parental leave.
+
+
 We built it so teams could surface documentation debt the same way they surface code coverage debt — as a quantifiable metric, tracked over time, integrated into the development workflow.
 
 The first internal team to use it had a senior engineer say "I had no idea it had gotten this bad." That's when I knew we'd built something real.
