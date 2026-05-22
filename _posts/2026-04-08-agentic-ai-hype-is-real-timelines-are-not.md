@@ -17,6 +17,14 @@ I've spent the last three years building these things in production at Vertex â€
 
 Let me tell you what's actually real.
 
+```mermaid
+graph LR
+    I[Inflated<br/>expectations] --> D[Disillusionment]
+    D --> P[Productivity<br/>plateau]
+    P --> V[Real value]
+```
+_Figure: agentic AI follows the curve â€” the value at the end is real; the timeline isn't._
+
 ## The capability is genuinely there
 
 I don't want to be the guy standing in the way of the freight train. The foundation models are legitimately good. GPT-4 class models can reason across complex multi-step problems, synthesize large document sets, write production-quality code, and chain tool calls in ways that would have seemed like science fiction five years ago.
