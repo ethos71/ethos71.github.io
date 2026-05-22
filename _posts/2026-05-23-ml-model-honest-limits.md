@@ -24,6 +24,14 @@ If you've been around ML, you already know what that gap means. The model fits i
 
 Most of the production "AI" I see in the wild can't.
 
+```mermaid
+graph LR
+    T[April 1-25<br/>training] --> M[Model]
+    V[April 25 - May 2<br/>test] --> M
+    M --> E[Train MAE 1.765<br/>Test MAE 3.079]
+```
+_Figure: the train/test split that exposed the honest gap._
+
 ## What I built
 
 A daily player-performance predictor for fantasy baseball. XGBoost regression. The target: how many fantasy points a given MLB batter will score the next day. Scoring is the standard rotisserie shape — hits, doubles, triples, home runs, runs, RBIs, stolen bases, walks. About 150 batters in play on any given day.
