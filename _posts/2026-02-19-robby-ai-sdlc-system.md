@@ -26,6 +26,14 @@ The result wasn't a super-productive super flock. Most of the chickens were dead
 
 She draws the parallel to corporate teams. The companies that stack their teams with the highest individual performers — the alphas, the dominators, the super chickens — consistently underperform teams built for collaboration, psychological safety, and mutual contribution.
 
+```mermaid
+graph LR
+    E[Engineer's<br/>day] --> P[Process work]
+    E --> C[Engineering]
+    P -.shrinks.-> C
+```
+_Figure: the time-reclamation bet — at the highest level._
+
 I built Robby because I believe she's right.
 
 Robby is a patent-pending multi-agent system I invented at Vertex. The patent is pending and the substance lives there. What I can say at a high level: the bet was that AI could absorb enough engineering process overhead — the docs, the handoff theater, the status work — that the humans get back to doing the engineering they signed up for.
