@@ -40,7 +40,7 @@ Robby is a patent-pending multi-agent AI system for SDLC orchestration. The bet 
 
 **Tech:** multi-agent AI tooling, ArgoCD, GitHub Actions, Datadog
 **Outcome:** Adopted across multiple teams; "AI Curiosity Workshop" trained ~50 engineers on how to extend it
-**Deeper read:** [Robby: I Built an AI System to Kill the Super Chicken Problem](/2026/02/19/robby-ai-sdlc-system.html)
+**Deeper read:** [Robby: I Built an AI System to Kill the Super Chicken Problem](/ai/engineering/leadership/2026/02/19/robby-ai-sdlc-system.html)
 
 ---
 
@@ -61,7 +61,7 @@ The shift wasn't accuracy. It was timing. Customers stopped finding out about ne
 
 **Tech:** Java, Spring Boot, AWS, real-time transaction streaming
 **Outcome:** Customers shifted from reactive quarterly reviews to forward-looking nexus monitoring; preventable penalty exposure reduced
-**Deeper read:** [Mort AI Nexus — A Patent for Detecting When You've Crossed a Line](/2026/01/14/mort-ai-nexus-patent.html)
+**Deeper read:** [Mort AI Nexus — A Patent for Detecting When You've Crossed a Line](/engineering/ai/2026/01/14/mort-ai-nexus-patent.html)
 
 ---
 
@@ -99,7 +99,7 @@ What changed when we deployed it: model training stopped being a regulatory nego
 
 **Tech:** Python, NLP-driven generation, deterministic rules engine for tax-law validity
 **Outcome:** Removed the data-access bottleneck for AI model training; enabled tax ML projects that previously couldn't be greenlit
-**Deeper read:** [How Data Cake Got Built](/2025/12/11/how-data-cake-got-built.html)
+**Deeper read:** [How Data Cake Got Built](/engineering/ai/2025/12/11/how-data-cake-got-built.html)
 
 ---
 

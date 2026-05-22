@@ -10,6 +10,23 @@ Conventions: 🔴 this week, 🟡 next, 🟢 someday. Check off when done.
 
 ## 🔴 This Week
 
+### Severance-agreement scrub (2026-05-22)
+- [ ] **Audit patent URL slug** — body content scrubbed of novelty, but the post URL itself still
+      contains `audit-red-black-tree-patent`. Renaming via `permalink:` in frontmatter would clean
+      the URL but break any inbound links. Decide: rename + add a Jekyll redirect, leave the
+      URL as a technical identifier only, or change the filename.
+- [ ] **Verify the broader scrub** — read the 5 patent deep-dives, `patents.md`, the 5-patents
+      meta post, sections 1/2/4 of `five-systems`, the homepage Robby tile, and `experience.md`.
+      The pass removed: named data structures, specific signal inputs, component counts
+      (70 skills / 15 roles), agent role lists, the kitchen-brigade architecture, the
+      "confidence-over-time" framing, `XGBoost + scikit-learn` invention-context,
+      `regional economic signals` and weather/housing/migration inputs, all 3 mermaid
+      architecture diagrams (audit-tree / Mort pipeline / Robby brigade), the Data Cake
+      `synthetic_row` schema, the Doc Intel drift table, the "Why a Red Black Tree"
+      section, and the "within 2% of real-data models" claim.
+      Kept: high-level problem framing, outcomes, patent-pending status, year ranges, Wayfair
+      legal-context (public case law), JPMC and Connect Your Care content (not Vertex IP).
+
 ### Review the 4 new case-study posts (drafted 2026-05-22, dated forward)
 - [ ] `_posts/2026-05-23-ml-model-honest-limits.md` — XGBoost / fantasy baseball
 - [ ] `_posts/2026-05-30-voice-biometric-fraud.md` — **verify these details from memory:** "TARA Fraud Busters" team name, "Sapiens" rules engine, "$2.4B industry call-center fraud exposure", "20–40% adoption ceiling on opt-in security features." Each is plausible but not in `~/workspace/job/` source files. Confirm or soften.

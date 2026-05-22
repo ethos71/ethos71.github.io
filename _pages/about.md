@@ -17,7 +17,7 @@ to a ~$830B industry-wide fraud-loss plateau, the Indirect Tax Close platform se
 companies at Vertex, or the acquisition-driving HRCommand decomposition at Connect Your Care — I
 identify the hard problem, architect the right solution, and ship it.
 
-I'm also obsessive about raising the floor. I designed and personally delivered the **AI Curiosity Workshop** ("Raise the Boats") at Vertex, teaching ~50 employees across engineering, product, and data science how to use AI and build custom agents from scratch. [Read about the workshop.](/2026/03/18/teaching-200-people-to-build-ai-agents.html)
+I'm also obsessive about raising the floor. I designed and personally delivered the **AI Curiosity Workshop** ("Raise the Boats") at Vertex, teaching ~50 employees across engineering, product, and data science how to use AI and build custom agents from scratch. [Read about the workshop.](/ai/leadership/2026/03/18/teaching-200-people-to-build-ai-agents.html)
 
 ## Career Snapshot
 
