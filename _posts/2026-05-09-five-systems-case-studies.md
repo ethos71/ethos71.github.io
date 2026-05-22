@@ -15,6 +15,7 @@ tags:
   - architecture
 excerpt: "Five production systems from the last decade. Patents, platform rewrites, fraud prevention at scale. Each one shipped, each one moved a number that mattered."
 header:
+  image: /assets/linkedin/linkedin-banner.png
   og_image: /assets/linkedin/linkedin-banner.png
   teaser: /assets/linkedin/linkedin-banner.png
 ---

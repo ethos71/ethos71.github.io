@@ -15,7 +15,7 @@ excerpt: "Running the AI Curiosity Workshop — internally branded 'Raise the Bo
 
 When I pitched the idea internally, the reaction was roughly: *that's a lot of time to spend on something that isn't shipping features.*
 
-I pushed anyway. By the time we wrapped, ~50 employees across engineering, product, data science, and — yeah — some finance folks had gone through the **AI Curiosity Workshop** (we called it "Raise the Boats" internally). I learned more from teaching it than I expected.
+I pushed anyway. By the time we wrapped two years in, 200+ employees across engineering, product, data science, and — yeah — some finance folks had been through the **AI Curiosity Workshop** (we called it "Raise the Boats" internally). About 50 of them came through the live cohort I taught directly; the rest worked through the curriculum I built around it. I learned more from teaching it than I expected.
 
 ## The thing nobody told me about teaching AI
 

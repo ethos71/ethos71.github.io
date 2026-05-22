@@ -13,6 +13,10 @@ tags:
   - teams
   - crewai
 excerpt: "Robby is a multi-agent SDLC system with 70 skills and 15 roles that handles everything from Jira to deployments. It's not about replacing engineers. It's about removing process friction so people can do what they love — and was my answer to the super chicken problem."
+header:
+  image: /assets/linkedin/robby.png
+  og_image: /assets/linkedin/robby.png
+  teaser: /assets/linkedin/robby.png
 ---
 
 A few years ago I watched a TED talk that I haven't been able to stop thinking about.
