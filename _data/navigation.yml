@@ -9,7 +9,11 @@ main:
     url: /resume/
   - title: "Blog"
     url: /blog/
+  - title: "Categories"
+    url: /categories/
   - title: "Tags"
     url: /tags/
   - title: "Contact"
     url: /contact/
+  - title: "RSS"
+    url: /feed.xml
