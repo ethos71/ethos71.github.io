@@ -21,6 +21,14 @@ It's usually written on a README somewhere. Or in Confluence. Or in a comment bl
 
 Documentation rot is not a discipline problem. It's a systems problem. And I got tired of it.
 
+```mermaid
+graph LR
+    C[Code reality] --> X[Drift]
+    D[Documentation] --> X
+    X --> R[Silent risk]
+```
+_Figure: code keeps moving; docs stop; drift accumulates as silent risk._
+
 ## The problem in concrete terms
 
 At Vertex, we ran large, complex data pipelines in a regulated domain. And we had documentation — internal wikis, inline comments, architectural decision records, README files.
