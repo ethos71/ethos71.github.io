@@ -17,6 +17,15 @@ things I'd rather not admit to in polite company.
 
 Along the way I've learned a few things that no architecture book will tell you directly.
 
+```mermaid
+graph LR
+    M[Mainframe] --> J[J2EE]
+    J --> S[Microservices]
+    S --> C[Cloud]
+    C --> A[AI]
+```
+_Figure: every era. Same fundamentals underneath._
+
 ## 1. The database outlives everything
 
 You will rewrite the application 4 times. The database schema you shipped in 2008 will still be
