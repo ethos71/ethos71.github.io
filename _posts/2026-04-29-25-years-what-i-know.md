@@ -12,10 +12,11 @@ excerpt: "After 25+ years shipping systems from COBOL mainframes to AI agents, h
 ---
 
 I started writing software professionally when `Y2K` was a genuine existential threat and COBOL was
-a sensible career choice. I've since shipped systems in Assembly, Java, JavaScript, Python, Go, and
-things I'd rather not admit to in polite company.
+a sensible career choice. I've since shipped systems in Java, JavaScript, Python, C#, COBOL,
+and things I'd rather not admit to in polite company.
 
-Along the way I've learned a few things that no architecture book will tell you directly.
+Nine jobs. Mainframe to AI. Along the way I've learned a few things that no architecture book will
+tell you directly.
 
 ```mermaid
 graph LR
@@ -28,20 +29,26 @@ _Figure: every era. Same fundamentals underneath._
 
 ## 1. The database outlives everything
 
-You will rewrite the application 4 times. The database schema you shipped in 2008 will still be
-there in 2026, quietly haunting every new engineer who joins the team. Design the data model like
-it's permanent, because it basically is.
+You will rewrite the application 4 times. The schema you shipped in 2008 will still be there in
+2026, quietly haunting every new engineer who joins the team. I've watched it happen on Oracle, on
+DB2 over an IBM AS/400, on Postgres, on Snowflake. Different decade, same schema, different
+application sitting on top of it.
+
+Design the data model like it's permanent. It basically is.
 
 ## 2. Observability is a feature, not a tax
 
-Every system I've seen fail catastrophically — a $500M tax close pipeline, a fraud detection
-service at JPMC, a healthcare enrollment platform — failed silently first. Nobody knew it was
-broken until it was very broken. Build the dashboards before you build the features.
+Every system I've seen fail catastrophically failed silently first. The tax close pipeline at
+Vertex processing 50M–100M transactions a day didn't fall over loudly — it drifted for hours
+before anyone noticed. In every case I can think of, the dashboards came after the outage, when
+they should have come before the launch.
+
+Build the dashboards before you build the features.
 
 ## 3. AI doesn't change the fundamentals, it raises the stakes
 
-I hold 4 patent-pending AI inventions now. I've built LLM-backed audit defense tools, synthetic
-data generators, and multi-agent systems. And the most important thing I've learned is this:
+I hold 4 patent-pending AI inventions now. I've built LLM-backed audit defense tools, a synthetic
+data generator, and a multi-agent SDLC system. And the most important thing I've learned is this:
 
 **AI doesn't eliminate the need for good system design — it punishes bad system design faster.**
 {: .notice--info}
@@ -51,16 +58,17 @@ answers, and it sounds confident doing it.
 
 ## 4. The best engineers I've met are fundamentally teachers
 
-At Vertex, I built and delivered the "Raise the Boats" curriculum — teaching 200+ engineers and
-analysts how to use AI tools and build production agents. The engineers who resisted "wasting time
-teaching" were consistently the ones whose work became a single point of failure. When they left,
-their systems left with them.
+At Vertex I built and delivered the "Raise the Boats" curriculum — 200+ engineers and analysts
+through the program, ~50 through the live cohort I taught myself. The engineers who treated
+teaching as overhead were the same ones whose systems left with them when they left the company.
 
 ## 5. Every great product I've shipped had a clear owner
 
-Not a committee. Not a Jira board. One person who cared deeply and was empowered to make calls.
-The HRCommand product at Connect Your Care drove an acquisition. The voice biometric fraud system
-at JPMC hit 10 million accounts in 3 months. Both had clear owners.
+HRCommand at Connect Your Care drove the Optum acquisition because one architect owned the
+EJB-to-Spring-Boot decomposition and one team knew who was making the calls. The voice biometric
+fraud system at JPMC hit 10 million accounts in three months with 1,300 opt-outs because someone
+took the heat for the design and stayed with it. Committees come later, after the thing already
+works.
 
 ---
 
