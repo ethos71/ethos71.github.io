@@ -315,6 +315,106 @@ recruiter names, `@dom` stops and asks first instead of guessing.
   blog's voice — see "What this blog is NOT" above).
 - `~/workspace/nyx-crm/` — current CRM/MCP project.
 
+## Source facts (master resume)
+
+Imported 2026-05-23 from `~/workspace/job/service/resume_latex/resume.tex`
+(master resume) and `~/workspace/job/docs/profile/{ACCOMPLISHMENTS,INTERVIEW_TALKING_POINTS}.md`.
+Use these as ground truth when grounding posts in real material. Anything
+not here, don't invent — check `~/workspace/job/` first.
+
+**Privacy note that overrides the resume:** the resume names Dominick's
+son (Ethan, autism-spectrum) and lists a personal address/phone. None
+of that goes on the public blog. The "Privacy rules" section above
+stands; the resume's audience (prospective employers under cover) is
+not the blog's audience.
+
+### Career timeline (reverse chronological)
+
+| Years | Company | Location | Role |
+|---|---|---|---|
+| May 2022 – May 2026 | Vertex Inc | King of Prussia, PA | Principal Software Engineer |
+| Apr 2021 – May 2022 | JP Morgan Chase | Wilmington, DE | Senior Software Engineer (Auto, Chief Data Office) |
+| May 2019 – Apr 2021 | Connect Your Care (acquired by Optum Financial) | Hunt Valley, MD | Senior Software Engineer |
+| Feb 2019 – May 2019 | Donegal Insurance Group | Marietta, PA | Senior Java/Guidewire Developer (Configuration Lead) |
+| Feb 2018 – Feb 2019 | TekSystems for JP Morgan Chase | Wilmington, DE | Infrastructure Developer — Advanced |
+| Apr 2012 – Feb 2018 | Financial Management Solutions | Pasadena, MD | Lead Software Developer |
+| 2010 – 2012 | Travelers Insurance | Hunt Valley, MD | Lead Software Developer |
+| 2008 – 2010 | R2Integrated | Baltimore, MD | Software Developer |
+| 2005 – 2008 | G1440 | Baltimore, MD | Software Developer |
+
+### Education / certs
+
+- UMBC — B.S. Computer Science (2001–2005)
+- AWS Certified Solutions Architect (2018)
+- Generative AI Foundations — AWS Re:Invent Bootcamp (2022)
+
+### Key metrics (post-able)
+
+- **25+ years** shipping software, Mainframe → AI
+- **$500M+** cumulative products shipped
+- **50+ engineers** led across 10 teams at Vertex
+- **50M–100M transactions/day** at Vertex tax pipelines
+- **Sub-100ms p99 latency** under Black Friday peaks
+- **~$1M/year** saved at Vertex via metrics-system + cloud-reclaim work
+- **~$830B** fraud losses prevented via JPMC voice biometric program
+- **10M unique JPMC accounts** opted in to voice biometric in 3 months; **1,300 opted out (99.87% adoption)**
+- **+25 customers/rep/day** from 20-second call reduction
+- **200+ employees** trained via "Raise the Boats" AI curriculum; **~50** through the live cohort
+- **4 patent-pending AI inventions** at Vertex (Data Cake, Audit Management Timber Model, Doc Intel, Mort AI Nexus) — **novelty is confidential, see Vertex severance / IP section**
+- **Travelers Blue Ribbon:** delivered in 6 months against a 1-year estimate; 200+ critical issues resolved
+- **FMS Labor Saver:** in-house transition saved $100K+/year
+- **Forbes.com Video Network:** millions of daily users (R2Integrated)
+
+### Customer / product names that are post-able
+
+- **Vertex customers (Fortune 500 retail / food / payments):** Target, Starbucks, McDonald's. (Per contract paranoia: prefer "Fortune 500 retail and food-service customers" over naming the three — they appear in public Vertex marketing but linking them to *your* architecture context is risk-without-upside.)
+- **Vertex products:** Indirect Tax Intelligence, Indirect Tax Close, Compliance & Returns, O Series.
+- **JPMC initiative:** Project "Photon" (Chief Data Office Auto data migration), TARA Fraud Busters group, JPMC CAT tool.
+- **Connect Your Care product:** HRCommand (drove UnitedHealth/Optum Financial acquisition).
+- **FMS products:** FMS Labor Saver, FMS Portal, FMS Marketing.
+- **Travelers product:** Blue Ribbon agent platform.
+- **R2Integrated customers:** Forbes.com Video Network, AAA, Honda, Sirius XM, Pepsi/Quaker.
+
+### Tech stack snapshot (for grounding, not for listicles)
+
+- **Languages:** Java/J2EE, Python, JavaScript/TypeScript, SQL, C#/.NET, COBOL
+- **AI/ML:** LLMs, MCP, LangChain, Langfuse, crewAI, AutoGen, XGBoost, scikit-learn, PyTorch, NLP, synthetic data, GitHub Copilot, AWS SageMaker, Snowflake Cortex, Azure AI, Streamlit
+- **Frameworks/UI:** Spring Boot, FastAPI, Hibernate, Node.js, React, Vue.js, Angular, REST APIs, microservices, Kafka, Figma-to-code
+- **Cloud/Data:** AWS (EC2/S3/Lambda/RDS/DynamoDB/Kinesis), Azure, GCP, Snowflake, PostgreSQL, Oracle/SQLPlus, MongoDB, Redis, Spark
+- **DevOps/Platform:** Kubernetes, Docker, Terraform, Jenkins, ArgoCD, GitHub Actions, Datadog, WebLogic, Puppet, Linux, CI/CD, Agile/SAFe
+
+**Don't dump the stack as a listicle in posts.** Use specific tools when
+they belong in a specific story. The resume already enumerates them.
+
+### Story anchors (use, don't quote)
+
+These are story shapes from the interview talking points. Lift the
+*shape* (specific incident → what was learned → why it generalizes) but
+write them in Dominick's voice, not the interview-prep voice.
+
+- **Connect Your Care strangler-fig:** monolithic EJB/J2EE → Spring Boot
+  microservices, never broke production, drove Optum acquisition.
+- **JPMC voice biometric:** the *opt-in* design problem (knowledge-based
+  auth was already broken), passive fingerprint during a natural call,
+  the customer-experience-as-security insight.
+- **Travelers Blue Ribbon:** the team finished a 1-year estimate in 6
+  months by triaging 200+ critical issues — speed-from-discipline, not
+  speed-from-cutting-corners.
+- **Vertex "Raise the Boats":** the workshop's premise (build the
+  capability, don't hire the specialists), the small-and-concrete first
+  lesson (the analyst who built a RAG over the audit knowledge base in
+  four hours), the language-changes-what-feels-possible payoff.
+- **FMS Labor Saver:** moving a third-party SaaS dependency in-house
+  saved $100K+/year — the case for owning your critical path.
+
+### What's still in @job, not here
+
+- Active interview pipeline / recruiter names — `@job` only.
+- Tailored per-role resume variants (Apex GenAI, Calendly, Geisinger,
+  Gusto, Highmark, Mercury, Temporal, Weedmaps, etc.) — `@job` only.
+- Battery Network / Call2Recycle prep materials — `@job` only, never
+  blog.
+
 ## Hard rules
 
 - Never commit anything personal (recruiter names, surgery details,
