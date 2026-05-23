@@ -16,11 +16,11 @@ header:
   teaser: /assets/linkedin/connect-your-care.png
 ---
 
-I've sat in this meeting at five companies. New VP, new deck, same line: "The monolith is the problem. We need to do a full rewrite."
+I joined Connect Your Care in Hunt Valley in May of 2019. HRCommand — the flagship — was a J2EE/EJB monolith running on WebLogic, ten years of consumer HR product baked into it. The brief was straightforward: modernize it, don't break it, and ship enough new product surface that a strategic acquirer would care.
 
-Four of those rewrites shipped late, shipped broken, or never shipped. The fifth — Connect Your Care, 2019 to 2021 — shipped, modernized a J2EE/EJB platform a decade in the making, never broke production, and was part of the thesis when UnitedHealth/Optum Financial acquired the company.
+Twenty-three months later UnitedHealth/Optum Financial acquired the company, and the modernized HRCommand architecture was sitting on the table in the due-diligence room. We never did a cutover weekend. We never had a release outage. Five engineers, two-week loop, two years.
 
-We didn't rewrite it. We used the **strangler fig** pattern and ran it boring.
+We didn't rewrite it. We ran the **strangler fig** pattern, and we ran it boring.
 
 ```mermaid
 graph LR
@@ -31,42 +31,34 @@ graph LR
 ```
 _Figure: the strangler-fig pattern — new grows around old as old shrinks._
 
-## Why the rewrite kills you
+## Why I won't sign up for a full rewrite
 
-A decade-old monolith is not a code problem. It's a *running business* — integration contracts, regulatory commitments, and a long list of undocumented behaviors that support has been quietly accommodating for years. The day you announce a rewrite, the team stops shipping in the old system, the new one rediscovers undocumented behavior the hard way, leadership rotates, and the rewrite gets killed at 60%. You end up with a half-built parallel system and a monolith you never improved.
+I've sat in the meeting at five companies now. New VP, new deck, same line: the monolith is the problem, we need a full rewrite. Four of those rewrites shipped late, shipped broken, or got killed at 60% with a half-built parallel system and a monolith nobody had improved.
 
-Not hypothetical. I've watched it happen.
+A decade-old monolith is not a code problem. It's a *running business* — integration contracts, regulatory commitments, a long list of undocumented behaviors that customer support has been quietly accommodating for years. The day you announce the rewrite, the old team stops shipping. The new team rediscovers undocumented behavior the hard way. Leadership rotates. The Q4 board deck reads differently than the Q1 one. None of that is exotic. It happens every time.
 
-## What we did instead
+## What we did at CYC
 
-The pattern is named after a real plant. The strangler fig germinates in the canopy of a host tree, sends roots down around it, and grows into a complete structure over years. By the time the host decays, the fig is already a tree. There was never a cutover.
+Thin proxy in front of HRCommand. Day one, zero new behavior. Pick the smallest bounded context with a clean data-ownership boundary — for us, that was a benefit-eligibility surface nobody wanted to touch. Build it as a Spring Boot service. Route traffic behind a per-endpoint feature flag. Watch error rates and the business KPIs that actually mattered for two weeks. If anything moved wrong, the flag flipped back in seconds. Peel the old code path out. Pick the next.
 
-In software: thin proxy in front of the monolith, day one zero new behavior. Pick the smallest bounded context with a clean data-ownership boundary. Build it as a Spring Boot service. Route traffic behind a per-endpoint feature flag. Watch error rates and business KPIs for two weeks. If anything moves wrong, the flag flips back in seconds. Peel the old code path out. Pick the next.
-
-Two-week loop, repeated until the monolith is small enough to retire or quiet enough to leave alone.
+In parallel, the UI rebuilt itself the same way — React replacing the old JSP screens slice by slice, Figma-to-code components landing in a shared library that the rest of the consumer-facing product line eventually adopted.
 
 ## The boring parts that decide whether it works
 
-The pattern is simple. The discipline is the part teams skip, because none of it feels like progress on the new system:
+The pattern is simple. The discipline is the part teams skip, because it doesn't feel like progress on the new system:
 
-1. **Anti-corruption layer at every seam.** New service defines its own data model and translates in one file. When the monolith changes shape, one file changes.
-2. **Idempotency keys on every cross-seam write.** The proxy will retry. Without idempotency you get duplicate financial records and a very bad week.
-3. **Outbox pattern for events.** State change and event-write commit in the same transaction; a drainer publishes. You never lose an event, never publish one that didn't happen.
-4. **Feature flags per endpoint, not per release.** Thirty-second rollback versus a war room.
-5. **Commit to the loop, not the order.** Which context moves next falls out of where the pain is.
+1. **Anti-corruption layer at every seam.** New service owns its own data model and translates in one file. When the monolith changes shape, one file changes.
+2. **Idempotency keys on every cross-seam write.** The proxy will retry. Without idempotency you get duplicate benefits records and a very bad Monday.
+3. **Outbox pattern for events.** State change and event write commit in the same transaction; a drainer publishes. You never lose an event, never publish one that didn't happen.
+4. **Feature flags per endpoint, not per release.** Thirty-second rollback instead of a war room.
+5. **Commit to the loop, not the order.** Which context moves next falls out of where the pain is, not out of a Gantt chart drawn in March.
 
-None of these are exotic. They're the things teams pretend they'll add later and then don't.
+None of these are exotic. They're what teams pretend they'll add later and then don't.
 
-## What it looked like
+## When I'd actually entertain a rewrite
 
-Five-person team. J2EE/EJB monolith, Spring Boot taking its place a slice at a time. No cutover weekend, no release outage — we shipped new product surfaces on the new architecture while peeling capability off the old, every two weeks, for two years.
+One case: the monolith genuinely cannot scale and the runway is funded for a parallel build to completion. That case is rarer than people think. Most monoliths that "can't scale" scale fine after two focused months on the three hot paths. Test that hypothesis before you spend a year of a five-person team on a parallel build that may not finish.
 
-When UnitedHealth/Optum Financial acquired the company in 2021, the modernized architecture was part of the thesis. That outcome is the one I'm proudest of in 25 years — not because the technology was novel, but because we did the boring disciplined thing every two weeks until it compounded.
-
-## When I'd entertain a rewrite
-
-One case: the monolith genuinely cannot scale and the runway is funded. That case is rarer than people think. Most monoliths that "can't scale" scale fine after two focused months on the three hot paths. Test that hypothesis before you spend a year on a parallel build that may not finish.
-
-If you take one thing from this post, take the discipline. The pattern is just the vehicle.
+The pattern is just the vehicle. The thing I'm proudest of from those two years isn't the architecture diagram — it's that the team shipped boring, disciplined two-week increments until they compounded into an acquisition.
 
 More soon.
