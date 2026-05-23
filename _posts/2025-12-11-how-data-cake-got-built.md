@@ -18,9 +18,9 @@ header:
 
 The problem started, like most good engineering problems, with something nobody wanted to touch.
 
-We needed training data for several ML models we were building in the Data and Insights value stream at Vertex. Tax transaction data. Lots of it. The real stuff — the kind of data that, if it left the building in the wrong shape, would be a very bad day for a lot of people.
+We needed training data for several ML models we were building in the Data and Insights value stream at Vertex. Tax transaction data, lots of it — the kind of data that, if it left the building in the wrong shape, would be a very bad day for a lot of people.
 
-Legal said no to real customer data. Security said no to real customer data. The right answer was: no real customer data.
+Legal and security both said no to real customer data, and they were right to. PII in a tax pipeline isn't a thing you negotiate.
 
 So we had a problem. You can't train a model on nothing. And synthetic data that doesn't behave like the real thing just teaches your model to recognize fake patterns.
 
@@ -34,22 +34,17 @@ _Figure: the data-access problem the patent addresses._
 
 ## What we actually built
 
-Data Cake is a patent-pending service that removes the training-data bottleneck for tax ML — without any real customer data ever leaving its system of record. The patent is still pending, so I'm staying high-level on the mechanism.
+Data Cake is a patent-pending service that removes the training-data bottleneck for tax ML without any real customer data ever leaving its system of record. The patent is pending, so I'm staying high-level on the mechanism.
 
-The outcome was the part that mattered: ML projects at Vertex stopped being a regulatory negotiation. We went from "is there a path to data?" to "what model do we want to train?" That's the conversation engineers should be having in the first place.
+The outcome was the part that mattered. ML projects at Vertex stopped being a regulatory negotiation. We went from "is there a path to data?" to "what model do we want to train?" That's the conversation engineers should be having in the first place.
 
 ## What surprised me building it
 
 Two things.
 
-First: the hardest part wasn't the ML. It was the domain. Tax is a heavily constrained world — jurisdictions, filing rules, industry boundaries, what's legally possible vs. what's merely plausible on paper. Getting the domain right took more work than getting the model right. As with most things, the constraints are the product.
+First: the hardest part wasn't the ML. It was the domain. Tax is a heavily constrained world, and getting the constraints right took more work than getting the model right. As with most things, the constraints are the product.
 
-Second: once it worked, the use cases exploded beyond what we originally intended. We built it for model training. It immediately became useful for:
-
-- Safe demo data for customer pilots
-- Load testing with realistic data distributions
-- Onboarding new engineers who needed to work with production-shaped data without touching production
-- QA environments that had previously been either too small to be meaningful or too real to be safe
+Second: once it worked, the use cases exploded beyond what we originally intended. We'd built it for model training. It immediately became useful for safe demo data in customer pilots, for load testing with realistic distributions, for onboarding new engineers who needed production-shaped data without touching production, and for QA environments that had previously been either too small to be meaningful or too real to be safe.
 
 Solutions to hard problems usually have more surface area than the original problem did.
 
