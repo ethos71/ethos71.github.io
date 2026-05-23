@@ -8,12 +8,12 @@ tags:
   - senior engineer
   - AI
   - hiring
-excerpt: "I'm back on the market after four years at Vertex. Here's what's the same, what's completely different, and what I wish someone had told me before I started."
+excerpt: "I'm between roles after four years at Vertex. Here's what's the same, what's completely different, and what I wish someone had told me before I started."
 ---
 
-I haven't job searched since 2022. Four years. In tech, that's like coming back from an expedition to find the terrain has shifted.
+I'm between roles for the first time since 2022. Four years. In tech that's a long time to be away from this side of the table, and the terrain has shifted.
 
-I'm a Principal Engineer with 25+ years of experience, four patent-pending AI inventions, and a track record I'm genuinely proud of. And I'm also relearning how to do this whole thing.
+I'm a Principal Engineer with 25+ years of experience and four patent-pending AI inventions, and I'm still relearning how to do this whole thing.
 
 A few things I've noticed in the first few weeks.
 
@@ -41,9 +41,7 @@ The engineers getting squeezed by AI right now are the ones who were doing thing
 
 But for senior engineers who can architect systems, evaluate tradeoffs, and lead teams through ambiguous problems? The demand is higher than I expected. Companies are building AI-powered products faster than they can find people who know how to build them responsibly.
 
-The job descriptions I'm seeing for principal/staff roles are asking for things like: multi-agent system design, LLM observability, AI safety/reliability patterns, leading teams through an AI transformation. That's a narrow pool. I happen to be in it.
-
-Know what your specific value is, and lead with it.
+The job descriptions I'm seeing for principal/staff roles are asking for multi-agent system design, LLM observability, AI safety and reliability patterns, leading teams through an AI transformation. That's a narrow pool, and I happen to be in it.
 
 ## The conversation that's changed
 
@@ -60,7 +58,5 @@ I want to build something real. Not a proof-of-concept. Not an "AI strategy" doc
 Tax, compliance, fintech — I know those domains. But I'm open to any technically hard problem where the stakes are real and the team is serious.
 
 If that's you, [find me on LinkedIn](https://www.linkedin.com/in/dominick-campbell-70b3619b/).
-
-More updates as this unfolds. I'm going to document this process — including the awkward parts — because more senior engineers should talk honestly about what job searching is actually like. We tend to only share the win announcement.
 
 More soon.
