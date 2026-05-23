@@ -19,7 +19,9 @@ header:
   teaser: /assets/linkedin/linkedin-banner.png
 ---
 
-A Fortune 500 tax team I worked with in 2024 had 180 open audit findings on a spreadsheet. The senior controversy lead — one person, twenty-plus years on the job — was the system. When she was out, decisions stalled. When she was in the room, the room deferred.
+A Fortune 500 tax team I sat with in 2024 had 180 open audit findings on a spreadsheet. The senior controversy lead — one person, twenty-plus years on the job — *was* the system. When she was out, decisions stalled. When she was in the room, the room deferred.
+
+I was a Principal Engineer at Vertex, working across the Indirect Tax Intelligence product. The customer base is the kind of company that runs 50M to 100M tax transactions a day at peak. The decisions that hang off those transactions — what gets contested, what gets settled, what gets quietly absorbed — were happening in someone's head and in a spreadsheet, at a scale where neither tool was built for the job.
 
 ```mermaid
 graph LR
@@ -42,7 +44,7 @@ Nobody had a shared frame. Everyone had an opinion. The decisions happened anywa
 
 ## What I built
 
-A patent-pending decision-support model for audit defense. I can't go deeper on the mechanism here — reach out if it's relevant to what you're working on.
+A patent-pending decision-support model for audit defense — the Audit Management Timber Model. I can't go deeper on the mechanism here. Reach out if it's relevant to what you're working on.
 
 ## What changed when we deployed it
 
@@ -58,4 +60,4 @@ More soon.
 
 ---
 
-*Audit Management decision-support model is patent pending. Developed at Vertex Inc., 2025.*
+*Audit Management Timber Model is patent pending. Developed at Vertex Inc., 2025.*

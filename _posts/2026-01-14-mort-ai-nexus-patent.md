@@ -22,7 +22,9 @@ The tax director finds out the same week the CFO does.
 
 After *South Dakota v. Wayfair* (2018), the Supreme Court expanded economic nexus to cover remote sales, and companies that never had a physical presence in a state suddenly discovered they'd been technically taxable there for years. Each state set its own threshold ([here's the current state-by-state guide](https://www.salestaxinstitute.com/resources/economic-nexus-state-guide) from the Sales Tax Institute, if you want to see how spread out it is). Per-state exposure runs $100K–$500K.
 
-The compliance machinery that exists to handle this is mostly reactive. Tools watch your transaction volume by state and tell you when you're close. That's defense with a short horizon.
+I spent four years at Vertex as a Principal Engineer on Indirect Tax Intelligence, which is the product surface where this problem lives for Fortune 500 retail and food-service customers. The compliance machinery that exists to handle nexus is mostly reactive. Tools watch your transaction volume by state and tell you when you're close. That's defense with a short horizon — measured in weeks if you're lucky, days if you're not.
+
+By the time a threshold dashboard lights up red, the obligation has already attached. The team has a registration to file, a calculation engine to configure, and a CFO conversation to have. The dashboard is a smoke alarm. The smoke alarm is not the goal.
 
 The question that kept nagging me: **can you see it coming?**
 
