@@ -202,6 +202,19 @@ Cut them on sight.
    go deeper on the mechanism here. Reach out if it's relevant to what
    you're working on."
 
+7. **Meta-performance about being a blog writer.** Dominick flagged
+   the May 18 opener — first as "I'm shifting how I write here. …
+   Friday-ish. About 700 words. Real material, not retrospectives.",
+   then as "Friday-ish. About 700 words. … the other 51 weeks of the
+   year, you get these." — as fake. Both versions are
+   writer-talking-about-being-a-writer paragraphs, the personal-blog
+   equivalent of "in this article we will explore." **Never write a
+   meta paragraph about cadence, length, or genre.** Don't open with
+   "Friday-ish. About 700 words." Don't open with "First of a weekly
+   cadence." Don't open with "Less essay, more field notes." The
+   cadence is in the title's date and in the file's existence.
+   Open with the work.
+
 ### Concrete openers (good)
 
 - "I'm shifting how I write here." (week-notes)

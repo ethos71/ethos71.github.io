@@ -13,8 +13,6 @@ tags:
 excerpt: "First of a weekly cadence. Less essay, more field notes — what shipped, what surprised me, where the week actually went."
 ---
 
-Friday-ish. About 700 words. Real material, not retrospectives. The case-study posts and the long opinion pieces still happen when something earns the length — the other 51 weeks of the year, you get these.
-
 ## What I shipped
 
 Most of the week went into **`dom`**, the AI cost-cutting toolkit. The premise is simple: most coding tasks don't need a $2 Opus call. Haiku at one cent does it, and a third of the time a local Ollama model does it for free. `dom` routes the task to the cheapest model that can actually do it. One curl command installs it into any project; an eval policy gates every change.
