@@ -6,14 +6,6 @@ author_profile: true
 
 The fastest way to reach me is email or LinkedIn. I read both daily.
 
-## Currently looking for
-
-Principal / Staff Engineer or AI Architect roles. Remote-only, full-time W2. Strong preference for:
-
-- **AI-native product companies** building agentic systems, multi-model orchestration, or LLM platform infrastructure
-- **Tax / fintech / compliance tech** — where I have 4+ years of deep domain expertise and 4 patent-pending systems
-- **Developer tooling / platform engineering** — anywhere the work compounds across many teams
-
 ## Reach me
 
 - **Email:** [Dominick.do.Campbell@gmail.com](mailto:Dominick.do.Campbell@gmail.com)
