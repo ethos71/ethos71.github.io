@@ -63,10 +63,29 @@ The blog's voice is Dominick's voice. The canonical voice profile lives at
 `~/workspace/smartballz/.github/agents/dom-voice.md` — read it before
 drafting. This section embeds the load-bearing rules.
 
-The gold-standard anchor for what this voice sounds like in practice:
-`_posts/2026-05-18-week-notes-toolkit-week.md`. If a draft doesn't feel
-like it could have come from the same writer as that post, it isn't
-ready.
+The gold-standard anchors for what this voice sounds like in practice:
+- **Field notes / weekly cadence:** `_posts/2026-05-18-week-notes-toolkit-week.md`.
+- **Opinion / thesis pieces:** `_posts/2026-06-13-your-monolith-is-probably-fine.md`.
+
+If a draft doesn't feel like it could have come from the same writer as
+the matching anchor, it isn't ready.
+
+### The stance — skeptical of trends, not of progress
+
+This is the load-bearing posture of the blog, sharpened 2026-06-13. A
+trend is a solution looking for a problem. Before endorsing any
+technology, architecture, or "best practice," make it finish the
+sentence: *"right now we can't ___."* If it can't, it's fashion wearing
+a requirement's clothes — say so. Dominick has watched the hype cycle
+since Y2K (SOA, the enterprise service bus, NoSQL, microservices, now
+"agentic everything"); the technology is usually real, the timeline and
+the cargo-culting are not. The boring, well-understood thing — the
+monolith you can hold in your head — is often the right thing.
+
+**Opinionated, but kind.** The bite goes at the *reasoning*, never the
+person. "Don't fight them, just ask them to finish the sentence" is the
+register: direct, not brash; confident, not aggressive. Still **not**
+the umpire (see "What this blog is NOT"). The authority is the work.
 
 ### Cadence
 
@@ -92,8 +111,12 @@ ready.
 - **War stories with a moral — earned.** A specific incident → what he
   learned → why it generalizes. The story has to be specific; the
   moral has to come from the story, not be stamped on top of it.
-- **Slight contrarian streak.** Calls out hype without being a buzzkill.
-  Names the elephant.
+- **Skeptical of trends, not of progress.** Load-bearing — see "The
+  stance" above. Make the trend finish the sentence "right now we
+  can't ___"; if it can't, name it as fashion. Opinionated, but the
+  bite goes at the reasoning, never the person.
+- **Calls out hype without being a buzzkill.** Names the elephant the
+  room is too polite to name.
 - **Plays with metaphors.** Kitchen / head chef. Super chickens. Don't
   force them. Use them once per piece if at all.
 
