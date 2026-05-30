@@ -15,9 +15,9 @@ tags:
   - architecture
 excerpt: "Five production systems from the last decade. Patents, platform rewrites, fraud prevention at scale. Each one shipped, each one moved a number that mattered."
 header:
-  image: /assets/linkedin/linkedin-banner.png
-  og_image: /assets/linkedin/linkedin-banner.png
-  teaser: /assets/linkedin/linkedin-banner.png
+  image: /assets/headers/five-systems-case-studies.png
+  og_image: /assets/headers/five-systems-case-studies.png
+  teaser: /assets/headers/five-systems-case-studies.png
 ---
 
 People ask what I've actually shipped. The deep-dive posts cover the systems one at a time; this is the consolidated version. Five systems from the last decade, each one in production, each one moved a number the business cared about. Where there's a deeper post, I link to it. Where there isn't, I go a little deeper here.

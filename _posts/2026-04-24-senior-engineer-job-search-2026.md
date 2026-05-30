@@ -9,6 +9,10 @@ tags:
   - AI
   - hiring
 excerpt: "I'm between roles after four years at Vertex. Here's what's the same, what's completely different, and what I wish someone had told me before I started."
+header:
+  image: /assets/headers/senior-engineer-job-search-2026.png
+  og_image: /assets/headers/senior-engineer-job-search-2026.png
+  teaser: /assets/headers/senior-engineer-job-search-2026.png
 ---
 
 I'm between roles for the first time since 2022. Four years off this side of the table is a long time in tech, and the ground moved while I wasn't looking.

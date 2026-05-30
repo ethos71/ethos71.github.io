@@ -12,8 +12,9 @@ tags:
   - enterprise-architecture
 excerpt: "Rip-and-replace is malpractice when the monolith is paying the bills. Here's the pattern that actually works — and why the discipline matters more than the diagram."
 header:
-  og_image: /assets/linkedin/connect-your-care.png
-  teaser: /assets/linkedin/connect-your-care.png
+  image: /assets/headers/strangler-fig-modernization.png
+  og_image: /assets/headers/strangler-fig-modernization.png
+  teaser: /assets/headers/strangler-fig-modernization.png
 ---
 
 I joined Connect Your Care in Hunt Valley in May of 2019. HRCommand — the flagship — was a J2EE/EJB monolith running on WebLogic, ten years of consumer HR product baked into it. The brief was straightforward: modernize it, don't break it, and ship enough new product surface that a strategic acquirer would care.

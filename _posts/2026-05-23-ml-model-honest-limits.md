@@ -12,8 +12,9 @@ tags:
   - fantasy-baseball
 excerpt: "Train MAE 1.765. Test MAE 3.079. That gap is not a bug to hide — it's the whole point of the post. A model that knows what it doesn't know is more useful than one that pretends."
 header:
-  og_image: /assets/linkedin/linkedin-banner.png
-  teaser: /assets/linkedin/linkedin-banner.png
+  image: /assets/headers/ml-model-honest-limits.png
+  og_image: /assets/headers/ml-model-honest-limits.png
+  teaser: /assets/headers/ml-model-honest-limits.png
 ---
 
 The most useful number in this model is the gap between two other numbers.

@@ -5,6 +5,10 @@ date: 2026-06-13
 categories: [opinion]
 tags: [architecture, decision-making, engineering-philosophy, hype-cycle]
 excerpt: "Nobody has ever needed microservices. Plenty of people have needed what microservices happen to provide. The gap between those two sentences has cost more money than almost anything I've watched in 25 years."
+header:
+  image: /assets/headers/your-monolith-is-probably-fine.png
+  og_image: /assets/headers/your-monolith-is-probably-fine.png
+  teaser: /assets/headers/your-monolith-is-probably-fine.png
 ---
 
 Nobody has ever needed microservices.
