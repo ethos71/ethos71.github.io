@@ -39,17 +39,6 @@ feature_row:
     btn_label: "About Me"
     btn_class: "btn--primary"
 
-feature_row2:
-  - title: "Tech Stack"
-    excerpt: >
-      **AI / Agents**: crewAI, AutoGen, LangChain, LangGraph, MCP, RAG, OpenAI, Anthropic, Langfuse  
-      **ML**: XGBoost, scikit-learn, PyTorch, NLP, synthetic data generation, SageMaker, Snowflake Cortex  
-      **Cloud-native**: AWS (Lambda, ECS, EKS, RDS, S3, DynamoDB, Kinesis), GCP, Azure, Terraform, Kubernetes, Docker  
-      **Backend**: Python, Java (15+ yrs), Go, TypeScript, FastAPI, Spring Boot, microservices, REST/GraphQL  
-      **Data**: Snowflake, PostgreSQL, Kafka, Spark, dbt, Airflow  
-      **Frontend**: React, Next.js, Vue.js, Angular  
-      **Earlier career**: C#/.NET, COBOL, J2EE, Assembly
-
 selected_work:
   - image_path: /assets/linkedin/robby.png
     alt: "Robby — multi-agent AI for the SDLC"
@@ -81,5 +70,3 @@ selected_work:
 <h2 id="selected-work" style="text-align:center; margin-top:2em;">Selected Work</h2>
 
 {% include feature_row id="selected_work" %}
-
-{% include feature_row id="feature_row2" type="center" %}

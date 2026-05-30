@@ -4,6 +4,17 @@ title: "Experience"
 author_profile: true
 ---
 
+<div style="margin-bottom: 1.5em;">
+  <a href="/resume.dominick.campbell.pdf" class="btn btn--primary" download>
+    <i class="fas fa-download"></i> Download Resume (PDF)
+  </a>
+  <a href="/resume.dominick.campbell.pdf" class="btn btn--inverse" target="_blank">
+    <i class="fas fa-external-link-alt"></i> Open PDF in New Tab
+  </a>
+</div>
+
+Twenty-five years, mainframe to AI. The readable version is below; the PDF is the same history on one page.
+
 ## Vertex Inc — King of Prussia, PA
 **Principal Engineer & AI Architect** · May 2022 – May 2026
 
