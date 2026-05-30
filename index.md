@@ -7,7 +7,7 @@ header:
   overlay_filter: "0.6"
   actions:
     - label: "<i class='fas fa-file-pdf'></i> View Resume"
-      url: "/resume/"
+      url: "/experience/"
     - label: "<i class='fab fa-linkedin'></i> LinkedIn"
       url: "https://www.linkedin.com/in/dominick-campbell-70b3619b/"
 excerpt: >

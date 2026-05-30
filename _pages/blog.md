@@ -11,4 +11,4 @@ I write here about engineering at scale, AI in production, and the parts everyon
 
 Most posts come out of work I've actually shipped — the four pending patents, the platform decompositions, the fraud system that prevented enough loss to fund a small country, the AI workshop I ran last year for fifty engineers who promptly built better agents than I had.
 
-Posts run long, usually 1,500 words or more, because the interesting parts always do. Browse by [tag](/tags/) or [category](/categories/) if you have something specific in mind, or scroll. I write these myself — but if you read one, you'll already know.
+Posts run long, usually 1,500 words or more, because the interesting parts always do. Browse by [topic](/topics/) if you have something specific in mind, or scroll. I write these myself — but if you read one, you'll already know.
