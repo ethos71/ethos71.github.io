@@ -1,6 +1,7 @@
 ---
 title: "How I Built Decision Support for Audit Defense"
 date: 2025-10-22
+noindex: true
 permalink: /engineering/ai/2025/10/22/audit-decision-support/
 redirect_from:
   - /engineering/ai/2025/10/22/audit-red-black-tree-patent.html

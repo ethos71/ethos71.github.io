@@ -67,7 +67,6 @@ Mort AI Nexus is a patent-pending AI system that shifts nexus discovery from rea
 
 **Tech:** Java, Spring Boot, AWS
 **Outcome:** Customers shifted from reactive quarterly reviews to forward-looking nexus monitoring; preventable penalty exposure reduced
-**Deeper read:** [Mort AI Nexus — A Patent for Detecting When You've Crossed a Line](/engineering/ai/2026/01/14/mort-ai-nexus-patent.html)
 
 ---
 
@@ -105,7 +104,6 @@ What changed when we deployed it: model training stopped being a regulatory nego
 
 **Tech:** Python, NLP-driven generation
 **Outcome:** Removed the data-access bottleneck for AI model training; enabled tax ML projects that previously couldn't be greenlit
-**Deeper read:** [How Data Cake Got Built](/engineering/ai/2025/12/11/how-data-cake-got-built.html)
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "How Data Cake Got Built: Inventing Synthetic Tax Data From Scratch"
 date: 2025-12-11
+noindex: true
 categories:
   - Engineering
   - AI

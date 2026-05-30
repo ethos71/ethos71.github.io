@@ -1,6 +1,7 @@
 ---
 title: "Mort AI Nexus: Predicting Economic Nexus Before It Bites You"
 date: 2026-01-14
+noindex: true
 categories:
   - Engineering
   - AI

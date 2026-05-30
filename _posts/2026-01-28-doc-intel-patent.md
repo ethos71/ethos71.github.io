@@ -1,6 +1,7 @@
 ---
 title: "Doc Intel: What Happens When Your Code and Docs Divorce"
 date: 2026-01-28
+noindex: true
 categories:
   - Engineering
   - AI
