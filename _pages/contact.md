@@ -14,8 +14,6 @@ Principal / Staff Engineer or AI Architect roles. Remote-only, full-time W2. Str
 - **Tax / fintech / compliance tech** — where I have 4+ years of deep domain expertise and 4 patent-pending systems
 - **Developer tooling / platform engineering** — anywhere the work compounds across many teams
 
-I'm not entertaining contract work or hybrid/on-site roles, and the floor on compensation is $150K base.
-
 ## Reach me
 
 - **Email:** [Dominick.do.Campbell@gmail.com](mailto:Dominick.do.Campbell@gmail.com)
