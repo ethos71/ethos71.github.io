@@ -29,9 +29,9 @@ I'm also obsessive about raising the floor. I designed and personally delivered 
 
 ## My Engineering Philosophy
 
-> **"Systems should be self-evidently correct, not merely functional."**
+> **"A trend is a solution looking for a problem. Make it finish the sentence: 'right now we can't ___.'"**
 
-I favor clean architecture over clever code, observability over optimism, and saying the thing over dancing around it. I've watched shortcuts compound across decades, and I've watched the right foundations pay off for just as long. The second one is cheaper.
+Skeptical of trends, not of progress. If a technology can't finish that sentence, it's fashion wearing a requirement's clothes — and I'll say so in the meeting. The boring, well-understood thing is usually the right thing; a monolith you can hold in your head beats a distributed system you can't. I've watched shortcuts compound across decades, and I've watched the right foundations pay off for just as long. The second one is cheaper.
 
 ## Currently Seeking
 
