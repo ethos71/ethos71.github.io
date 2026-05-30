@@ -4,18 +4,13 @@ title: "About"
 author_profile: true
 ---
 
-I'm a Principal Engineer and AI Architect with over 25 years designing systems that matter — from
-Mainframe batch processing to modern AI-powered tax intelligence platforms. I've led teams of 50+
-engineers, shipped products serving 100M+ daily transactions for Fortune 500 customers, and hold 4
-patent-pending AI inventions.
+I started writing software professionally when COBOL batch jobs and mainframes were still the safe choice. Twenty-five years later I'm a Principal Engineer and AI Architect building tax intelligence platforms on LLMs. I've led teams of 50+ engineers, shipped products serving 100M+ daily transactions for Fortune 500 customers, and hold 4 patent-pending AI inventions.
 
 ## What I Do Best
 
-I build things that are hard to build and then make them look inevitable. Whether that's the
-voice-biometric authentication service at JPMC that onboarded ~10M accounts in 90 days and contributed
-to a ~$830B industry-wide fraud-loss plateau, the Indirect Tax Close platform serving Fortune 500
-companies at Vertex, or the acquisition-driving HRCommand decomposition at Connect Your Care — I
-identify the hard problem, architect the right solution, and ship it.
+I take the problem nobody wants to touch and ship the thing that makes it look like it was always obvious.
+
+At JPMC that was a voice-biometric authentication service that onboarded ~10M accounts in 90 days and contributed to a ~$830B industry-wide fraud-loss plateau. At Vertex it was the Indirect Tax Close platform for Fortune 500 companies. At Connect Your Care it was the HRCommand decomposition that drove an acquisition. Different domains, same job: find the hard problem, architect the right solution, ship it.
 
 I'm also obsessive about raising the floor. I designed and personally delivered the **AI Curiosity Workshop** ("Raise the Boats") at Vertex, teaching ~50 employees across engineering, product, and data science how to use AI and build custom agents from scratch. [Read about the workshop.](/ai/leadership/2026/03/18/teaching-200-people-to-build-ai-agents.html)
 
@@ -36,9 +31,7 @@ I'm also obsessive about raising the floor. I designed and personally delivered 
 
 > **"Systems should be self-evidently correct, not merely functional."**
 
-I favor clean architecture over clever code, observability over optimism, and direct communication
-over ambiguity. I've seen what happens when shortcuts compound across decades — and I've also seen
-what happens when you invest in the right foundations early.
+I favor clean architecture over clever code, observability over optimism, and saying the thing over dancing around it. I've watched shortcuts compound across decades, and I've watched the right foundations pay off for just as long. The second one is cheaper.
 
 ## Currently Seeking
 

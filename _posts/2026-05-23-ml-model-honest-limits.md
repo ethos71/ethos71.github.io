@@ -38,7 +38,7 @@ A daily player-performance predictor for fantasy baseball — my side project, [
 
 Training data was 2,300+ real game logs from April 2026, engineered into ten features per player-day. Rolling averages at 5, 10, and 20 games. Standard deviations across the same windows. Trend deltas. Binary flags for hot streaks and cold streaks.
 
-Ten features. Hand-crafted. Domain-informed. That part matters more than which gradient-boosted library you reached for.
+Ten hand-crafted, domain-informed features. That part matters more than which gradient-boosted library you reached for.
 
 ## Why XGBoost
 
@@ -54,15 +54,15 @@ So I did temporal validation. **Train on April 1–25. Test on April 25–May 2.
 
 ## What the honest number means
 
-Train MAE 1.765 says the model learned the patterns in the April window. Test MAE 3.079 says they don't fully generalize a week forward. The reason is in the features. Mine are all about *the batter* — nothing about who he's facing, weather, ballpark, rest, lineup spot. A hot hitter against a Triple-A call-up is a different distribution from a hot hitter against an ace, and the model has no way to tell them apart.
+Train MAE 1.765 says the model learned the patterns in the April window. Test MAE 3.079 says they don't fully generalize a week forward. The reason is in the features. Mine are all about *the batter*. Nothing about who he's facing, weather, ballpark, rest, lineup spot. A hot hitter against a Triple-A call-up is a different distribution from a hot hitter against an ace, and the model has no way to tell them apart.
 
-About 40% of predictions land within ±2 FP, useful for relative ranking. The worst errors are 15+ FP and they cluster in exactly the games my features can't see — a slumping batter detonates against a rookie spot-starter, of course the model missed it.
+About 40% of predictions land within ±2 FP, useful for relative ranking. The worst errors are 15+ FP and they cluster in exactly the games my features can't see. A slumping batter detonates against a rookie spot-starter; of course the model missed it.
 
 80% of ML accuracy comes from the domain features. Most projects invert that ratio and wonder why the pipeline doesn't get better in production.
 
 ## What I'd ship
 
-I wouldn't ship this as autonomous predictions. Not yet. What I'd ship is the model as a tool an analyst uses — paired with Vegas lines, FanGraphs projections, and somebody who knows Ohtani isn't on waivers no matter what the database says.
+I wouldn't ship this as autonomous predictions. Not yet. What I'd ship is the model as a tool an analyst uses, paired with Vegas lines, FanGraphs projections, and somebody who knows Ohtani isn't on waivers no matter what the database says.
 
 Next iteration adds opponent ERA/OPS-allowed, pitcher handedness, and rest days. That should close the gap and beat the FanGraphs baseline this version underperforms by about 10%. Then weekly retrains and drift monitoring against the baseline.
 

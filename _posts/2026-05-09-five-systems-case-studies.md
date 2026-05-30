@@ -20,9 +20,7 @@ header:
   teaser: /assets/linkedin/linkedin-banner.png
 ---
 
-The most-asked question I get is some version of: *what have you actually shipped?* Fair enough. The deep-dive posts cover the systems one at a time. This is the consolidated version — five systems from the last decade, each one in production, each one moved a number the business cared about.
-
-Where there's a deeper post on the system, I link to it. Where there isn't, I go a little deeper here.
+People ask what I've actually shipped. The deep-dive posts cover the systems one at a time; this is the consolidated version. Five systems from the last decade, each one in production, each one moved a number the business cared about. Where there's a deeper post, I link to it. Where there isn't, I go a little deeper here.
 
 ```mermaid
 graph TB
@@ -128,4 +126,4 @@ Five-person team. The React rewrite of the HRCommand UI shipped on Figma-to-code
 
 ---
 
-If you'd like to talk about any of these in depth — or you're working on something with the same shape and want a second opinion — I'm at [Dominick.do.Campbell@gmail.com](mailto:Dominick.do.Campbell@gmail.com), or [LinkedIn](https://www.linkedin.com/in/dominick-campbell-70b3619b/).
+If you're working on something with the same shape and want to talk it through, I'm at [Dominick.do.Campbell@gmail.com](mailto:Dominick.do.Campbell@gmail.com), or [LinkedIn](https://www.linkedin.com/in/dominick-campbell-70b3619b/).

@@ -33,7 +33,7 @@ The shift came when I rewrote the opener. Instead of starting with the machinery
 
 Then we built something that handled that. The analyst's audit RAG was one of those. So was a product manager chaining three tools together to triage a support backlog she'd been staring at for months. So was the data analyst who got tired of waiting on engineering and shipped her own first prompt template by Wednesday.
 
-The barrier isn't the framework. It's giving people permission to imagine.
+The framework was never the barrier. Permission to imagine was.
 
 ## What I told them worked, and what didn't
 
@@ -55,10 +55,10 @@ That last one is the bit I hammered on every session. A traditional service thro
 
 ## The unexpected win
 
-The best outcome wasn't the tools people built. It was the language.
+The best outcome wasn't the tools people built. It was the language they started using.
 
-Teams started having different conversations. Instead of "we need a developer to build a script for this," it was "can we agent this?" Product managers were writing prompt templates. Finance analysts were chaining tools together. The vocabulary changed, and what felt possible to ask for changed with it.
+Teams began having different conversations. Instead of "we need a developer to build a script for this," it was "can we agent this?" Product managers were writing prompt templates. Finance analysts were chaining tools together. The vocabulary changed, and what felt possible to ask for changed with it.
 
-That's what the name actually meant. Not that everyone becomes an ML engineer. Everyone working at a higher waterline.
+That's what the name actually meant. Not everyone becomes an ML engineer. The whole team operates at a higher waterline.
 
 Back to work.

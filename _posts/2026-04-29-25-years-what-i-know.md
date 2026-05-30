@@ -15,8 +15,8 @@ I started writing software professionally when `Y2K` was a genuine existential t
 a sensible career choice. I've since shipped systems in Java, JavaScript, Python, C#, COBOL,
 and things I'd rather not admit to in polite company.
 
-Nine jobs. Mainframe to AI. Along the way I've learned a few things that no architecture book will
-tell you directly.
+Nine jobs, mainframe to AI. A handful of things have held true across all of them. None of them are
+in the architecture books.
 
 ```mermaid
 graph LR
@@ -39,7 +39,7 @@ Design the data model like it's permanent. It basically is.
 ## 2. Observability is a feature, not a tax
 
 Every system I've seen fail catastrophically failed silently first. The tax close pipeline at
-Vertex processing 50M–100M transactions a day didn't fall over loudly — it drifted for hours
+Vertex processing 50M–100M transactions a day didn't fall over loudly. It drifted for hours
 before anyone noticed. In every case I can think of, the dashboards came after the outage, when
 they should have come before the launch.
 
@@ -48,9 +48,9 @@ Build the dashboards before you build the features.
 ## 3. AI doesn't change the fundamentals, it raises the stakes
 
 I hold 4 patent-pending AI inventions now. I've built LLM-backed audit defense tools, a synthetic
-data generator, and a multi-agent SDLC system. And the most important thing I've learned is this:
+data generator, and a multi-agent SDLC system. The most important thing I've learned from any of it:
 
-**AI doesn't eliminate the need for good system design — it punishes bad system design faster.**
+**AI doesn't eliminate the need for good system design. It punishes bad system design faster.**
 {: .notice--info}
 
 A traditional service with a weak design degrades. An AI service with a weak design starts inventing
@@ -58,7 +58,7 @@ answers, and it sounds confident doing it.
 
 ## 4. The best engineers I've met are fundamentally teachers
 
-At Vertex I built and delivered the "Raise the Boats" curriculum — 200+ engineers and analysts
+At Vertex I built and delivered the "Raise the Boats" curriculum: 200+ engineers and analysts
 through the program, ~50 through the live cohort I taught myself. The engineers who treated
 teaching as overhead were the same ones whose systems left with them when they left the company.
 
@@ -72,6 +72,9 @@ works.
 
 ---
 
-I'm writing more here as I go. If any of this resonates, find me on
+Twenty-five years and the lessons keep coming from the same place: the data, the boring dashboards,
+the person who owns the thing. If any of this lands, find me on
 [LinkedIn](https://www.linkedin.com/in/dominick-campbell-70b3619b/) or
 [GitHub](https://github.com/ethos71).
+
+More soon.

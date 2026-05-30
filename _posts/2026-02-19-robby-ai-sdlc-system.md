@@ -36,7 +36,7 @@ _Figure: the time-reclamation bet — at the highest level._
 
 I built Robby at Vertex because I believe she's right.
 
-Robby is a patent-pending multi-agent system I invented in the Data and Insights value stream. The patent is pending and the substance lives there. The bet, at the highest level: AI can absorb enough of the engineering process overhead that humans get back to doing the engineering they signed up for.
+Robby is a patent-pending multi-agent system I invented in the Data and Insights value stream. The patent is pending and the substance stays there. The bet, at the highest level: AI can absorb enough of the engineering process overhead that humans get back to doing the engineering they signed up for.
 
 I can't go deeper on the mechanism here. Reach out if it's relevant to what you're working on.
 

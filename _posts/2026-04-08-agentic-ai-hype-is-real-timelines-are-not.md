@@ -13,7 +13,7 @@ excerpt: "Everyone is shipping 'AI agents' right now. Having actually built them
 
 The last three years of my working life have been multi-agent systems in production. crewAI, AutoGen, LangChain, LangGraph — I've shipped against all of them, watched all of them break, and patched all of them at 11pm. Four patent-pending AI inventions came out of that stretch. I'm not standing in the way of the freight train.
 
-I do want to talk about how fast it's actually moving, because the keynote version and the 11pm version are not the same conversation.
+So this isn't a bubble post. It's a post about how fast it's actually moving, because the keynote version and the 11pm version are not the same conversation.
 
 ```mermaid
 graph LR
@@ -31,7 +31,7 @@ If you want an agent that researches a topic, drafts a report, validates sources
 
 ## Where the production version diverges
 
-The keynote demos show the agent *taking action* — submitting filings, modifying records, moving money. In tax, finance, and healthcare, you cannot let an agent autonomously do any of those without a verification layer in front of it. That isn't a capability gap, it's the legal and operational reality of regulated domains. Build for human-in-the-loop by default, not as the thing you bolt on after compliance asks.
+The keynote demos show the agent *taking action* — submitting filings, modifying records, moving money. In tax, finance, and healthcare, you cannot let an agent autonomously do any of those without a verification layer in front of it. The reason is the legal and operational reality of regulated domains, not a hole in what the model can do. Build for human-in-the-loop by default, not as the thing you bolt on after compliance asks.
 
 Reliability is the second thing the demos don't show. A single agent call has maybe a 2–3% failure rate on a complex task — hallucination, tool error, context-window weirdness. Chain five and that compounds into something nobody wants to look at on a Monday. You need retry logic, fallback paths, observable failure states. The pretty demos have none of it, which is why they don't survive contact with a real workload.
 
