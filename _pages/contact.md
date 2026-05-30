@@ -4,8 +4,6 @@ title: "Contact"
 author_profile: true
 ---
 
-The fastest way to reach me is email or LinkedIn. I read both daily.
-
 ## Reach me
 
 - **Email:** [Dominick.do.Campbell@gmail.com](mailto:Dominick.do.Campbell@gmail.com)
