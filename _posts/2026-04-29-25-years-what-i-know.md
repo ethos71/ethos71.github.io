@@ -9,6 +9,10 @@ tags:
   - AI
   - leadership
 excerpt: "After 25+ years shipping systems from COBOL mainframes to AI agents, here's the unvarnished truth about what makes software last — and what kills it."
+header:
+  image: /assets/headers/25-years-what-i-know.png
+  og_image: /assets/headers/25-years-what-i-know.png
+  teaser: /assets/headers/25-years-what-i-know.png
 ---
 
 I started writing software professionally when `Y2K` was a genuine existential threat and COBOL was

@@ -10,6 +10,10 @@ tags:
   - crewai
   - autogen
 excerpt: "Running the AI Curiosity Workshop — internally branded 'Raise the Boats' — at Vertex taught me more about how people actually learn AI than any framework documentation ever could."
+header:
+  image: /assets/headers/teaching-200-people-to-build-ai-agents.png
+  og_image: /assets/headers/teaching-200-people-to-build-ai-agents.png
+  teaser: /assets/headers/teaching-200-people-to-build-ai-agents.png
 ---
 
 Four hours in, an analyst with no Python background shipped a working RAG tool over our internal audit knowledge base. It pre-drafted answers to the questions her team got asked most often. She had never written a line of Python before that morning.

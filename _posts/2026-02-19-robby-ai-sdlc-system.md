@@ -11,9 +11,9 @@ tags:
   - teams
 excerpt: "Robby is a patent-pending multi-agent system I invented at Vertex. It's a bet that AI can absorb enough engineering process work that humans get back to building."
 header:
-  image: /assets/linkedin/robby.png
-  og_image: /assets/linkedin/robby.png
-  teaser: /assets/linkedin/robby.png
+  image: /assets/headers/robby-ai-sdlc-system.png
+  og_image: /assets/headers/robby-ai-sdlc-system.png
+  teaser: /assets/headers/robby-ai-sdlc-system.png
 ---
 
 A few years ago I watched a TED talk that I haven't been able to stop thinking about.

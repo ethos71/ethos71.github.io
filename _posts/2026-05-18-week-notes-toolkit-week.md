@@ -11,6 +11,10 @@ tags:
   - smartballz
   - job search
 excerpt: "First of a weekly cadence. Less essay, more field notes — what shipped, what surprised me, where the week actually went."
+header:
+  image: /assets/headers/week-notes-toolkit-week.png
+  og_image: /assets/headers/week-notes-toolkit-week.png
+  teaser: /assets/headers/week-notes-toolkit-week.png
 ---
 
 ## What I shipped

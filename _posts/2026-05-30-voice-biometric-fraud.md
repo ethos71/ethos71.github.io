@@ -13,8 +13,9 @@ tags:
   - jpmorgan
 excerpt: "99.87% of 10 million JPMC accounts opted in to voice biometric authentication during the first three months. About 1,300 opted out. The interesting number is not the 99.87%."
 header:
-  og_image: /assets/linkedin/voice-bio.png
-  teaser: /assets/linkedin/voice-bio.png
+  image: /assets/headers/voice-biometric-fraud.png
+  og_image: /assets/headers/voice-biometric-fraud.png
+  teaser: /assets/headers/voice-biometric-fraud.png
 ---
 
 The number I think about from this project is 1,300.

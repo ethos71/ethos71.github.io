@@ -9,6 +9,10 @@ tags:
   - LLMs
   - production
 excerpt: "Everyone is shipping 'AI agents' right now. Having actually built them in production for three years, I have some thoughts on what's real and what's going to hurt people."
+header:
+  image: /assets/headers/agentic-ai-hype-is-real-timelines-are-not.png
+  og_image: /assets/headers/agentic-ai-hype-is-real-timelines-are-not.png
+  teaser: /assets/headers/agentic-ai-hype-is-real-timelines-are-not.png
 ---
 
 The last three years of my working life have been multi-agent systems in production. crewAI, AutoGen, LangChain, LangGraph — I've shipped against all of them, watched all of them break, and patched all of them at 11pm. Four patent-pending AI inventions came out of that stretch. I'm not standing in the way of the freight train.
