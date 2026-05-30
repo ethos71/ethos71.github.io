@@ -31,6 +31,15 @@
 {% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 200 }}">{% else %}<meta name="twitter:description" content="{{ site.description }}">{% endif %}
 <meta name="twitter:image" content="{{ site.url }}{{ page.header.og_image | default: '/assets/linkedin/linkedin-banner.png' }}">
 
+{% comment %}
+  Per-page de-indexing. Set `noindex: true` in a page's front matter to
+  ask crawlers to drop it from search results. The page still resolves
+  at its URL (no redirect, no 404) — this only governs indexing. Used to
+  retire the Vertex patent deep-dives from search while their filings are
+  active, without breaking any inbound links.
+{% endcomment %}
+{% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+
 {% if page.layout == "single" %}
 {% comment %}
   Per-post BlogPosting JSON-LD. Emits only on `single` layout, which

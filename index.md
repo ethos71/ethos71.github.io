@@ -56,22 +56,6 @@ selected_work:
     url: "/ai/engineering/leadership/2026/02/19/robby-ai-sdlc-system.html"
     btn_label: "Read"
     btn_class: "btn--primary"
-  - image_path: /assets/linkedin/data-cake.png
-    alt: "Data Cake — synthetic tax data"
-    title: "Data Cake"
-    excerpt: "Inventing synthetic tax data from scratch — privacy-preserving training fuel for AI in a regulated industry."
-    url: "/engineering/ai/2025/12/11/how-data-cake-got-built.html"
-    btn_label: "Read"
-    btn_class: "btn--primary"
-  - image_path: /assets/linkedin/mort-ai-nexus.png
-    alt: "Mort AI Nexus — economic-nexus prediction"
-    title: "Mort AI Nexus"
-    excerpt: "Predicting economic sales-tax nexus before it bites you. State-by-state thresholds, ML-augmented."
-    url: "/engineering/ai/2026/01/14/mort-ai-nexus-patent.html"
-    btn_label: "Read"
-    btn_class: "btn--primary"
-
-selected_work_b:
   - image_path: /assets/linkedin/voice-bio.png
     alt: "Voice biometric authentication"
     title: "Voice biometric auth"
@@ -95,6 +79,5 @@ selected_work_b:
 <h2 id="selected-work" style="text-align:center; margin-top:2em;">Selected Work</h2>
 
 {% include feature_row id="selected_work" %}
-{% include feature_row id="selected_work_b" %}
 
 {% include feature_row id="feature_row2" type="center" %}
