@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Dominick A. Campbell — Moody Editorial Dark</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#141118;--bg2:#1b1721;--ink:#ece7df;--soft:#a99f95;--gold:#c9a25e;--line:#322b3a;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Newsreader',Georgia,serif;-webkit-font-smoothing:antialiased;
+       background-image:radial-gradient(120% 80% at 50% -10%, #241d2c 0%, var(--bg) 60%);}
+  .grain{position:fixed;inset:0;pointer-events:none;opacity:.035;mix-blend-mode:overlay;
+         background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 44px}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:26px 44px;border-bottom:1px solid var(--line);position:relative;z-index:2}
+  nav .logo{font-family:'Fraunces';font-weight:900;font-size:20px;letter-spacing:.3px}
+  nav ul{display:flex;gap:30px;list-style:none}
+  nav li{font-size:15px;color:var(--soft);letter-spacing:.2px}
+  nav li:hover{color:var(--gold)}
+  /* hero */
+  .hero{padding:78px 0 40px;text-align:center;border-bottom:1px solid var(--line)}
+  .hero .ek{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:26px}
+  .hero h1{font-family:'Fraunces';font-weight:600;font-size:60px;line-height:1.04;letter-spacing:-.5px;max-width:18ch;margin:0 auto}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero .sub{font-size:19px;color:var(--soft);margin-top:24px;font-style:italic}
+  /* featured */
+  .feat{padding:54px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:center}
+  .feat .meta{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .feat h2{font-family:'Fraunces';font-weight:600;font-size:38px;line-height:1.08;letter-spacing:-.4px}
+  .feat .dek{font-size:19px;color:var(--soft);margin-top:20px;line-height:1.55}
+  .feat .dek::first-letter{font-family:'Fraunces';font-weight:900;font-size:58px;float:left;line-height:.8;margin:6px 12px 0 0;color:var(--ink)}
+  .feat .badge{font-size:13px;color:var(--soft);margin-top:22px;letter-spacing:.3px}
+  /* list */
+  .more{padding:44px 0 10px}
+  .more h3{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--soft);margin-bottom:8px}
+  .art{display:grid;grid-template-columns:1fr auto;gap:24px;padding:24px 0;border-top:1px solid var(--line);align-items:baseline}
+  .art h4{font-family:'Fraunces';font-weight:600;font-size:27px;letter-spacing:-.3px;line-height:1.1}
+  .art .c{font-size:13px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-top:8px}
+  .art .dt{font-size:14px;color:var(--soft);white-space:nowrap;font-variant-numeric:tabular-nums}
+  footer{padding:40px 0;border-top:1px solid var(--line);margin-top:30px;display:flex;justify-content:space-between;font-size:13px;color:var(--soft)}
+  footer a{color:var(--ink);text-decoration:none}
+  footer a:hover{color:var(--gold)}
+</style></head>
+<body>
+<div class="grain"></div>
+<nav>
+  <div class="logo">Dominick A. Campbell</div>
+  <ul><li>About</li><li>Writing</li><li>Experience</li><li>Contact</li></ul>
+</nav>
+<div class="wrap">
+  <section class="hero">
+    <div class="ek">Principal Engineer & AI Architect</div>
+    <h1>Twenty-five years of shipping software, <em>mainframe to AI</em>.</h1>
+    <div class="sub">I write about the work.</div>
+  </section>
+
+  <section class="feat">
+    <div>
+      <div class="meta">Featured · Opinion</div>
+      <h2>Your Monolith Is Probably Fine</h2>
+      <div class="badge">Jun 13, 2026 · 6 min read</div>
+    </div>
+    <div>
+      <p class="dek">Nobody has ever needed microservices. Plenty of people have needed what microservices happen to provide. The gap between those two sentences has cost more money than almost anything I've watched in 25 years.</p>
+    </div>
+  </section>
+
+  <section class="more">
+    <h3>From the archive</h3>
+    <div class="art"><div><h4>The Strangler Fig Pattern: Modernizing Without Ripping Out</h4><div class="c">Engineering</div></div><div class="dt">Jun 06 2026</div></div>
+    <div class="art"><div><h4>$830B in Fraud Prevented: Voice Biometric Auth at 10M Scale</h4><div class="c">Case Study</div></div><div class="dt">May 30 2026</div></div>
+    <div class="art"><div><h4>ML Models and Their Honest Limits</h4><div class="c">Machine Learning</div></div><div class="dt">May 23 2026</div></div>
+    <div class="art"><div><h4>Week Notes — The Week the Toolkit Earned Its Keep</h4><div class="c">Field Notes</div></div><div class="dt">May 18 2026</div></div>
+  </section>
+
+  <footer>
+    <span>© 2026 Dominick A. Campbell</span>
+    <span><a href="#">GitHub</a> · <a href="#">LinkedIn</a> · <a href="#">RSS</a></span>
+  </footer>
+</div>
+</body></html>

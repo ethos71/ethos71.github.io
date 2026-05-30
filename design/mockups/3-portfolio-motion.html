@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dominick A. Campbell — Principal Engineer & AI Architect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#070809;
+    --bg-2:#0c0e11;
+    --ink:#f4f1ea;
+    --ink-soft:#a7a39a;
+    --ink-faint:#6b6860;
+    --line:rgba(244,241,234,.10);
+    --line-2:rgba(244,241,234,.06);
+    --accent:#ff5d2e;
+    --accent-glow:rgba(255,93,46,.55);
+    --card:rgba(255,255,255,.022);
+    --max:1180px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Sora",sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.55;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* ---- atmosphere ---- */
+  .aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .aurora::before,.aurora::after{content:"";position:absolute;border-radius:50%;filter:blur(110px);opacity:.6}
+  .aurora::before{
+    width:760px;height:760px;left:-180px;top:-260px;
+    background:radial-gradient(circle at 30% 30%, rgba(255,93,46,.42), transparent 62%);
+    animation:drift1 24s ease-in-out infinite alternate;
+  }
+  .aurora::after{
+    width:680px;height:680px;right:-200px;top:120px;
+    background:radial-gradient(circle at 50% 50%, rgba(58,90,255,.30), transparent 64%);
+    animation:drift2 30s ease-in-out infinite alternate;
+  }
+  .glow-3{
+    position:fixed;z-index:0;pointer-events:none;
+    width:560px;height:560px;left:36%;top:38%;border-radius:50%;filter:blur(120px);
+    background:radial-gradient(circle,rgba(255,93,46,.16),transparent 66%);
+    animation:drift1 28s ease-in-out infinite alternate-reverse;
+  }
+  @keyframes drift1{to{transform:translate(70px,60px) scale(1.12)}}
+  @keyframes drift2{to{transform:translate(-60px,40px) scale(1.08)}}
+
+  /* grain */
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  .wrap{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:0 40px}
+
+  /* ---- reveal: autoplay, ends visible ---- */
+  @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  [data-rise]{opacity:0;animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+  [data-fade]{opacity:0;animation:fade 1.1s ease forwards}
+
+  /* ---- nav ---- */
+  nav{position:relative;z-index:3;max-width:var(--max);margin:0 auto;padding:28px 40px;
+    display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk";font-weight:700;letter-spacing:.02em;font-size:1.02rem}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent-glow)}
+  .navlinks{display:flex;gap:34px;align-items:center}
+  .navlinks a{color:var(--ink-soft);text-decoration:none;font-size:.86rem;font-weight:500;letter-spacing:.01em;transition:color .2s}
+  .navlinks a:hover{color:var(--ink)}
+  .navlinks .pill{border:1px solid var(--line);border-radius:100px;padding:9px 18px;color:var(--ink)}
+  .navlinks .pill:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* ---- hero ---- */
+  header{padding:54px 0 36px}
+  .eyebrow{display:flex;align-items:center;gap:14px;font-family:"Spline Sans Mono";font-size:.74rem;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:30px;animation-delay:.05s}
+  .eyebrow .bar{height:1px;width:46px;background:var(--line)}
+  .eyebrow b{color:var(--accent);font-weight:500}
+
+  .display{font-family:"Space Grotesk";font-weight:700;line-height:.85;letter-spacing:-.03em;
+    font-size:clamp(72px,12.6vw,168px);margin-left:-.06em}
+  .display .l1{display:block;color:var(--ink);animation-delay:.12s}
+  .display .l2{display:block;animation-delay:.22s;
+    background:linear-gradient(95deg,var(--accent) 0%,#ff8a5c 48%,#ffd9c2 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .display .l2 .out{-webkit-text-fill-color:transparent;-webkit-text-stroke:1.4px rgba(255,255,255,.30);color:transparent}
+
+  .herorow{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;
+    margin-top:40px;flex-wrap:wrap;animation-delay:.5s}
+  .lede{max-width:480px;color:var(--ink-soft);font-size:1.04rem;line-height:1.7}
+  .lede strong{color:var(--ink);font-weight:600}
+  .cta{display:flex;gap:14px;align-items:center}
+  .btn{font-family:"Space Grotesk";font-weight:600;font-size:.92rem;text-decoration:none;
+    padding:14px 26px;border-radius:100px;display:inline-flex;align-items:center;gap:9px;transition:transform .2s,box-shadow .25s,background .2s}
+  .btn-primary{background:var(--accent);color:#160a05;box-shadow:0 10px 34px -10px var(--accent-glow)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px var(--accent-glow)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:rgba(255,255,255,.32);transform:translateY(-2px)}
+  .btn .arr{font-family:"Spline Sans Mono"}
+
+  /* stats strip */
+  .stats{display:flex;gap:48px;margin-top:64px;padding-top:30px;border-top:1px solid var(--line-2);
+    flex-wrap:wrap;animation-delay:.62s}
+  .stat .k{font-family:"Space Grotesk";font-weight:700;font-size:1.85rem;letter-spacing:-.02em}
+  .stat .k .u{color:var(--accent)}
+  .stat .v{font-family:"Spline Sans Mono";font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-top:4px}
+
+  /* ---- section heading ---- */
+  .sec{padding:96px 0 0}
+  .sechead{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px}
+  .sechead h2{font-family:"Space Grotesk";font-weight:700;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.02em}
+  .sechead .idx{font-family:"Spline Sans Mono";font-size:.76rem;letter-spacing:.2em;color:var(--ink-faint);text-transform:uppercase}
+
+  /* ---- work tiles ---- */
+  .tiles{display:grid;grid-template-columns:1.4fr 1fr;gap:22px}
+  .tile{position:relative;background:var(--card);border:1px solid var(--line);border-radius:22px;
+    padding:34px;overflow:hidden;text-decoration:none;color:inherit;
+    transform:perspective(1200px) rotateX(0deg);transition:transform .4s cubic-bezier(.2,.7,.2,1),border-color .3s,background .3s;
+    backdrop-filter:blur(6px)}
+  .tile::after{content:"";position:absolute;inset:0;border-radius:22px;pointer-events:none;
+    background:radial-gradient(420px circle at 78% 12%,rgba(255,93,46,.10),transparent 60%);opacity:.9}
+  .tile:hover{transform:perspective(1200px) rotateX(2.4deg) translateY(-6px);border-color:rgba(255,93,46,.4);background:rgba(255,93,46,.04)}
+  .tile-feat{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;min-height:430px}
+  .tnum{font-family:"Spline Sans Mono";font-size:.74rem;color:var(--accent);letter-spacing:.14em}
+  .ttag{font-family:"Spline Sans Mono";font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-faint);border:1px solid var(--line);border-radius:100px;padding:5px 12px;display:inline-block}
+  .tile h3{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.02em;margin:18px 0 12px}
+  .tile-feat h3{font-size:2.5rem;line-height:1.02}
+  .tile h3 small{display:block;font-size:.5em;color:var(--ink-faint);font-weight:500;letter-spacing:0;margin-top:8px}
+  .tile p{color:var(--ink-soft);font-size:.98rem;line-height:1.65;max-width:42ch}
+  .tile-sm h3{font-size:1.45rem}
+  .tile-sm p{font-size:.9rem}
+  .ttop{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+  .tlink{margin-top:22px;font-family:"Spline Sans Mono";font-size:.78rem;color:var(--ink);display:inline-flex;
+    align-items:center;gap:8px;letter-spacing:.04em}
+  .tlink .a{color:var(--accent);transition:transform .25s}
+  .tile:hover .tlink .a{transform:translateX(5px)}
+
+  /* metric flourish in feature */
+  .featmetric{display:flex;gap:28px;margin-top:26px}
+  .featmetric div .n{font-family:"Space Grotesk";font-weight:700;font-size:1.5rem}
+  .featmetric div .n .u{color:var(--accent)}
+  .featmetric div .lbl{font-family:"Spline Sans Mono";font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:3px}
+
+  /* ---- writing strip ---- */
+  .writing{margin-top:18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .wrow{display:grid;grid-template-columns:90px 1fr auto;align-items:center;gap:24px;
+    padding:26px 4px;border-bottom:1px solid var(--line-2);text-decoration:none;color:inherit;transition:padding .3s,background .3s}
+  .wrow:last-child{border-bottom:none}
+  .wrow:hover{padding-left:18px;background:linear-gradient(90deg,rgba(255,93,46,.05),transparent)}
+  .wdate{font-family:"Spline Sans Mono";font-size:.76rem;color:var(--ink-faint);letter-spacing:.06em}
+  .wtitle{font-family:"Space Grotesk";font-weight:600;font-size:1.3rem;letter-spacing:-.01em}
+  .wrow:hover .wtitle{color:var(--accent)}
+  .wgo{font-family:"Spline Sans Mono";font-size:1.1rem;color:var(--ink-faint);transition:color .25s,transform .25s}
+  .wrow:hover .wgo{color:var(--accent);transform:translateX(4px)}
+
+  /* ---- footer ---- */
+  footer{margin-top:110px;border-top:1px solid var(--line);padding:46px 0 60px}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+  .foot .c{font-family:"Spline Sans Mono";font-size:.8rem;color:var(--ink-faint);letter-spacing:.04em}
+  .foot .links{display:flex;gap:26px}
+  .foot a{color:var(--ink-soft);text-decoration:none;font-size:.86rem;font-weight:500;transition:color .2s}
+  .foot a:hover{color:var(--accent)}
+  .footbig{font-family:"Space Grotesk";font-weight:700;font-size:clamp(40px,9vw,118px);letter-spacing:-.03em;
+    line-height:.9;color:transparent;-webkit-text-stroke:1px rgba(244,241,234,.12);margin-top:30px;user-select:none}
+
+  @media(max-width:900px){
+    .tiles{grid-template-columns:1fr}
+    .tile-feat{grid-row:auto;min-height:auto}
+    .wrap{padding:0 24px}
+  }
+</style>
+</head>
+<body>
+  <div class="aurora"></div>
+  <div class="glow-3"></div>
+  <div class="grain"></div>
+
+  <nav>
+    <div class="brand"><span class="dot"></span>DAC<span style="color:var(--ink-faint);font-weight:500">/ engineering</span></div>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#writing">Writing</a>
+      <a href="#" class="pill">View Resume</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <header>
+      <div class="eyebrow" data-rise>
+        <span class="bar"></span>
+        Principal Engineer &amp; AI Architect · <b>25+ years</b> · <b>4 patent-pending AI inventions</b>
+      </div>
+
+      <h1 class="display">
+        <span class="l1" data-rise>DOMINICK</span>
+        <span class="l2" data-rise>CAMP<span class="out">BELL</span></span>
+      </h1>
+
+      <div class="herorow" data-fade>
+        <p class="lede">
+          I build systems that <strong>remove friction</strong> — multi-agent SDLC
+          orchestration, fraud-grade voice biometrics, and monoliths un-tangled
+          into services that ship. Twenty-five years turning hard architecture into
+          outcomes people feel.
+        </p>
+        <div class="cta">
+          <a href="#" class="btn btn-primary">View Resume <span class="arr">↗</span></a>
+          <a href="#" class="btn btn-ghost">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="stats" data-fade>
+        <div class="stat"><div class="k">$830<span class="u">B</span></div><div class="v">Fraud prevented</div></div>
+        <div class="stat"><div class="k">99.87<span class="u">%</span></div><div class="v">Adoption · 10M+ accts</div></div>
+        <div class="stat"><div class="k">4</div><div class="v">Patent-pending AI</div></div>
+        <div class="stat"><div class="k">25<span class="u">+</span></div><div class="v">Years shipping</div></div>
+      </div>
+    </header>
+
+    <!-- ===== SELECTED WORK ===== -->
+    <section class="sec" id="work">
+      <div class="sechead">
+        <h2>Selected Work</h2>
+        <span class="idx">003 — engineering / ai / platform</span>
+      </div>
+
+      <div class="tiles">
+        <!-- feature tile -->
+        <a href="#" class="tile tile-feat">
+          <div>
+            <div class="ttop">
+              <span class="tnum">01 / Robby</span>
+              <span class="ttag">Multi-agent · SDLC</span>
+            </div>
+            <h3>Robby
+              <small>Multi-agent system for SDLC orchestration</small>
+            </h3>
+            <p>Built to remove process friction so engineers do the work they came for.</p>
+          </div>
+          <div>
+            <div class="featmetric">
+              <div><div class="n">SDLC<span class="u">.</span></div><div class="lbl">Orchestration</div></div>
+              <div><div class="n">Multi<span class="u">·</span>agent</div><div class="lbl">Architecture</div></div>
+            </div>
+            <span class="tlink">Explore the system <span class="a">→</span></span>
+          </div>
+        </a>
+
+        <!-- small tile 1 -->
+        <a href="#" class="tile tile-sm">
+          <div class="ttop">
+            <span class="tnum">02 / JPMorgan</span>
+            <span class="ttag">Security</span>
+          </div>
+          <h3>Voice Biometric Auth</h3>
+          <p>$830B fraud prevented at JPMorgan. 99.87% adoption across 10M+ accounts.</p>
+          <span class="tlink">Read the case <span class="a">→</span></span>
+        </a>
+
+        <!-- small tile 2 -->
+        <a href="#" class="tile tile-sm">
+          <div class="ttop">
+            <span class="tnum">03 / Optum</span>
+            <span class="ttag">Modernization</span>
+          </div>
+          <h3>Strangler-Fig Modernization</h3>
+          <p>Decoupled a J2EE/EJB monolith into Spring Boot microservices. Contributed to the Optum acquisition.</p>
+          <span class="tlink">See the migration <span class="a">→</span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== WRITING ===== -->
+    <section class="sec" id="writing">
+      <div class="sechead">
+        <h2>Writing</h2>
+        <span class="idx">field notes — recent</span>
+      </div>
+
+      <div class="writing">
+        <a href="#" class="wrow">
+          <span class="wdate">Jun 13</span>
+          <span class="wtitle">Your Monolith Is Probably Fine</span>
+          <span class="wgo">↗</span>
+        </a>
+        <a href="#" class="wrow">
+          <span class="wdate">Jun 06</span>
+          <span class="wtitle">The Strangler Fig Pattern</span>
+          <span class="wgo">↗</span>
+        </a>
+        <a href="#" class="wrow">
+          <span class="wdate">May 23</span>
+          <span class="wtitle">ML Models and Their Honest Limits</span>
+          <span class="wgo">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="foot">
+        <span class="c">© 2026 Dominick A. Campbell</span>
+        <div class="links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footbig">LET'S BUILD.</div>
+    </footer>
+  </div>
+</body>
+</html>

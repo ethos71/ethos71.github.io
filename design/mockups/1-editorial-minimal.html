@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dominick A. Campbell — Principal Engineer & AI Architect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #faf8f5;
+    --ink: #1a1a1a;
+    --ink-soft: #4a463f;
+    --ink-faint: #8a847a;
+    --accent: #9b3d2e;
+    --rule: #ddd6c9;
+    --rule-strong: #c7bfae;
+    --display: "Fraunces", Georgia, serif;
+    --body: "Newsreader", Georgia, serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 19px;
+    line-height: 1.65;
+    font-optical-sizing: auto;
+  }
+
+  /* warm paper grain — subtle, no external request */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.012) 0.5px, transparent 0.6px);
+    background-size: 4px 4px;
+    opacity: 0.7;
+  }
+
+  .topline {
+    height: 4px;
+    background: var(--accent);
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 64px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ---------- Masthead ---------- */
+  header.masthead {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 30px 0 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .mark {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    text-decoration: none;
+    font-variation-settings: "opsz" 40;
+  }
+  .mark .dot { color: var(--accent); }
+
+  nav.primary {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+  }
+  nav.primary a {
+    font-family: var(--body);
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 0 18px;
+    position: relative;
+    transition: color 0.18s ease;
+  }
+  nav.primary a:hover { color: var(--accent); }
+  nav.primary a + a::before {
+    content: "·";
+    position: absolute;
+    left: -3px;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 78px 0 56px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .kicker {
+    font-family: var(--body);
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 26px;
+    font-weight: 500;
+  }
+
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 340;
+    font-size: 88px;
+    line-height: 0.99;
+    letter-spacing: -0.02em;
+    margin: 0;
+    max-width: 13ch;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 380;
+    color: var(--accent);
+  }
+
+  .hero .lede {
+    font-family: var(--body);
+    font-size: 25px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 32ch;
+    margin: 32px 0 0;
+    font-weight: 320;
+  }
+
+  /* ---------- Body grid ---------- */
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 72px;
+    padding: 64px 0 0;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+  }
+  .section-head h2 {
+    font-family: var(--body);
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 600;
+    margin: 0;
+  }
+  .section-head .count {
+    font-family: var(--body);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- Article list ---------- */
+  .post {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 28px;
+    padding: 34px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.18s ease;
+  }
+  .post:last-child { border-bottom: none; }
+  .post:hover { background: rgba(155,61,46,0.035); }
+  .post:hover .post-title { color: var(--accent); }
+
+  .post-meta {
+    padding-top: 6px;
+  }
+  .post-date {
+    font-family: var(--body);
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--ink);
+    font-weight: 500;
+    display: block;
+  }
+  .post-cat {
+    font-family: var(--body);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 8px;
+    display: block;
+  }
+
+  .post-title {
+    font-family: var(--display);
+    font-weight: 420;
+    font-size: 31px;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--ink);
+    font-variation-settings: "opsz" 60;
+    transition: color 0.18s ease;
+  }
+  .post-dek {
+    font-family: var(--body);
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 12px 0 0;
+    max-width: 56ch;
+    font-weight: 320;
+  }
+
+  /* lead post emphasis */
+  .post.lead .post-title { font-size: 40px; line-height: 1.06; }
+  .post.lead .post-dek { font-size: 20px; }
+
+  /* ---------- Sidebar ---------- */
+  aside .side-block { margin-bottom: 54px; }
+
+  aside .side-head {
+    font-family: var(--body);
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 600;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: 12px;
+    margin: 0 0 18px;
+  }
+
+  aside .about-text {
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+    font-weight: 330;
+  }
+  aside .about-text .first {
+    font-family: var(--display);
+    float: left;
+    font-size: 56px;
+    line-height: 0.78;
+    padding: 8px 10px 0 0;
+    color: var(--accent);
+    font-weight: 420;
+  }
+
+  aside .read-more {
+    font-family: var(--body);
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+  }
+  aside .read-more:hover { color: var(--ink); border-color: var(--ink); }
+
+  .topics { list-style: none; margin: 0; padding: 0; }
+  .topics li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--body);
+    font-size: 16px;
+    padding: 9px 0;
+    border-bottom: 1px dotted var(--rule);
+    color: var(--ink-soft);
+  }
+  .topics li:last-child { border-bottom: none; }
+  .topics li span { color: var(--ink-faint); font-size: 13px; }
+
+  .pull {
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 20px;
+    margin: 0;
+  }
+  .pull p {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 21px;
+    line-height: 1.32;
+    color: var(--ink);
+    margin: 0 0 12px;
+    font-weight: 360;
+  }
+  .pull cite {
+    font-family: var(--body);
+    font-style: normal;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: 90px;
+    border-top: 2px solid var(--ink);
+    padding: 34px 0 60px;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  footer .copy {
+    font-family: var(--body);
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+  footer .links a {
+    font-family: var(--body);
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    margin-left: 22px;
+    transition: color 0.18s ease;
+  }
+  footer .links a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="topline"></div>
+
+  <div class="wrap">
+    <header class="masthead">
+      <a class="mark" href="#">Dominick A. Campbell<span class="dot">.</span></a>
+      <nav class="primary">
+        <a href="#">About</a>
+        <a href="#">Writing</a>
+        <a href="#">Experience</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <p class="kicker">Principal Engineer &amp; AI Architect</p>
+      <h1>Twenty-five years of shipping software, <em>mainframe to AI.</em></h1>
+      <p class="lede">I write about the work — the patterns that hold up, the ones that don't, and what the numbers actually mean.</p>
+    </section>
+
+    <div class="columns">
+      <main>
+        <div class="section-head">
+          <h2>Latest Writing</h2>
+          <span class="count">Five of fifteen</span>
+        </div>
+
+        <a class="post lead" href="#">
+          <div class="post-meta">
+            <span class="post-date">Jun 13<br>2026</span>
+            <span class="post-cat">Opinion</span>
+          </div>
+          <div>
+            <h3 class="post-title">Your Monolith Is Probably Fine</h3>
+            <p class="post-dek">Nobody has ever needed microservices. Plenty of people have needed what microservices happen to provide.</p>
+          </div>
+        </a>
+
+        <a class="post" href="#">
+          <div class="post-meta">
+            <span class="post-date">Jun 06<br>2026</span>
+            <span class="post-cat">Engineering</span>
+          </div>
+          <div>
+            <h3 class="post-title">The Strangler Fig Pattern: Modernizing Without Ripping Out</h3>
+            <p class="post-dek">Rip-and-replace is malpractice when the monolith is paying the bills.</p>
+          </div>
+        </a>
+
+        <a class="post" href="#">
+          <div class="post-meta">
+            <span class="post-date">May 30<br>2026</span>
+            <span class="post-cat">Case Study</span>
+          </div>
+          <div>
+            <h3 class="post-title">$830B in Fraud Prevented: Voice Biometric Auth at 10M Scale</h3>
+            <p class="post-dek">99.87% of 10 million JPMC accounts opted in. The interesting number isn't the 99.87%.</p>
+          </div>
+        </a>
+
+        <a class="post" href="#">
+          <div class="post-meta">
+            <span class="post-date">May 23<br>2026</span>
+            <span class="post-cat">Machine Learning</span>
+          </div>
+          <div>
+            <h3 class="post-title">ML Models and Their Honest Limits</h3>
+            <p class="post-dek">The most useful number in this model is the gap between two other numbers.</p>
+          </div>
+        </a>
+
+        <a class="post" href="#">
+          <div class="post-meta">
+            <span class="post-date">May 18<br>2026</span>
+            <span class="post-cat">Field Notes</span>
+          </div>
+          <div>
+            <h3 class="post-title">Week Notes — The Week the Toolkit Earned Its Keep</h3>
+            <p class="post-dek">What shipped, what surprised me, where the week went.</p>
+          </div>
+        </a>
+      </main>
+
+      <aside>
+        <div class="side-block">
+          <h4 class="side-head">About</h4>
+          <p class="about-text"><span class="first">A</span> principal engineer and AI architect with a quarter century of shipping — from mainframe batch jobs to large-scale machine learning. This is where I think out loud about building systems that last.</p>
+          <a class="read-more" href="#">More about me &rarr;</a>
+        </div>
+
+        <div class="side-block">
+          <h4 class="side-head">Topics</h4>
+          <ul class="topics">
+            <li>Engineering <span>06</span></li>
+            <li>Machine Learning <span>04</span></li>
+            <li>Case Studies <span>03</span></li>
+            <li>Opinion <span>02</span></li>
+            <li>Field Notes <span>—</span></li>
+          </ul>
+        </div>
+
+        <div class="side-block">
+          <h4 class="side-head">From the Archive</h4>
+          <blockquote class="pull">
+            <p>“The interesting number is almost never the one in the headline.”</p>
+            <cite>— On reading metrics honestly</cite>
+          </blockquote>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <span class="copy">© 2026 Dominick A. Campbell</span>
+        <span class="links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">RSS</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

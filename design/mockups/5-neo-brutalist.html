@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Dominick A. Campbell — Neo-Brutalist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0a0a0a;--paper:#fdf6e3;--blue:#2b4cff;--coral:#ff5a3c;--yellow:#ffe600;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  .bd{border:3px solid var(--ink)}
+  .shadow{box-shadow:7px 7px 0 var(--ink)}
+  /* nav */
+  nav{display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--ink);padding:18px 32px;position:sticky;top:0;background:var(--paper);z-index:5}
+  nav .logo{font-weight:900;font-size:19px;letter-spacing:-.5px}
+  nav ul{display:flex;gap:6px;list-style:none}
+  nav li{font-family:'Space Mono';font-size:13px;font-weight:700;border:2px solid var(--ink);padding:6px 12px;background:#fff}
+  nav li:hover{background:var(--yellow)}
+  /* hero */
+  .hero{padding:64px 0 40px}
+  .kicker{font-family:'Space Mono';font-weight:700;font-size:13px;background:var(--blue);color:#fff;display:inline-block;padding:5px 12px;border:3px solid var(--ink);margin-bottom:22px}
+  h1{font-size:84px;line-height:.92;font-weight:900;letter-spacing:-2.5px;text-transform:uppercase;max-width:14ch}
+  h1 .hl{background:var(--coral);color:#fff;padding:0 6px}
+  .lede{font-size:21px;font-weight:500;max-width:54ch;margin-top:26px;line-height:1.4}
+  /* metrics */
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:48px 0}
+  .metric{background:#fff;padding:22px 18px}
+  .metric .n{font-size:40px;font-weight:900;letter-spacing:-1px;line-height:1}
+  .metric .l{font-family:'Space Mono';font-size:11px;font-weight:700;margin-top:10px;text-transform:uppercase}
+  .metric:nth-child(1){background:var(--yellow)}
+  .metric:nth-child(3){background:var(--blue);color:#fff}
+  /* section header */
+  .sh{font-family:'Space Mono';font-weight:700;font-size:14px;text-transform:uppercase;border-bottom:3px solid var(--ink);padding-bottom:10px;margin:54px 0 26px;display:flex;justify-content:space-between}
+  /* work */
+  .work{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:#fff;padding:24px}
+  .card .tag{font-family:'Space Mono';font-size:11px;font-weight:700;background:var(--ink);color:var(--paper);display:inline-block;padding:3px 9px;margin-bottom:14px}
+  .card h3{font-size:24px;font-weight:900;letter-spacing:-.5px;text-transform:uppercase;line-height:1}
+  .card p{font-size:15px;font-weight:500;margin-top:12px;line-height:1.4}
+  .card:nth-child(2){background:var(--coral);color:#fff}
+  .card:nth-child(2) .tag{background:#fff;color:var(--coral)}
+  /* writing */
+  .post{display:flex;align-items:baseline;gap:20px;background:#fff;padding:18px 22px;margin-bottom:14px}
+  .post:hover{background:var(--yellow)}
+  .post .date{font-family:'Space Mono';font-size:12px;font-weight:700;width:90px;flex:none}
+  .post h4{font-size:21px;font-weight:700;letter-spacing:-.5px}
+  .post .arrow{margin-left:auto;font-weight:900;font-size:22px}
+  /* footer */
+  footer{border-top:3px solid var(--ink);margin-top:60px;padding:28px 0;font-family:'Space Mono';font-size:12px;font-weight:700;display:flex;justify-content:space-between;text-transform:uppercase}
+  footer a{color:var(--blue);text-decoration:none}
+</style></head>
+<body>
+<nav>
+  <div class="logo">DOMINICK A. CAMPBELL</div>
+  <ul><li>ABOUT</li><li>WORK</li><li>WRITING</li><li>CONTACT</li></ul>
+</nav>
+<div class="wrap">
+  <section class="hero">
+    <span class="kicker">PRINCIPAL ENGINEER & AI ARCHITECT</span>
+    <h1>I build the <span class="hl">boring</span> infrastructure</h1>
+    <p class="lede">Twenty-five years shipping software, mainframe to AI. I build the boring infrastructure that decides whether the rocket lands.</p>
+  </section>
+
+  <section class="metrics">
+    <div class="metric bd"><div class="n">25+</div><div class="l">Years shipping</div></div>
+    <div class="metric bd"><div class="n">4</div><div class="l">Patents pending</div></div>
+    <div class="metric bd"><div class="n">50+</div><div class="l">Engineers led</div></div>
+    <div class="metric bd"><div class="n">50–100M</div><div class="l">Txns / day</div></div>
+  </section>
+
+  <div class="sh"><span>SELECTED WORK</span><span>003</span></div>
+  <section class="work">
+    <div class="card bd shadow"><span class="tag">VERTEX</span><h3>Robby</h3><p>Multi-agent SDLC orchestration.</p></div>
+    <div class="card bd shadow"><span class="tag">JPMORGAN</span><h3>Voice Biometric Auth</h3><p>$830B fraud prevented · 99.87% adoption · 10M+ accounts.</p></div>
+    <div class="card bd shadow"><span class="tag">CONNECT YOUR CARE</span><h3>Strangler-Fig</h3><p>J2EE/EJB monolith → Spring Boot. Drove the Optum acquisition.</p></div>
+  </section>
+
+  <div class="sh"><span>RECENT WRITING</span><span>→ ALL POSTS</span></div>
+  <section>
+    <div class="post bd"><span class="date">JUN 13 2026</span><h4>Your Monolith Is Probably Fine</h4><span class="arrow">↗</span></div>
+    <div class="post bd"><span class="date">JUN 06 2026</span><h4>The Strangler Fig Pattern</h4><span class="arrow">↗</span></div>
+    <div class="post bd"><span class="date">MAY 23 2026</span><h4>ML Models and Their Honest Limits</h4><span class="arrow">↗</span></div>
+  </section>
+</div>
+<footer class="wrap" style="max-width:1180px">
+  <span>© 2026 DOMINICK A. CAMPBELL</span>
+  <span><a href="#">GITHUB</a> · <a href="#">LINKEDIN</a> · <a href="#">RSS</a></span>
+</footer>
+</body></html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Dominick A. Campbell — Swiss Grid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#111;--gray:#767676;--line:#d8d8d8;--paper:#fff;--red:#e30613;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;font-size:15px;line-height:1.5}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 40px}
+  .col12{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+  /* nav */
+  nav{border-bottom:1px solid var(--ink);padding:20px 40px;display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:baseline}
+  nav .logo{grid-column:1/4;font-weight:800;font-size:15px;letter-spacing:-.2px}
+  nav ul{grid-column:5/13;display:flex;gap:32px;list-style:none;justify-content:flex-end}
+  nav li{font-size:13px;font-weight:500;color:var(--gray)}
+  nav li:first-child{color:var(--ink);font-weight:700}
+  /* hero */
+  .hero{padding:80px 0 70px;border-bottom:1px solid var(--line)}
+  .hero .role{grid-column:1/4;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+  .hero .role .red{color:var(--red)}
+  .hero h1{grid-column:4/13;font-size:46px;font-weight:600;letter-spacing:-1.4px;line-height:1.08}
+  /* section */
+  .sec{padding:50px 0;border-bottom:1px solid var(--line)}
+  .secnum{grid-column:1/4;font-size:13px;font-weight:700;letter-spacing:.5px}
+  .secnum .n{color:var(--red);font-variant-numeric:tabular-nums}
+  .secbody{grid-column:4/13}
+  /* work rows */
+  .row{display:grid;grid-template-columns:3fr 5fr 2fr 2fr;gap:24px;padding:18px 0;border-top:1px solid var(--line);align-items:baseline}
+  .row:first-child{border-top:none}
+  .row .t{font-size:19px;font-weight:700;letter-spacing:-.4px}
+  .row .d{font-size:14px;color:var(--gray);line-height:1.4}
+  .row .m{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+  .row .y{font-size:12px;color:var(--gray);font-variant-numeric:tabular-nums;text-align:right}
+  /* writing rows */
+  .wrow{display:grid;grid-template-columns:6fr 3fr 3fr;gap:24px;padding:16px 0;border-top:1px solid var(--line);align-items:baseline}
+  .wrow .t{font-size:18px;font-weight:600;letter-spacing:-.3px}
+  .wrow .c{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--red)}
+  .wrow .dt{font-size:13px;color:var(--gray);text-align:right;font-variant-numeric:tabular-nums}
+  /* facts */
+  .facts{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
+  .fact .n{font-size:34px;font-weight:700;letter-spacing:-1px;line-height:1}
+  .fact .l{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:.5px;margin-top:8px}
+  /* footer */
+  footer{padding:30px 0;display:grid;grid-template-columns:repeat(12,1fr);gap:24px;font-size:12px;color:var(--gray)}
+  footer .a{grid-column:1/7}
+  footer .b{grid-column:7/13;text-align:right}
+  footer a{color:var(--ink);text-decoration:none}
+</style></head>
+<body>
+<nav>
+  <div class="logo">Dominick&nbsp;A.&nbsp;Campbell</div>
+  <ul><li>Index</li><li>Work</li><li>Writing</li><li>About</li><li>Contact</li></ul>
+</nav>
+<div class="wrap">
+  <section class="hero col12">
+    <div class="role">Principal Engineer<br>& AI Architect<br><span class="red">— 2026</span></div>
+    <h1>Twenty-five years shipping software, from mainframe to AI. I write about the work — the decisions, not the demos.</h1>
+  </section>
+
+  <section class="sec col12">
+    <div class="secnum"><span class="n">01</span> &nbsp;Selected Work</div>
+    <div class="secbody">
+      <div class="row"><span class="t">Robby</span><span class="d">Multi-agent SDLC orchestration</span><span class="m">Vertex</span><span class="y">2024–26</span></div>
+      <div class="row"><span class="t">Voice Biometric Auth</span><span class="d">$830B fraud prevented · 99.87% adoption · 10M+ accounts</span><span class="m">JPMorgan</span><span class="y">2018–19</span></div>
+      <div class="row"><span class="t">Strangler-Fig Modernization</span><span class="d">J2EE/EJB → Spring Boot · drove Optum acquisition</span><span class="m">Connect Your Care</span><span class="y">2019–21</span></div>
+    </div>
+  </section>
+
+  <section class="sec col12">
+    <div class="secnum"><span class="n">02</span> &nbsp;Writing</div>
+    <div class="secbody">
+      <div class="wrow"><span class="t">Your Monolith Is Probably Fine</span><span class="c">Opinion</span><span class="dt">Jun 13 2026</span></div>
+      <div class="wrow"><span class="t">The Strangler Fig Pattern</span><span class="c">Engineering</span><span class="dt">Jun 06 2026</span></div>
+      <div class="wrow"><span class="t">ML Models and Their Honest Limits</span><span class="c">Machine Learning</span><span class="dt">May 23 2026</span></div>
+    </div>
+  </section>
+
+  <section class="sec col12">
+    <div class="secnum"><span class="n">03</span> &nbsp;Facts</div>
+    <div class="secbody facts">
+      <div class="fact"><div class="n">25+</div><div class="l">Years</div></div>
+      <div class="fact"><div class="n">4</div><div class="l">Patents pending</div></div>
+      <div class="fact"><div class="n">50+</div><div class="l">Engineers led</div></div>
+      <div class="fact"><div class="n">100M</div><div class="l">Txns / day</div></div>
+      <div class="fact"><div class="n">&lt;100ms</div><div class="l">p99 latency</div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="a">Dominick A. Campbell — 2026</div>
+    <div class="b"><a href="#">GitHub</a> / <a href="#">LinkedIn</a> / <a href="#">RSS</a></div>
+  </footer>
+</div>
+</body></html>

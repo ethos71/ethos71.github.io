@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dominick A. Campbell — Principal Engineer &amp; AI Architect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-tint:#f6f8f7;
+    --bg-tint-2:#f2f5f3;
+    --ink:#0f1714;
+    --ink-soft:#3d4a45;
+    --ink-mute:#6b7872;
+    --line:#e4e9e6;
+    --line-strong:#d4dbd7;
+    --accent:#047857;
+    --accent-dk:#03593f;
+    --accent-wash:#ecf6f1;
+    --maxw:1100px;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Plus Jakarta Sans",system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- nav ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:saturate(140%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:600;letter-spacing:-.01em}
+  .brand .mark{
+    width:30px;height:30px;border-radius:8px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-dk));
+    display:grid;place-items:center;color:#fff;font-family:"Fraunces",serif;
+    font-weight:600;font-size:16px;line-height:1;
+    box-shadow:0 2px 10px rgba(4,120,87,.28);
+  }
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{font-size:14.5px;color:var(--ink-soft);font-weight:500;transition:color .15s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{
+    font-size:14px;font-weight:600;color:#fff !important;
+    background:var(--accent);padding:9px 18px;border-radius:9px;
+    box-shadow:0 1px 2px rgba(4,120,87,.25);transition:background .15s,transform .15s;
+  }
+  .nav-cta:hover{background:var(--accent-dk);transform:translateY(-1px)}
+
+  /* ---------- shared section ---------- */
+  section{position:relative}
+  .band-tint{background:var(--bg-tint)}
+  .band-tint-2{background:var(--bg-tint-2)}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:22px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--accent);display:inline-block}
+  h2.section-title{
+    font-family:"Fraunces",serif;font-weight:500;
+    font-size:clamp(30px,4vw,42px);line-height:1.08;letter-spacing:-.02em;
+    color:var(--ink);max-width:18ch;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:96px 0 104px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:64px;align-items:center}
+  .hero .eyebrow{margin-bottom:26px}
+  .hero h1{
+    font-family:"Fraunces",serif;font-weight:500;
+    font-size:clamp(40px,5.6vw,62px);line-height:1.04;letter-spacing:-.025em;
+    color:var(--ink);
+  }
+  .hero h1 .hl{color:var(--accent);font-style:italic;font-weight:500}
+  .hero p.lede{
+    margin-top:26px;font-size:18.5px;line-height:1.62;color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-actions{display:flex;gap:16px;margin-top:38px;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;
+    padding:13px 24px;border-radius:11px;transition:transform .15s,box-shadow .2s,background .15s;
+  }
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 4px 16px rgba(4,120,87,.22)}
+  .btn-primary:hover{background:var(--accent-dk);transform:translateY(-2px);box-shadow:0 8px 22px rgba(4,120,87,.28)}
+  .btn-ghost{color:var(--ink);border:1px solid var(--line-strong);background:#fff}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+  .btn .arr{transition:transform .15s}
+  .btn:hover .arr{transform:translateX(3px)}
+
+  /* hero card */
+  .hero-card{
+    background:#fff;border:1px solid var(--line);border-radius:18px;
+    padding:30px;box-shadow:0 26px 60px -30px rgba(15,23,20,.22);position:relative;
+  }
+  .hero-card::before{
+    content:"";position:absolute;inset:-1px;border-radius:18px;pointer-events:none;
+    background:linear-gradient(160deg,rgba(4,120,87,.10),transparent 40%);
+  }
+  .hc-row{display:flex;align-items:center;justify-content:space-between;padding:15px 0;border-bottom:1px dashed var(--line)}
+  .hc-row:last-child{border-bottom:0;padding-bottom:4px}
+  .hc-row:first-child{padding-top:0}
+  .hc-k{font-size:13px;color:var(--ink-mute);font-weight:500}
+  .hc-v{font-family:"Fraunces",serif;font-size:24px;font-weight:500;color:var(--ink);letter-spacing:-.01em}
+  .hc-v .u{font-size:13px;color:var(--accent);font-family:"Plus Jakarta Sans";font-weight:600;margin-left:3px}
+  .hc-tag{
+    display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent);background:var(--accent-wash);padding:5px 11px;border-radius:99px;margin-bottom:20px;
+  }
+  .hero-bg{
+    position:absolute;top:-160px;right:-180px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%,rgba(4,120,87,.10),transparent 62%);
+    pointer-events:none;
+  }
+
+  /* ---------- how i work ---------- */
+  .how{padding:88px 0}
+  .how-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+  .how-head p{color:var(--ink-mute);font-size:15.5px;max-width:34ch}
+  .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:54px;border-top:1px solid var(--line)}
+  .principle{padding:34px 30px 36px;border-right:1px solid var(--line);position:relative}
+  .principle:last-child{border-right:0}
+  .principle .num{
+    font-family:"Fraunces",serif;font-size:15px;color:var(--accent);font-weight:600;
+    letter-spacing:.04em;
+  }
+  .principle h3{
+    font-family:"Fraunces",serif;font-weight:500;font-size:23px;line-height:1.22;
+    letter-spacing:-.01em;margin-top:18px;color:var(--ink);
+  }
+  .principle p{margin-top:12px;color:var(--ink-soft);font-size:15px;line-height:1.6}
+  .principle::after{
+    content:"";position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--accent);transition:width .3s ease;
+  }
+  .principle:hover::after{width:100%}
+
+  /* ---------- selected work ---------- */
+  .work{padding:90px 0}
+  .work-list{margin-top:54px;border-top:1px solid var(--line-strong)}
+  .work-item{
+    display:grid;grid-template-columns:64px 1fr auto;gap:28px;align-items:baseline;
+    padding:32px 8px;border-bottom:1px solid var(--line);transition:background .18s,padding .18s;
+  }
+  .work-item:hover{background:#fff;padding-left:18px;padding-right:18px}
+  .work-idx{font-family:"Fraunces",serif;font-size:18px;color:var(--ink-mute);font-weight:500}
+  .work-main h3{
+    font-family:"Fraunces",serif;font-weight:500;font-size:27px;letter-spacing:-.015em;
+    color:var(--ink);line-height:1.1;display:inline-flex;align-items:center;gap:12px;
+  }
+  .work-main h3 .arr{
+    color:var(--accent);opacity:0;transform:translateX(-6px);transition:.2s;font-size:20px;
+  }
+  .work-item:hover .work-main h3 .arr{opacity:1;transform:translateX(0)}
+  .work-main p{margin-top:9px;color:var(--ink-soft);font-size:16px;max-width:62ch;line-height:1.55}
+  .work-tag{
+    font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--accent);white-space:nowrap;padding-top:6px;
+  }
+
+  /* ---------- writing ---------- */
+  .writing{padding:90px 0}
+  .writing-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+  .writing-head .seeall{
+    font-size:14px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:7px;
+  }
+  .writing-head .seeall:hover{color:var(--accent-dk)}
+  .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+  .post{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px 30px;
+    display:flex;flex-direction:column;min-height:240px;
+    transition:transform .2s,box-shadow .25s,border-color .2s;
+  }
+  .post:hover{transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(15,23,20,.30);border-color:var(--line-strong)}
+  .post .date{font-size:13px;color:var(--ink-mute);font-weight:600;letter-spacing:.02em}
+  .post .kicker{
+    font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+  }
+  .post h3{
+    font-family:"Fraunces",serif;font-weight:500;font-size:24px;line-height:1.18;
+    letter-spacing:-.012em;margin-top:auto;color:var(--ink);
+  }
+  .post .readmore{
+    margin-top:18px;font-size:13.5px;font-weight:600;color:var(--ink-soft);
+    display:inline-flex;align-items:center;gap:7px;transition:color .15s,gap .15s;
+  }
+  .post:hover .readmore{color:var(--accent);gap:11px}
+  .post-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+
+  /* ---------- contact ---------- */
+  .contact{padding:96px 0 100px;text-align:center;position:relative;overflow:hidden}
+  .contact-bg{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:760px;height:420px;border-radius:50%;
+    background:radial-gradient(ellipse at center,rgba(4,120,87,.08),transparent 65%);pointer-events:none;
+  }
+  .contact h2{
+    font-family:"Fraunces",serif;font-weight:500;font-size:clamp(32px,4.6vw,50px);
+    line-height:1.06;letter-spacing:-.02em;max-width:18ch;margin:0 auto;color:var(--ink);position:relative;
+  }
+  .contact h2 .hl{color:var(--accent);font-style:italic}
+  .contact p{margin:22px auto 0;color:var(--ink-soft);font-size:17px;max-width:48ch;position:relative}
+  .contact .hero-actions{justify-content:center;position:relative}
+
+  /* ---------- footer ---------- */
+  footer.site{border-top:1px solid var(--line);background:var(--bg-tint);padding:40px 0}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .foot .copy{font-size:14px;color:var(--ink-mute)}
+  .foot-links{display:flex;gap:26px}
+  .foot-links a{font-size:14px;color:var(--ink-soft);font-weight:500;transition:color .15s}
+  .foot-links a:hover{color:var(--accent)}
+
+  /* entrance */
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  .rise{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .d1{animation-delay:.05s}.d2{animation-delay:.13s}.d3{animation-delay:.21s}
+  .d4{animation-delay:.29s}.d5{animation-delay:.37s}
+  @media (prefers-reduced-motion:reduce){.rise{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark">D</span>
+      <span>Dominick&nbsp;A.&nbsp;Campbell</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#how">How I work</a>
+      <a href="#work">Work</a>
+      <a href="#writing">Writing</a>
+      <a class="nav-cta" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow rise d1">Principal Engineer &amp; AI Architect</span>
+      <h1 class="rise d2">I build systems that move money, defend audits, and <span class="hl">scale trust</span> — then I teach teams to do the same with AI.</h1>
+      <p class="lede rise d3">Twenty-five years turning fragile monoliths into observable, resilient platforms — and helping engineering teams adopt AI without losing their discipline.</p>
+      <div class="hero-actions rise d4">
+        <a class="btn btn-primary" href="#work">See work <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#writing">Read writing</a>
+      </div>
+    </div>
+    <div class="hero-card rise d5">
+      <span class="hc-tag">Track record</span>
+      <div class="hc-row">
+        <span class="hc-k">Fraud prevented at JPMorgan</span>
+        <span class="hc-v">$830<span class="u">B</span></span>
+      </div>
+      <div class="hc-row">
+        <span class="hc-k">Voice-auth adoption</span>
+        <span class="hc-v">99.87<span class="u">%</span></span>
+      </div>
+      <div class="hc-row">
+        <span class="hc-k">Accounts secured</span>
+        <span class="hc-v">10<span class="u">M+</span></span>
+      </div>
+      <div class="hc-row">
+        <span class="hc-k">Years shipping in production</span>
+        <span class="hc-v">25<span class="u">+</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<section class="how band-tint" id="how">
+  <div class="wrap">
+    <div class="how-head">
+      <div>
+        <span class="eyebrow">How I work</span>
+        <h2 class="section-title">Principles that survive contact with production.</h2>
+      </div>
+      <p>The same three convictions, whether the stack is twenty years old or twenty days old.</p>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <span class="num">01</span>
+        <h3>Ship boring, disciplined increments.</h3>
+        <p>Small, reversible changes beat big-bang rewrites. Boring is a feature when money is on the line.</p>
+      </div>
+      <div class="principle">
+        <span class="num">02</span>
+        <h3>Observability before features.</h3>
+        <p>If you can't see it, you can't defend it. Instrumentation comes first, then the thing you wanted to build.</p>
+      </div>
+      <div class="principle">
+        <span class="num">03</span>
+        <h3>Skeptical of trends, not of progress.</h3>
+        <p>Adopt what earns its keep. New tools get the same scrutiny as old ones — and AI is no exception.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section class="work" id="work">
+  <div class="wrap">
+    <span class="eyebrow">Selected work</span>
+    <h2 class="section-title">Systems people trusted with real stakes.</h2>
+    <div class="work-list">
+      <article class="work-item">
+        <span class="work-idx">01</span>
+        <div class="work-main">
+          <h3>Voice Biometric Auth <span class="arr">↗</span></h3>
+          <p>$830B fraud prevented at JPMorgan. 99.87% adoption across 10M+ accounts.</p>
+        </div>
+        <span class="work-tag">Security · Scale</span>
+      </article>
+      <article class="work-item">
+        <span class="work-idx">02</span>
+        <div class="work-main">
+          <h3>Strangler-Fig Modernization <span class="arr">↗</span></h3>
+          <p>J2EE/EJB monolith into Spring Boot microservices. Contributed to the Optum acquisition.</p>
+        </div>
+        <span class="work-tag">Platform · M&amp;A</span>
+      </article>
+      <article class="work-item">
+        <span class="work-idx">03</span>
+        <div class="work-main">
+          <h3>Robby <span class="arr">↗</span></h3>
+          <p>Multi-agent system for SDLC orchestration, adopted across multiple teams.</p>
+        </div>
+        <span class="work-tag">AI · Tooling</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section class="writing band-tint-2" id="writing">
+  <div class="wrap">
+    <div class="writing-head">
+      <div>
+        <span class="eyebrow">Writing</span>
+        <h2 class="section-title">Long-form notes on shipping software that lasts.</h2>
+      </div>
+      <a class="seeall" href="#">All writing <span>→</span></a>
+    </div>
+    <div class="posts">
+      <article class="post">
+        <div class="post-top">
+          <span class="kicker">Architecture</span>
+          <span class="date">Jun 13, 2026</span>
+        </div>
+        <h3>Your Monolith Is Probably Fine</h3>
+        <span class="readmore">Read essay <span>→</span></span>
+      </article>
+      <article class="post">
+        <div class="post-top">
+          <span class="kicker">Patterns</span>
+          <span class="date">Jun 06, 2026</span>
+        </div>
+        <h3>The Strangler Fig Pattern</h3>
+        <span class="readmore">Read essay <span>→</span></span>
+      </article>
+      <article class="post">
+        <div class="post-top">
+          <span class="kicker">AI / ML</span>
+          <span class="date">May 23, 2026</span>
+        </div>
+        <h3>ML Models and Their Honest Limits</h3>
+        <span class="readmore">Read essay <span>→</span></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-bg"></div>
+  <div class="wrap">
+    <h2>Have a system worth getting <span class="hl">right?</span></h2>
+    <p>I take on a small number of architecture, modernization, and AI-enablement engagements each year. Let's talk about yours.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:dominick.do.campbell@gmail.com">Start a conversation <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="#writing">Read writing</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap foot">
+    <span class="copy">© 2026 Dominick A. Campbell</span>
+    <nav class="foot-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">RSS</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

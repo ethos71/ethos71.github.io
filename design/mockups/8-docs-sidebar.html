@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Dominick A. Campbell — Docs / Dev-clean</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#1c1e21;--soft:#6b7280;--line:#e7e9ee;--paper:#fff;--panel:#fafbfc;--accent:#5b5bd6;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;font-size:15px;line-height:1.55}
+  .layout{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+  /* sidebar */
+  aside{border-right:1px solid var(--line);background:var(--panel);padding:26px 22px;position:sticky;top:0;height:100vh}
+  aside .brand{font-family:'JetBrains Mono';font-weight:700;font-size:15px;letter-spacing:-.3px}
+  aside .role{font-family:'JetBrains Mono';font-size:11px;color:var(--soft);margin-top:6px;line-height:1.4}
+  aside .grp{margin-top:28px}
+  aside .grp .h{font-family:'JetBrains Mono';font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--soft);margin-bottom:10px}
+  aside ul{list-style:none}
+  aside li{font-size:14px;padding:6px 10px;border-radius:7px;color:#374151;margin:1px 0}
+  aside li.active{background:#ecebfb;color:var(--accent);font-weight:600}
+  aside li:hover{background:#eef0f3}
+  /* main */
+  main{padding:46px 56px;max-width:1000px}
+  .hero{padding-bottom:34px;border-bottom:1px solid var(--line)}
+  .hero .crumb{font-family:'JetBrains Mono';font-size:12px;color:var(--soft);margin-bottom:18px}
+  .hero h1{font-size:34px;font-weight:700;letter-spacing:-.7px;line-height:1.15;max-width:24ch}
+  .hero p{font-size:17px;color:var(--soft);margin-top:14px;max-width:60ch}
+  .content{display:grid;grid-template-columns:1fr 220px;gap:48px;margin-top:36px}
+  .feed h2{font-family:'JetBrains Mono';font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--soft);margin-bottom:6px}
+  .post{padding:20px 0;border-bottom:1px solid var(--line)}
+  .post .top{display:flex;gap:10px;align-items:center;margin-bottom:7px}
+  .post .cat{font-family:'JetBrains Mono';font-size:11px;font-weight:500;color:var(--accent);background:#ecebfb;padding:2px 8px;border-radius:5px}
+  .post .dt{font-family:'JetBrains Mono';font-size:12px;color:var(--soft)}
+  .post h3{font-size:19px;font-weight:600;letter-spacing:-.3px}
+  .post p{font-size:14px;color:var(--soft);margin-top:5px}
+  /* right rail */
+  .rail{position:sticky;top:46px;align-self:start}
+  .rail .h{font-family:'JetBrains Mono';font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--soft);margin-bottom:14px}
+  .rail .fact{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+  .rail .fact .v{font-family:'JetBrains Mono';font-weight:700}
+  .rail .foot{margin-top:24px;font-size:12px;color:var(--soft);line-height:1.8}
+  .rail .foot a{color:var(--accent);text-decoration:none}
+</style></head>
+<body>
+<div class="layout">
+  <aside>
+    <div class="brand">~/dominick</div>
+    <div class="role">Principal Engineer<br>& AI Architect</div>
+    <div class="grp"><div class="h">Site</div>
+      <ul><li class="active">Home</li><li>About</li><li>Experience</li><li>Contact</li></ul></div>
+    <div class="grp"><div class="h">Writing</div>
+      <ul><li>Opinion</li><li>Engineering</li><li>Case Studies</li><li>Machine Learning</li><li>Field Notes</li></ul></div>
+  </aside>
+  <main>
+    <div class="hero">
+      <div class="crumb">~ / home</div>
+      <h1>Twenty-five years shipping software, mainframe to AI.</h1>
+      <p>I write about the work — the decisions, not the demos.</p>
+    </div>
+    <div class="content">
+      <div class="feed">
+        <h2>Latest posts</h2>
+        <div class="post"><div class="top"><span class="cat">Opinion</span><span class="dt">Jun 13 2026</span></div><h3>Your Monolith Is Probably Fine</h3><p>Nobody has ever needed microservices.</p></div>
+        <div class="post"><div class="top"><span class="cat">Engineering</span><span class="dt">Jun 06 2026</span></div><h3>The Strangler Fig Pattern: Modernizing Without Ripping Out</h3><p>Rip-and-replace is malpractice when the monolith pays the bills.</p></div>
+        <div class="post"><div class="top"><span class="cat">Case Study</span><span class="dt">May 30 2026</span></div><h3>$830B in Fraud Prevented: Voice Biometric Auth at 10M Scale</h3><p>99.87% of 10M JPMC accounts opted in.</p></div>
+        <div class="post"><div class="top"><span class="cat">Machine Learning</span><span class="dt">May 23 2026</span></div><h3>ML Models and Their Honest Limits</h3><p>The most useful number is the gap between two other numbers.</p></div>
+        <div class="post"><div class="top"><span class="cat">Field Notes</span><span class="dt">May 18 2026</span></div><h3>Week Notes — The Week the Toolkit Earned Its Keep</h3><p>What shipped, what surprised me, where the week went.</p></div>
+      </div>
+      <div class="rail">
+        <div class="h">Facts</div>
+        <div class="fact"><span>Years</span><span class="v">25+</span></div>
+        <div class="fact"><span>Patents pending</span><span class="v">4</span></div>
+        <div class="fact"><span>Engineers led</span><span class="v">50+</span></div>
+        <div class="fact"><span>Txns / day</span><span class="v">50–100M</span></div>
+        <div class="foot">© 2026 Dominick A. Campbell<br><a href="#">GitHub</a> · <a href="#">LinkedIn</a> · <a href="#">RSS</a></div>
+      </div>
+    </div>
+  </main>
+</div>
+</body></html>
