@@ -101,3 +101,7 @@ Conventions: 🔴 this week, 🟡 next, 🟢 someday. Check off when done.
       (`/engineering/ai/...` instead of bare `/YYYY/MM/DD/...`)
 - [x] 2026-05-22: Workshop post — reconciled 200-vs-50 mismatch in body
 - [x] 2026-05-22: Categories link added to top nav
+- [x] 2026-06-13: Opinion post `_posts/2026-06-13-your-monolith-is-probably-fine.md`
+      — trend-resistance / decision-discipline piece. Companion to the
+      strangler-fig post (that one is the *how*; this is the *why/when*).
+      Direct-committed per @dom workflow; review on your own timeline.
