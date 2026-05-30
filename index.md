@@ -16,23 +16,25 @@ excerpt: >
 
 intro:
   - excerpt: >
-      I design and build the systems that move money, defend audits, and scale trust — then I teach teams
-      how to do the same with AI. Currently open to **Principal / Staff Engineer** and **AI Architect** roles.
+      I build the systems that move money, defend audits, and scale trust — then I teach teams
+      to do the same with AI. Currently open to **Principal / Staff Engineer** and **AI Architect** roles.
 
 feature_row:
-  - title: "25+ Years. Zero Shortcuts."
+  - title: "Twenty-five years, mainframe to AI"
     excerpt: >
-      Mainframe → J2EE → Microservices → Cloud → AI. Every era, every stack.
-      Built voice-biometric fraud systems at JPMC handling 10M accounts in 90 days, the Indirect Tax Close platform at Vertex,
-      and the HRCommand decomposition that drove the United Health acquisition of Connect Your Care.
+      Mainframe → J2EE → microservices → cloud → AI. I've shipped through every era and watched
+      each one get oversold. Voice-biometric fraud detection at JPMC (10M accounts in 90 days),
+      the Indirect Tax Close platform at Vertex, and the HRCommand decomposition that drove the
+      Optum acquisition of Connect Your Care.
     url: "/experience/"
     btn_label: "See Experience"
     btn_class: "btn--primary"
-  - title: "Builder. Teacher. Leader."
+  - title: "Skeptical of trends, not of progress"
     excerpt: >
-      Designed and delivered the **"Raise the Boats"** AI curriculum — personally taught
-      ~50 employees across engineering, product, and data science how to build production AI agents.
-      I don't just ship products; I raise the bar for the whole team.
+      A trend is a solution looking for a problem. Before adopting anything, I make it finish the
+      sentence: "right now we can't ___." I'd rather build the capability than buy the dependency —
+      the **"Raise the Boats"** curriculum taught ~50 people across engineering, product, and data
+      science to build production AI agents from scratch.
     url: "/about/"
     btn_label: "About Me"
     btn_class: "btn--primary"
