@@ -1,0 +1,96 @@
+---
+# Editorial Minimal skin — overrides on top of Minimal Mistakes.
+# Front matter (the two dashes) is required so Jekyll processes this Sass.
+---
+
+@charset "utf-8";
+
+// =========================================================================
+//  Editorial Minimal
+//  Magazine / print aesthetic: warm paper, near-black ink, one oxblood
+//  accent. Fraunces (serif display) for headings, Newsreader for body.
+//  Variables are declared BEFORE the theme imports so the theme's
+//  `!default` assignments defer to ours.
+// =========================================================================
+
+// --- Type ---------------------------------------------------------------
+$serif: "Fraunces", Georgia, "Times New Roman", serif;
+$sans-serif: "Newsreader", Georgia, serif; // body is a reading serif here
+$global-font-family: $sans-serif;
+$header-font-family: $serif;
+$doc-font-size: 18;
+$type-size-1: 2.75em;
+$type-size-2: 2em;
+$type-size-3: 1.5em;
+
+// --- Palette ------------------------------------------------------------
+$paper: #faf8f5;
+$ink: #1a1a1a;
+$oxblood: #9b3d2e;
+$muted: #6b6259;
+$rule: #e4ddd2;
+
+$background-color: $paper;
+$text-color: $ink;
+$muted-text-color: $muted;
+$primary-color: $oxblood;
+$link-color: $oxblood;
+$link-color-hover: darken($oxblood, 10%);
+$link-color-visited: $oxblood;
+$border-color: $rule;
+$footer-background-color: #f1ece4;
+$masthead-link-color: $ink;
+$masthead-link-color-hover: $oxblood;
+
+// Code blocks: keep them legible against warm paper
+$code-background-color: #f3ede3;
+$code-background-color-dark: #efe8dc;
+
+// --- Theme imports ------------------------------------------------------
+@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes";
+
+// =========================================================================
+//  Fine-tuning the theme didn't expose as variables
+// =========================================================================
+
+// Masthead: thin editorial rule, generous, no heavy shadow
+.masthead {
+  border-bottom: 1px solid $ink;
+  box-shadow: none;
+  background-color: $paper;
+}
+.greedy-nav { background-color: $paper; }
+.greedy-nav a { font-family: $sans-serif; font-size: 0.95em; }
+.site-title { font-family: $serif; font-weight: 600; letter-spacing: -0.01em; }
+
+// Headlines: tighter, weightier display setting
+h1, h2, h3, .page__title, .archive__item-title {
+  font-family: $serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+}
+
+// Body reading measure + rhythm
+.page__content {
+  font-size: 1.05em;
+  line-height: 1.7;
+  p { margin: 0 0 1.4em; }
+}
+
+// Post list: date-gutter editorial feel
+.archive__item-title { margin-top: 0.4em; }
+.archive__item-excerpt { color: $muted; font-size: 1em; }
+
+// Footer: quiet, warm, serif touch
+.page__footer { font-family: $sans-serif; }
+.page__footer-copyright { color: $muted; }
+
+// Links inside content: underline on hover, oxblood
+.page__content a { color: $oxblood; text-decoration-thickness: 1px; }
+.page__content a:hover { color: darken($oxblood, 10%); }
+
+// Buttons / primary accents
+.btn--primary { background-color: $oxblood; border-color: $oxblood; }
+.btn--primary:hover { background-color: darken($oxblood, 8%); }
