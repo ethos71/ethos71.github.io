@@ -29,7 +29,7 @@ I'm also obsessive about raising the floor. I designed and personally delivered 
 
 ## My Engineering Philosophy
 
-> **"Don't follow trends. The next person who tells me a monolith needs to be microservices had better be able to say what we can't do today without it."**
+> **"A trend is a solution looking for a problem."**
 
 Skeptical of trends, not of progress. A monolith you understand beats a distributed system you don't, and most of the time nobody in the room can name the actual problem the shiny thing is supposed to solve. I've watched shortcuts compound across decades, and I've watched the right foundations pay off for just as long. The second one is cheaper.
 
