@@ -29,9 +29,9 @@ I'm also obsessive about raising the floor. I designed and personally delivered 
 
 ## My Engineering Philosophy
 
-> **"A trend is a solution looking for a problem. Make it finish the sentence: 'right now we can't ___.'"**
+> **"Don't follow trends. The next person who tells me a monolith needs to be microservices had better be able to say what we can't do today without it."**
 
-Skeptical of trends, not of progress. If a technology can't finish that sentence, it's fashion wearing a requirement's clothes — and I'll say so in the meeting. The boring, well-understood thing is usually the right thing; a monolith you can hold in your head beats a distributed system you can't. I've watched shortcuts compound across decades, and I've watched the right foundations pay off for just as long. The second one is cheaper.
+Skeptical of trends, not of progress. A monolith you understand beats a distributed system you don't, and most of the time nobody in the room can name the actual problem the shiny thing is supposed to solve. I've watched shortcuts compound across decades, and I've watched the right foundations pay off for just as long. The second one is cheaper.
 
 ## Currently Seeking
 
