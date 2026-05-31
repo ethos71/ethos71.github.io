@@ -33,11 +33,4 @@ I'm also obsessive about raising the floor. I designed and personally delivered 
 
 Skeptical of trends, not of progress. A monolith you understand beats a distributed system you don't, and most of the time nobody in the room can name the actual problem the shiny thing is supposed to solve. I've watched shortcuts compound across decades, and I've watched the right foundations pay off for just as long. The second one is cheaper.
 
-## Currently Seeking
-
-Principal / Staff Engineer or AI Architect roles, preferably in:
-- **Tax / Fintech / Compliance tech**
-- **AI-native product companies**
-- **Developer tooling / platform engineering**
-
 [Download My Resume](/resume.dominick.campbell.pdf){: .btn .btn--primary}
