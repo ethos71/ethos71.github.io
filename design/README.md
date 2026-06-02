@@ -46,7 +46,16 @@ direction has a `.png` (full-page screenshot at 1280px) and a `.html`
   work). Mockups are **homepages only** — the article reading page is
   still to be designed before any build.
 - Rendered to PNG with headless Chrome at 1280px wide.
-- Source-of-truth copies also live at `~/ui-mockups-ethos71/` locally.
+
+## Verification captures
+
+`verification/` holds screenshots of what actually shipped, kept as a
+record of the redesign landing:
+
+- `BUILT-home.png`, `BUILT-article.png` — built output (home + article
+  reading page) from the Editorial Minimal build.
+- `LIVE-deployed.png`, `LIVE-final-home.png`, `LIVE-about-voice.png`,
+  `LIVE-blog-list.png` — post-deploy captures of the live site.
 
 ## Next steps (not yet done)
 
