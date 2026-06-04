@@ -122,3 +122,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 </script>
+
+{% comment %}
+  Heading anchors: the Minimal Mistakes theme appends a clickable link
+  icon to every heading and sets title="Permalink" on it, which browsers
+  show as a hover tooltip. Keep the click target, the icon, and the
+  screen-reader-only label; drop only the visible tooltip. The theme
+  injects these anchors via JS, so sweep once the DOM is ready and watch
+  for any added afterward (idempotent, runs again on full load).
+{% endcomment %}
+<script>
+(function () {
+  function strip(root) {
+    (root || document).querySelectorAll('a.header-link[title]')
+      .forEach(function (a) { a.removeAttribute('title'); });
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    strip(document);
+    new MutationObserver(function (mutations) {
+      mutations.forEach(function (m) {
+        (m.addedNodes || []).forEach(function (n) {
+          if (n.nodeType !== 1) return;
+          if (n.matches && n.matches('a.header-link')) n.removeAttribute('title');
+          if (n.querySelectorAll) strip(n);
+        });
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+  });
+  window.addEventListener('load', function () { strip(document); });
+})();
+</script>
