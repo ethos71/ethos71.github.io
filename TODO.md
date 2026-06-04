@@ -39,6 +39,18 @@ Conventions: 🔴 this week, 🟡 next, 🟢 someday. Check off when done.
 - [ ] Closing sign-off "More next week." — lock in or change
 - [ ] Anything in the post that should be private (especially `nyx-crm`, client work)
 
+### Review the new weekly post (`_posts/2026-06-04-week-notes-fantasy-baseball.md`)
+- [ ] **Naming call:** project referred to *only* as "fantasy baseball AI," never by repo
+      name, per your instruction. The 2026-05-18 week-notes still calls it
+      "fantasy-football XGBoost project" (wrong sport + names a tool) — decide whether
+      to backfill that older post to match.
+- [ ] **Header image:** post ships with the site-default OG/teaser banner; needs a
+      bespoke `/assets/headers/week-notes-fantasy-baseball.png` to match the other posts.
+- [ ] **Numbers sanity-check (all from this week's commits):** 77min→119s nightly job,
+      13→0 CSV reads/writes, 8,061/8,386 players resolved, team_key ~10%→90%. Confirm
+      none are more than you want public on a hobby project.
+- [ ] Closer locked as "More next week."
+
 ### Friday-ish brief (every week)
 - [ ] Drop a few sentences before I write: family stuff, kid's Challenger week, work moments that matter
 - [ ] Anything from your wife you want included — paste it here (I cannot access Facebook)
