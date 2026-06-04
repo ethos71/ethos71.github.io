@@ -94,3 +94,21 @@ h1, h2, h3, .page__title, .archive__item-title {
 // Buttons / primary accents
 .btn--primary { background-color: $oxblood; border-color: $oxblood; }
 .btn--primary:hover { background-color: darken($oxblood, 8%); }
+
+// Screen-reader-only utility. The theme's JS injects heading anchors as
+// <span class="sr-only">Permalink</span><i class="fas fa-link">, but this
+// build only ships the theme's `.visually-hidden` utility — `.sr-only` was
+// never defined, so the word "Permalink" became visible on heading hover.
+// Define it (canonical visually-hidden pattern) so the label is announced
+// to screen readers but never painted; the clickable link icon stays.
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
