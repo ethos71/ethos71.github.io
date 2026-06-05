@@ -121,3 +121,63 @@ h1, h2, h3, .page__title, .archive__item-title {
 // anywhere. Headings keep their `id`, so deep links to a section still
 // resolve. `!important` beats the theme's opacity:1-on-hover rule.
 .header-link { display: none !important; }
+
+// =========================================================================
+//  Page templates: section blocks (_includes/section.html,
+//  _layouts/sections.html) and the post list (_includes/post-list.html).
+//  These are the reusable rendering primitives — pages compose them via
+//  front matter / includes instead of inline styles.
+// =========================================================================
+
+// Lead: the one large intro paragraph at the top of a templated page.
+.page-lead {
+  font-size: 1.32em;
+  line-height: 1.5;
+  color: $ink;
+  margin: 0.2em 0 1.6em;
+  max-width: 36em;
+}
+
+// Section block: consistent rhythm, a hairline rule between stacked sections.
+.page-section { margin: 2.2em 0; }
+.page-section + .page-section {
+  border-top: 1px solid $rule;
+  padding-top: 1.8em;
+}
+.page-section__title { margin: 0 0 0.5em; }
+.page-section__body > :first-child { margin-top: 0; }
+.page-section__body > :last-child { margin-bottom: 0; }
+
+// Post list: one editorial row per post — title left, date right.
+.post-list {
+  list-style: none;
+  margin: 0 0 2.2em;
+  padding: 0;
+}
+.post-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1em;
+  padding: 0.55em 0;
+  border-bottom: 1px solid $rule;
+}
+.post-list__link { font-family: $serif; font-weight: 500; }
+.post-list__date {
+  flex: none;
+  color: $muted;
+  font-size: 0.82em;
+  white-space: nowrap;
+}
+
+// Taxonomy group heading (By category / By tag) + its count.
+.taxonomy-title {
+  margin: 1.4em 0 0.3em;
+  .count {
+    font-family: $sans-serif;
+    font-weight: 400;
+    font-size: 0.62em;
+    color: $muted;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,13 @@
+{% comment %}
+  Reusable post list — one editorial row per post (title + date), no inline
+  styles. Param:
+    include.posts - an array of post objects (already sorted by the caller)
+{% endcomment %}
+<ul class="post-list">
+{% for post in include.posts %}
+  <li class="post-list__item">
+    <a class="post-list__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <span class="post-list__date">{{ post.date | date: "%b %-d, %Y" }}</span>
+  </li>
+{% endfor %}
+</ul>

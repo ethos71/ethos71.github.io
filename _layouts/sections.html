@@ -1,0 +1,26 @@
+---
+layout: single
+---
+{% comment %}
+  Data-driven page layout. Define page content as structured front matter:
+
+    layout: sections
+    lead: >-
+      A one-paragraph intro rendered large.
+    sections:
+      - title: "First Section"
+        body: |
+          Markdown body (paragraphs, tables, lists, blockquotes).
+      - title: "Second Section"
+        body: |
+          ...
+
+  Each section renders through _includes/section.html, so every page built
+  this way has the same structure and styling. A page may also keep a normal
+  markdown body; it renders between the lead and the sections.
+{% endcomment %}
+{% if page.lead %}<p class="page-lead">{{ page.lead | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>{% endif %}
+
+{{ content }}
+
+{% for s in page.sections %}{% include section.html title=s.title id=s.id body=s.body %}{% endfor %}

@@ -1,0 +1,16 @@
+{% comment %}
+  Reusable content section — one consistent shape for every titled block.
+
+  Params:
+    include.title  - section heading (optional)
+    include.id     - anchor id (optional; defaults to a slug of the title)
+    include.body   - markdown string, rendered via markdownify
+
+  Use directly:   {% include section.html title="About" body=some_markdown %}
+  Or data-driven: see _layouts/sections.html, which loops page.sections.
+{% endcomment %}
+{% assign _sid = include.id | default: include.title | slugify %}
+<section class="page-section"{% if _sid != "" %} id="{{ _sid }}"{% endif %}>
+  {% if include.title %}<h2 class="page-section__title">{{ include.title }}</h2>{% endif %}
+  <div class="page-section__body">{{ include.body | markdownify }}</div>
+</section>
