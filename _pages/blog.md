@@ -16,23 +16,3 @@ Field notes most weeks; longer case studies when the work earns it.
 
 {% assign posts = site.posts | sort: "date" | reverse %}
 {% include post-list.html posts=posts %}
-
-## By category
-
-{% assign cats = site.categories | sort %}
-{% for category in cats %}
-{% assign cat_name = category[0] %}
-{% assign cat_posts = category[1] %}
-<h3 class="taxonomy-title" id="cat-{{ cat_name | slugify }}">{{ cat_name }} <span class="count">{{ cat_posts.size }}</span></h3>
-{% include post-list.html posts=cat_posts %}
-{% endfor %}
-
-## By tag
-
-{% assign tags = site.tags | sort %}
-{% for tag in tags %}
-{% assign tag_name = tag[0] %}
-{% assign tag_posts = tag[1] %}
-<h3 class="taxonomy-title" id="tag-{{ tag_name | slugify }}">{{ tag_name }} <span class="count">{{ tag_posts.size }}</span></h3>
-{% include post-list.html posts=tag_posts %}
-{% endfor %}
