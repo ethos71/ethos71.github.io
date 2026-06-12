@@ -14,11 +14,6 @@ excerpt: >
   **Principal Engineer & AI Architect** · 25+ years shipping systems from Mainframe to modern AI ·
   Inventor on 4 patent-pending AI systems · Production tax systems serving Fortune 500 customers · Led 50+ engineers
 
-intro:
-  - excerpt: >
-      I build the systems that move money, defend audits, and scale trust — then I teach teams
-      to do the same with AI. Currently open to **Principal / Staff Engineer** and **AI Architect** roles.
-
 feature_row:
   - title: "Twenty-five years, mainframe to AI"
     excerpt: >
@@ -37,6 +32,14 @@ feature_row:
       science to build production AI agents from scratch.
     url: "/about/"
     btn_label: "About Me"
+    btn_class: "btn--primary"
+  - title: "Field notes from the build"
+    excerpt: >
+      I write about the work while it's still warm — weekly notes on agent toolkits,
+      cost-aware model routing, and the plumbing that keeps production AI running on
+      hardware I own. The posts come from the week's real commits, not a content calendar.
+    url: "/blog/"
+    btn_label: "Read the Blog"
     btn_class: "btn--primary"
 
 selected_work:
@@ -62,8 +65,6 @@ selected_work:
     btn_label: "Read"
     btn_class: "btn--primary"
 ---
-
-{% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
 
