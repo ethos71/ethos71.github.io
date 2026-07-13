@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Your Monolith Is Probably Fine"
 date: 2026-06-13
 categories: [opinion]

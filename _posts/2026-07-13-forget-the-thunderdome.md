@@ -1,14 +1,9 @@
 ---
-layout: post
 title: "Forget the Thunderdome"
 date: 2026-07-13
 categories: [opinion]
 tags: [job-search, open-source, ai, mcp, hiring-without-whiteboards]
 excerpt: "Twenty-five years in, and the first thing the market handed me was a CoderPad link. So I stopped grinding and built the tool that ran my search instead. It's free now."
-header:
-  image: /assets/headers/forget-the-thunderdome.png
-  og_image: /assets/headers/forget-the-thunderdome.png
-  teaser: /assets/headers/forget-the-thunderdome.png
 ---
 
 In May, after four years as a principal engineer at Vertex, I got laid off. Twenty-five years into this career, and the first thing the market handed me was a CoderPad link.
