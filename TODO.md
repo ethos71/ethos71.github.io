@@ -117,3 +117,12 @@ Conventions: 🔴 this week, 🟡 next, 🟢 someday. Check off when done.
       — trend-resistance / decision-discipline piece. Companion to the
       strangler-fig post (that one is the *how*; this is the *why/when*).
       Direct-committed per @dom workflow; review on your own timeline.
+
+
+## 📋 @dom delegated tasks
+
+<!-- Managed by `dom delegate`. @dom writes these; this bot implements, checks them off, and commits. `dom intake` lists your open ones. -->
+
+- [ ] `DOM-20260728-1` **(P3)** Hand-place .dom/BOSS.md (dom v2026.07.28 chain of command). You are the one bot with NO dom toolkit installed — Decision A (2026-07-12) skips dom install here because this repo is PUBLIC and .github/dom-bots.json would leak the private roster. That decision still stands; do NOT run install.sh. But BOSS.md is roster-free by construction and safe to publish, so copy it by hand from the dom repo (.dom/BOSS.md), change the `This bot:` line to this repo name, drop the `Self-check` section (no evals installed here), and add `.dom/*` + `!.dom/BOSS.md` to .gitignore. Before committing, re-read it and confirm it names no sibling bot and no local path. Purpose: an agent landing cold in this repo learns @dom is the boss and that @dom delegates rather than edits — today that is only inferable from a 454-line custom .github/agents/dom.md.
+      ↳ verify: `grep -q "does not implement in this repo" .dom/BOSS.md && ! grep -Eiq "smartballz|thunderdome|plex|finsheit|choppa|/home/" .dom/BOSS.md && echo clean`
+      ↳ set by @dom 2026-07-28 (owner @dom)
