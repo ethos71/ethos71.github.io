@@ -20,6 +20,42 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+
+      # ── Chain-of-command drift guard ────────────────────────────────────
+      # This repo ships no dom toolkit (Decision A: it is PUBLIC and the
+      # private roster would leak), so test_boss_contract.py does not run
+      # here. .dom/BOSS.md is therefore hand-maintained and nothing else
+      # watches it. This step is the substitute: it fails the PR if BOSS.md
+      # changes at all, forcing a human re-read before anything about the
+      # chain of command reaches a public page.
+      #
+      # It deliberately does NOT grep for sibling bot names — a denylist
+      # would have to spell them out in a public file, which is the leak it
+      # is meant to prevent. The checksum catches every change instead.
+      - name: BOSS.md has not silently drifted
+        run: |
+          set -euo pipefail
+          f=.dom/BOSS.md
+          test -f "$f" || { echo "::error::$f is missing — the chain of command is gone"; exit 1; }
+
+          for phrase in "Chain of Command" "github.com/ethos71/dom"; do
+            grep -qF "$phrase" "$f" || { echo "::error::$f lost required text: $phrase"; exit 1; }
+          done
+
+          if grep -nE "/home/|[A-Z]:\\\\Users" "$f"; then
+            echo "::error::$f contains an absolute local path — keep it machine-agnostic"; exit 1
+          fi
+
+          PINNED=ce2a91c2e1f8ae97a59910bf72cfd19fba788d4c8c7f29e158b1f6756c89ba3b
+          ACTUAL=$(sha256sum "$f" | cut -d" " -f1)
+          if [ "$ACTUAL" != "$PINNED" ]; then
+            echo "::error::$f changed (pinned $PINNED, got $ACTUAL)."
+            echo "Re-read it: it is PUBLIC. Confirm it names no sibling bot and no local"
+            echo "path, then update PINNED in .github/workflows/build-check.yml to $ACTUAL"
+            exit 1
+          fi
+          echo "BOSS.md intact ($ACTUAL)"
+
       - name: Build with Jekyll (production)
         env:
           JEKYLL_ENV: production
