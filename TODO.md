@@ -37,7 +37,7 @@ Conventions: 🔴 this week, 🟡 next, 🟢 someday. Check off when done.
 - [ ] Job-search framing ("between roles, deliberate about fit") — confirm tone or rewrite
 - [ ] Kid stays as "my son / my kid" — say the word if his name goes in next week
 - [ ] Closing sign-off "More next week." — lock in or change
-- [ ] Anything in the post that should be private (especially `nyx-crm`, client work)
+- [ ] Anything in the post that should be private (especially client work)
 
 ### Review the new weekly post (`_posts/2026-06-04-week-notes-fantasy-baseball.md`)
 - [ ] **Naming call:** project referred to *only* as "fantasy baseball AI," never by repo
@@ -124,5 +124,5 @@ Conventions: 🔴 this week, 🟡 next, 🟢 someday. Check off when done.
 <!-- Managed by `dom delegate`. @dom writes these; this bot implements, checks them off, and commits. `dom intake` lists your open ones. -->
 
 - [x] `DOM-20260728-1` **(P3)** Hand-place .dom/BOSS.md (dom v2026.07.28 chain of command). You are the one bot with NO dom toolkit installed — Decision A (2026-07-12) skips dom install here because this repo is PUBLIC and .github/dom-bots.json would leak the private roster. That decision still stands; do NOT run install.sh. But BOSS.md is roster-free by construction and safe to publish, so copy it by hand from the dom repo (.dom/BOSS.md), change the `This bot:` line to this repo name, drop the `Self-check` section (no evals installed here), and add `.dom/*` + `!.dom/BOSS.md` to .gitignore. Before committing, re-read it and confirm it names no sibling bot and no local path. Purpose: an agent landing cold in this repo learns @dom is the boss and that @dom delegates rather than edits — today that is only inferable from a 454-line custom .github/agents/dom.md.
-      ↳ verify: `grep -q "does not implement in this repo" .dom/BOSS.md && ! grep -Eiq "smartballz|thunderdome|plex|finsheit|choppa|/home/" .dom/BOSS.md && echo clean`
+      ↳ verify: `grep -q "Chain of Command" .dom/BOSS.md && ! grep -Eq "/home/|[A-Z]:.Users" .dom/BOSS.md && echo clean   # sibling-name check runs in dom, not here — naming them in a PUBLIC file is the leak`
       ↳ set by @dom 2026-07-28 (owner @dom)
