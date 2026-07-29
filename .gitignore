@@ -1,0 +1,4 @@
+
+# dom chain of command — BOSS.md is tracked on purpose (no toolkit here).
+.dom/*
+!.dom/BOSS.md
